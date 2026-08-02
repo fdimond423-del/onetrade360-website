@@ -2,8 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useLocation, Link } from "wouter";
 import { motion, AnimatePresence } from "framer-motion";
 import { 
-  Menu, X, ChevronRight, RefreshCw, MessageSquare, Globe, Building2, Factory, Cpu,
-  Briefcase, Compass, Users, Phone, ArrowUpRight, Sparkles, Layers
+  Menu, X, ChevronRight, Phone, Mail, Globe, ArrowRight, ShieldCheck, CheckCircle2, ChevronDown
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logoImg from "@/assets/logo-transparent.png";
@@ -32,47 +31,78 @@ export function Navbar({ onOpenInquiry, onReplaySplash }: NavbarProps) {
     { name: "Manufacturing", href: "/manufacturing" },
     { name: "Technology", href: "/technology" },
     { name: "Network", href: "/network" },
-    { name: "About", href: "/about" },
+    { name: "About Us", href: "/about" },
     { name: "Contact", href: "/contact" },
   ];
 
   return (
     <>
+      {/* Top Executive Utility Strip (Orion Style) */}
+      <div className="bg-[#0F172A] text-slate-300 text-xs py-2 px-4 border-b border-slate-800 z-50 relative font-sans hidden sm:block">
+        <div className="container mx-auto flex items-center justify-between">
+          <div className="flex items-center gap-6">
+            <div className="flex items-center gap-2">
+              <Phone className="w-3.5 h-3.5 text-amber-400" />
+              <span>India: <strong className="text-white font-medium">+91-7984171515</strong></span>
+            </div>
+            <div className="flex items-center gap-2 border-l border-slate-800 pl-6">
+              <Phone className="w-3.5 h-3.5 text-cyan-400" />
+              <span>USA: <strong className="text-white font-medium">+1-272-267-9294</strong></span>
+            </div>
+            <div className="flex items-center gap-2 border-l border-slate-800 pl-6">
+              <Mail className="w-3.5 h-3.5 text-emerald-400" />
+              <span className="text-white font-medium">onetradeworld360@gmail.com</span>
+            </div>
+          </div>
+
+          <div className="flex items-center gap-4">
+            <div className="flex items-center gap-2 font-mono text-[11px] text-slate-300">
+              <Globe className="w-3.5 h-3.5 text-amber-400" />
+              <span>India 🇮🇳 • USA 🇺🇸 • Canada 🇨🇦</span>
+            </div>
+            <button 
+              onClick={onOpenInquiry}
+              className="text-[11px] font-bold text-amber-400 hover:text-amber-300 transition-colors uppercase font-mono cursor-pointer border-l border-slate-800 pl-4"
+            >
+              Request RFP & Consultation
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* Main Executive Navbar */}
       <header 
-        className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+        className={`sticky top-0 w-full z-40 transition-all duration-300 ${
           isScrolled 
-            ? "bg-white/95 backdrop-blur-2xl border-b border-slate-200 py-3 shadow-[0_10px_30px_rgba(15,23,42,0.08)]" 
-            : "bg-gradient-to-b from-white via-white/90 to-transparent py-4"
+            ? "bg-white/98 backdrop-blur-md border-b border-slate-200 py-3 shadow-[0_4px_25px_rgba(15,23,42,0.06)]" 
+            : "bg-white border-b border-slate-200 py-4"
         }`}
       >
         <div className="container mx-auto px-4 sm:px-6 flex items-center justify-between">
           
-          {/* Large Logo Badge Container */}
-          <Link href="/" className="flex items-center gap-3.5 z-50 group">
-            <motion.div 
-              whileHover={{ scale: 1.04 }}
-              className="relative p-2.5 rounded-2xl bg-white border-2 border-amber-400/90 shadow-[0_4px_25px_rgba(245,183,0,0.3)] group-hover:shadow-[0_6px_35px_rgba(2,132,199,0.35)] transition-all duration-300 flex items-center justify-center"
-            >
+          {/* Prominent Transparent Logo Badge */}
+          <Link href="/" className="flex items-center gap-3 z-50 group">
+            <div className="p-2.5 rounded-xl bg-white border-2 border-amber-400 shadow-[0_4px_20px_rgba(245,183,0,0.25)] group-hover:shadow-[0_6px_25px_rgba(2,132,199,0.3)] transition-all">
               <img 
                 src={logoImg} 
                 alt="OneTrade360 Logo" 
                 className="h-12 sm:h-16 w-auto object-contain max-w-[220px]" 
               />
-            </motion.div>
+            </div>
           </Link>
           
-          {/* Desktop Navigation Links */}
-          <nav className="hidden lg:flex items-center gap-1 xl:gap-2 px-4 py-2 rounded-full bg-slate-50 border border-slate-200/90 shadow-sm">
+          {/* Corporate Navigation Items */}
+          <nav className="hidden lg:flex items-center gap-1 xl:gap-2">
             {navLinks.map((link) => {
               const isActive = location === link.href;
               return (
                 <Link
                   key={link.name}
                   href={link.href}
-                  className={`px-3.5 py-1.5 rounded-full text-xs font-semibold font-sans transition-all relative ${
+                  className={`px-3.5 py-2 rounded-lg text-xs font-semibold font-serif transition-all ${
                     isActive
-                      ? "text-white bg-slate-900 font-bold shadow-[0_4px_14px_rgba(15,23,42,0.3)]"
-                      : "text-slate-700 hover:text-slate-950 hover:bg-slate-200/60"
+                      ? "text-slate-950 bg-slate-100 font-bold border border-slate-300 shadow-sm"
+                      : "text-slate-700 hover:text-slate-950 hover:bg-slate-50"
                   }`}
                 >
                   {link.name}
@@ -81,47 +111,38 @@ export function Navbar({ onOpenInquiry, onReplaySplash }: NavbarProps) {
             })}
           </nav>
           
-          {/* Action CTAs */}
+          {/* Executive Action Button */}
           <div className="hidden lg:flex items-center gap-3">
-            {onReplaySplash && (
-              <button 
-                onClick={onReplaySplash} 
-                className="text-xs text-slate-500 hover:text-cyan-600 transition-colors p-2 rounded-full hover:bg-slate-100 cursor-pointer" 
-                title="Replay Loader"
-              >
-                <RefreshCw className="w-4 h-4" />
-              </button>
-            )}
-
             <Button 
               onClick={onOpenInquiry} 
-              className="bg-gradient-to-r from-amber-400 via-amber-500 to-cyan-500 text-slate-950 font-bold hover:brightness-105 clip-diagonal shadow-[0_4px_20px_rgba(245,183,0,0.35)] h-11 px-6 text-xs tracking-wide uppercase font-mono cursor-pointer"
+              className="bg-[#0F172A] hover:bg-slate-800 text-white font-bold h-11 px-6 text-xs uppercase font-serif tracking-wider shadow-md cursor-pointer flex items-center gap-2 rounded-lg"
             >
-              Get Started
+              <span>Connect With Us</span>
+              <ArrowRight className="w-4 h-4 text-amber-400" />
             </Button>
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Toggle */}
           <button 
-            className="lg:hidden z-50 p-2.5 text-slate-900 bg-white border border-slate-200 rounded-2xl shadow-sm cursor-pointer active:scale-95" 
+            className="lg:hidden p-2.5 text-slate-900 bg-white border border-slate-200 rounded-xl shadow-sm cursor-pointer" 
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
-            {mobileMenuOpen ? <X className="w-6 h-6 text-amber-500" /> : <Menu className="w-6 h-6 text-cyan-600" />}
+            {mobileMenuOpen ? <X className="w-6 h-6 text-amber-600" /> : <Menu className="w-6 h-6 text-slate-900" />}
           </button>
         </div>
       </header>
 
-      {/* Mobile Drawer Menu */}
+      {/* Mobile Drawer */}
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="fixed inset-0 z-40 bg-white/98 backdrop-blur-2xl pt-28 px-6 pb-10 flex flex-col justify-between lg:hidden border-b border-slate-200 overflow-y-auto"
+            className="fixed inset-0 z-30 bg-white pt-36 px-6 pb-10 flex flex-col justify-between lg:hidden border-b border-slate-200 overflow-y-auto"
           >
             <div className="space-y-2">
-              <div className="text-xs font-mono text-cyan-600 uppercase tracking-widest mb-4">Navigation Menu</div>
+              <div className="text-xs font-mono text-slate-500 uppercase tracking-widest mb-4">Corporate Navigation</div>
               {navLinks.map((link) => {
                 const isActive = location === link.href;
                 return (
@@ -129,12 +150,12 @@ export function Navbar({ onOpenInquiry, onReplaySplash }: NavbarProps) {
                     key={link.name} 
                     href={link.href} 
                     onClick={() => setMobileMenuOpen(false)}
-                    className={`text-lg font-serif font-medium border-b border-slate-100 pb-3 flex items-center justify-between ${
-                      isActive ? "text-amber-500 font-bold" : "text-slate-800"
+                    className={`text-base font-serif font-medium border-b border-slate-100 pb-3 flex items-center justify-between ${
+                      isActive ? "text-amber-600 font-bold" : "text-slate-800"
                     }`}
                   >
                     <span>{link.name}</span>
-                    <ChevronRight className="w-5 h-5 text-cyan-600" />
+                    <ChevronRight className="w-4 h-4 text-slate-400" />
                   </Link>
                 );
               })}
@@ -143,11 +164,11 @@ export function Navbar({ onOpenInquiry, onReplaySplash }: NavbarProps) {
             <div className="pt-6 border-t border-slate-200 space-y-4">
               <Button 
                 onClick={() => { setMobileMenuOpen(false); onOpenInquiry(); }} 
-                className="w-full h-12 text-sm font-bold bg-gradient-to-r from-amber-400 to-cyan-500 text-slate-950 clip-diagonal cursor-pointer"
+                className="w-full h-12 text-xs font-bold uppercase font-serif bg-[#0F172A] text-white cursor-pointer rounded-lg"
               >
-                Connect With Us Today
+                Schedule Executive Consultation
               </Button>
-              <div className="text-center text-xs font-mono text-slate-500">
+              <div className="text-center text-xs text-slate-500">
                 India: +91-7984171515 • USA: +1-272-267-9294
               </div>
             </div>
