@@ -23,7 +23,7 @@ export function Footer({ onReplaySplash, onOpenInquiry }: FooterProps) {
           <div className="lg:col-span-4 space-y-6">
             <div className="inline-block p-3 rounded-2xl bg-slate-900/90 border border-amber-400/80 shadow-[0_0_30px_rgba(245,183,0,0.35)] backdrop-blur-xl">
               <img 
-                src="/logo-transparent.png" 
+                src={`${import.meta.env.BASE_URL}logo-transparent.png`} 
                 alt="OneTrade360 Logo" 
                 className="h-20 sm:h-24 w-auto object-contain max-w-[260px] drop-shadow-[0_0_12px_rgba(255,255,255,0.7)]" 
               />

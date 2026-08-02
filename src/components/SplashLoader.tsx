@@ -93,7 +93,7 @@ export function SplashLoader({ onComplete }: SplashLoaderProps) {
                 className="relative z-10 w-56 h-56 sm:w-72 sm:h-72 rounded-3xl bg-slate-900/90 border-2 border-amber-400/80 p-5 shadow-[0_0_70px_rgba(245,183,0,0.4)] backdrop-blur-2xl flex items-center justify-center overflow-hidden"
               >
                 <img 
-                  src="/logo-transparent.png" 
+                  src={`${import.meta.env.BASE_URL}logo-transparent.png`} 
                   alt="OneTrade360° Global Network Logo" 
                   className="w-full h-full object-contain transform hover:scale-105 transition-transform duration-500 drop-shadow-[0_0_15px_rgba(255,255,255,0.7)]"
                 />

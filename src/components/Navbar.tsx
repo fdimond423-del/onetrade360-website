@@ -53,7 +53,7 @@ export function Navbar({ onOpenInquiry, onReplaySplash }: NavbarProps) {
               className="relative p-2.5 rounded-2xl bg-slate-900/90 border-2 border-amber-400/80 shadow-[0_0_30px_rgba(245,183,0,0.4)] backdrop-blur-xl group-hover:shadow-[0_0_40px_rgba(56,189,248,0.6)] transition-all duration-300"
             >
               <img 
-                src="/logo-transparent.png" 
+                src={`${import.meta.env.BASE_URL}logo-transparent.png`} 
                 alt="OneTrade360 Logo" 
                 className="h-12 sm:h-14 w-auto object-contain max-w-[200px] drop-shadow-[0_0_12px_rgba(255,255,255,0.7)]" 
               />
