@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, Send, CheckCircle2, Globe, Mail, Phone, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import logoImg from "@/assets/logo.jpeg";
+import logoImg from "@/assets/logo-transparent.png";
 
 interface InquiryModalProps {
   isOpen: boolean;
@@ -38,7 +38,7 @@ export function InquiryModal({ isOpen, onClose }: InquiryModalProps) {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={onClose}
-            className="fixed inset-0 bg-[#040711]/85 backdrop-blur-md"
+            className="fixed inset-0 bg-[#040711]/85 backdrop-blur-md cursor-pointer"
           />
 
           {/* Modal Content */}
@@ -53,7 +53,7 @@ export function InquiryModal({ isOpen, onClose }: InquiryModalProps) {
 
             <button
               onClick={onClose}
-              className="absolute top-4 right-4 p-2 text-slate-400 hover:text-white rounded-full bg-white/5 hover:bg-white/10 transition-colors"
+              className="absolute top-4 right-4 p-2 text-slate-400 hover:text-white rounded-full bg-white/5 hover:bg-white/10 transition-colors cursor-pointer"
             >
               <X className="w-5 h-5" />
             </button>
@@ -75,8 +75,8 @@ export function InquiryModal({ isOpen, onClose }: InquiryModalProps) {
               <div>
                 {/* Logo & Header */}
                 <div className="flex items-center gap-3 mb-6 pb-4 border-b border-white/10">
-                  <div className="p-1.5 rounded-xl bg-white border border-amber-400/80">
-                    <img src={logoImg} alt="Logo" className="h-11 w-auto object-contain rounded-lg" />
+                  <div className="p-2 rounded-xl bg-slate-900 border border-amber-400/80 shadow-[0_0_20px_rgba(245,183,0,0.3)]">
+                    <img src={logoImg} alt="Logo" className="h-12 w-auto object-contain filter drop-shadow-[0_0_8px_rgba(255,255,255,0.7)]" />
                   </div>
                   <div>
                     <h3 className="text-lg font-serif font-bold text-white">Connect with OneTrade360™</h3>
@@ -136,7 +136,7 @@ export function InquiryModal({ isOpen, onClose }: InquiryModalProps) {
                     <select
                       value={formData.interest}
                       onChange={(e) => setFormData({ ...formData, interest: e.target.value })}
-                      className="w-full bg-slate-900/90 border border-white/10 rounded-xl px-3 py-2.5 text-sm text-white focus:outline-none focus:border-cyan-400 transition-colors font-sans"
+                      className="w-full bg-slate-900/90 border border-white/10 rounded-xl px-3 py-2.5 text-sm text-white focus:outline-none focus:border-cyan-400 transition-colors font-sans cursor-pointer"
                     >
                       <option value="Restaurant & Café Solutions">Restaurant & Café Solutions</option>
                       <option value="Convenience Store Solutions">Convenience Store & Gas Station Solutions</option>
@@ -160,7 +160,7 @@ export function InquiryModal({ isOpen, onClose }: InquiryModalProps) {
                     />
                   </div>
 
-                  <Button type="submit" className="w-full h-12 bg-gradient-to-r from-amber-400 via-amber-500 to-cyan-500 text-slate-950 font-bold hover:brightness-110 clip-diagonal flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(245,183,0,0.3)]">
+                  <Button type="submit" className="w-full h-12 bg-gradient-to-r from-amber-400 via-amber-500 to-cyan-500 text-slate-950 font-bold hover:brightness-110 clip-diagonal flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(245,183,0,0.3)] cursor-pointer">
                     Submit Inquiry
                     <Send className="w-4 h-4" />
                   </Button>
