@@ -40,43 +40,38 @@ export function Navbar({ onOpenInquiry, onReplaySplash }: NavbarProps) {
       <header 
         className={`fixed top-0 w-full z-50 transition-all duration-300 ${
           isScrolled 
-            ? "bg-[#060A14]/90 backdrop-blur-2xl border-b border-white/10 py-2.5 shadow-[0_10px_40px_rgba(0,0,0,0.6)]" 
-            : "bg-gradient-to-b from-[#060A14] via-[#060A14]/70 to-transparent py-4"
+            ? "bg-[#060A14]/90 backdrop-blur-2xl border-b border-white/10 py-3 shadow-[0_10px_40px_rgba(0,0,0,0.6)]" 
+            : "bg-gradient-to-b from-[#060A14] via-[#060A14]/80 to-transparent py-4"
         }`}
       >
         <div className="container mx-auto px-4 sm:px-6 flex items-center justify-between">
           
-          {/* Prominent Large Logo Badge */}
+          {/* Prominent Large Logo Badge with Transparent Background */}
           <Link href="/" className="flex items-center gap-3.5 z-50 group">
-            <div className="relative p-1 rounded-2xl bg-white/95 border-2 border-amber-400/80 shadow-[0_0_25px_rgba(245,183,0,0.4)] group-hover:scale-105 group-hover:shadow-[0_0_35px_rgba(56,189,248,0.6)] transition-all duration-300 overflow-hidden">
+            <motion.div 
+              whileHover={{ scale: 1.04 }}
+              className="relative p-2.5 rounded-2xl bg-slate-900/90 border-2 border-amber-400/80 shadow-[0_0_30px_rgba(245,183,0,0.4)] backdrop-blur-xl group-hover:shadow-[0_0_40px_rgba(56,189,248,0.6)] transition-all duration-300"
+            >
               <img 
-                src="/logo.jpeg" 
+                src="/logo-transparent.png" 
                 alt="OneTrade360 Logo" 
-                className="h-10 sm:h-12 w-auto object-contain max-w-[170px] rounded-xl" 
+                className="h-12 sm:h-14 w-auto object-contain max-w-[200px] drop-shadow-[0_0_12px_rgba(255,255,255,0.7)]" 
               />
-            </div>
-            <div className="hidden xl:flex flex-col">
-              <span className="text-xl font-serif font-extrabold tracking-tight text-white group-hover:text-cyan-400 transition-colors">
-                OneTrade<span className="text-amber-400">360™</span>
-              </span>
-              <span className="text-[9px] font-mono text-slate-400 uppercase tracking-widest -mt-1">
-                Global Business Ecosystem
-              </span>
-            </div>
+            </motion.div>
           </Link>
           
           {/* Main Navigation Links */}
-          <nav className="hidden lg:flex items-center gap-1 xl:gap-2 px-3 py-1.5 rounded-full bg-slate-900/60 border border-white/10 backdrop-blur-md">
+          <nav className="hidden lg:flex items-center gap-1 xl:gap-2 px-4 py-2 rounded-full bg-slate-900/70 border border-white/10 backdrop-blur-md shadow-inner">
             {navLinks.map((link) => {
               const isActive = location === link.href;
               return (
                 <Link
                   key={link.name}
                   href={link.href}
-                  className={`px-3 py-1.5 rounded-full text-xs font-semibold font-sans transition-all relative ${
+                  className={`px-3.5 py-1.5 rounded-full text-xs font-semibold font-sans transition-all relative ${
                     isActive
-                      ? "text-slate-950 bg-gradient-to-r from-amber-400 to-cyan-400 font-bold shadow-[0_0_15px_rgba(56,189,248,0.3)]"
-                      : "text-slate-300 hover:text-white hover:bg-white/5"
+                      ? "text-slate-950 bg-gradient-to-r from-amber-400 via-amber-500 to-cyan-400 font-bold shadow-[0_0_20px_rgba(56,189,248,0.4)]"
+                      : "text-slate-300 hover:text-white hover:bg-white/10"
                   }`}
                 >
                   {link.name}
@@ -99,7 +94,7 @@ export function Navbar({ onOpenInquiry, onReplaySplash }: NavbarProps) {
 
             <Button 
               onClick={onOpenInquiry} 
-              className="bg-gradient-to-r from-amber-400 via-amber-500 to-cyan-500 text-slate-950 font-bold hover:brightness-110 clip-diagonal shadow-[0_0_20px_rgba(245,183,0,0.3)] h-10 px-5 text-xs tracking-wide uppercase font-mono"
+              className="bg-gradient-to-r from-amber-400 via-amber-500 to-cyan-500 text-slate-950 font-bold hover:brightness-110 clip-diagonal shadow-[0_0_25px_rgba(245,183,0,0.4)] h-11 px-6 text-xs tracking-wide uppercase font-mono"
             >
               Get Started
             </Button>
@@ -107,7 +102,7 @@ export function Navbar({ onOpenInquiry, onReplaySplash }: NavbarProps) {
 
           {/* Mobile Menu Button */}
           <button 
-            className="lg:hidden z-50 p-2 text-white bg-slate-900/80 border border-white/10 rounded-xl" 
+            className="lg:hidden z-50 p-2.5 text-white bg-slate-900/90 border border-white/10 rounded-2xl shadow-md" 
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             {mobileMenuOpen ? <X className="w-6 h-6 text-amber-400" /> : <Menu className="w-6 h-6 text-cyan-400" />}
@@ -122,7 +117,7 @@ export function Navbar({ onOpenInquiry, onReplaySplash }: NavbarProps) {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="fixed inset-0 z-40 bg-[#060A14]/98 backdrop-blur-2xl pt-28 px-6 pb-10 flex flex-col justify-between lg:hidden border-b border-white/10 overflow-y-auto"
+            className="fixed inset-0 z-40 bg-[#060A14]/98 backdrop-blur-2xl pt-32 px-6 pb-10 flex flex-col justify-between lg:hidden border-b border-white/10 overflow-y-auto"
           >
             <div className="space-y-2">
               <div className="text-xs font-mono text-cyan-400 uppercase tracking-widest mb-4">Navigation Menu</div>

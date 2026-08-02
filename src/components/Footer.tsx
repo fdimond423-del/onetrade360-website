@@ -9,7 +9,7 @@ interface FooterProps {
 
 export function Footer({ onReplaySplash, onOpenInquiry }: FooterProps) {
   return (
-    <footer className="bg-[#03060D] border-t border-white/10 text-slate-400 text-sm relative overflow-hidden">
+    <footer className="bg-[#03060D] border-t border-white/10 text-slate-400 text-sm relative overflow-hidden font-sans">
       {/* Ambient background glows */}
       <div className="absolute bottom-0 left-1/4 w-[500px] h-[300px] bg-cyan-500/5 rounded-full blur-[140px] pointer-events-none" />
       <div className="absolute bottom-0 right-1/4 w-[400px] h-[300px] bg-amber-500/5 rounded-full blur-[140px] pointer-events-none" />
@@ -19,18 +19,18 @@ export function Footer({ onReplaySplash, onOpenInquiry }: FooterProps) {
         {/* Top Grid */}
         <div className="grid lg:grid-cols-12 gap-10 pb-12 border-b border-white/10">
           
-          {/* Column 1: Brand & Logo */}
+          {/* Column 1: Brand & Large Logo */}
           <div className="lg:col-span-4 space-y-6">
-            <div className="inline-block p-2 rounded-2xl bg-white/95 border border-amber-400/80 shadow-[0_0_25px_rgba(245,183,0,0.3)]">
+            <div className="inline-block p-3 rounded-2xl bg-slate-900/90 border border-amber-400/80 shadow-[0_0_30px_rgba(245,183,0,0.35)] backdrop-blur-xl">
               <img 
-                src="/logo.jpeg" 
+                src="/logo-transparent.png" 
                 alt="OneTrade360 Logo" 
-                className="h-16 sm:h-20 w-auto object-contain max-w-[240px] rounded-xl" 
+                className="h-20 sm:h-24 w-auto object-contain max-w-[260px] drop-shadow-[0_0_12px_rgba(255,255,255,0.7)]" 
               />
             </div>
             
             <p className="text-slate-300 text-sm font-light leading-relaxed max-w-sm">
-              <strong className="text-white font-medium">OneTrade360™</strong> — The Complete Business Ecosystem for Retail, Hospitality, Manufacturing & Global Trade. One Platform. Global Connections. Endless Opportunities.
+              <strong className="text-white font-medium">OneTrade360™</strong> — The Complete Business Ecosystem for Retail, Hospitality, Healthcare, Manufacturing & Global Trade. One Platform. Global Connections. Endless Opportunities.
             </p>
 
             <div className="flex items-center gap-3 font-mono text-xs text-cyan-400 bg-cyan-500/10 border border-cyan-500/20 px-3.5 py-2 rounded-xl w-fit">
@@ -69,7 +69,7 @@ export function Footer({ onReplaySplash, onOpenInquiry }: FooterProps) {
             </ul>
           </div>
 
-          {/* Column 3: Key Solutions */}
+          {/* Column 3: Key Platforms */}
           <div className="lg:col-span-2 space-y-4">
             <h4 className="text-white font-serif font-bold text-base tracking-wide uppercase font-mono text-amber-400">
               Key Platforms
@@ -92,7 +92,7 @@ export function Footer({ onReplaySplash, onOpenInquiry }: FooterProps) {
             </h4>
             
             <div className="space-y-3 text-xs font-mono">
-              <div className="p-3 rounded-xl bg-slate-900/80 border border-white/10 space-y-1">
+              <div className="p-3 rounded-xl bg-slate-900/90 border border-white/10 space-y-1">
                 <div className="text-slate-400 uppercase text-[10px]">India Office Line</div>
                 <div className="text-white font-bold flex items-center gap-2 text-sm">
                   <Phone className="w-4 h-4 text-emerald-400" />
@@ -100,7 +100,7 @@ export function Footer({ onReplaySplash, onOpenInquiry }: FooterProps) {
                 </div>
               </div>
 
-              <div className="p-3 rounded-xl bg-slate-900/80 border border-white/10 space-y-1">
+              <div className="p-3 rounded-xl bg-slate-900/90 border border-white/10 space-y-1">
                 <div className="text-slate-400 uppercase text-[10px]">USA Headquarters Line</div>
                 <div className="text-white font-bold flex items-center gap-2 text-sm">
                   <Phone className="w-4 h-4 text-cyan-400" />
@@ -108,7 +108,7 @@ export function Footer({ onReplaySplash, onOpenInquiry }: FooterProps) {
                 </div>
               </div>
 
-              <div className="p-3 rounded-xl bg-slate-900/80 border border-white/10 space-y-1">
+              <div className="p-3 rounded-xl bg-slate-900/90 border border-white/10 space-y-1">
                 <div className="text-slate-400 uppercase text-[10px]">Direct Email</div>
                 <div className="text-white font-bold flex items-center gap-2 text-xs truncate">
                   <Mail className="w-4 h-4 text-amber-400 shrink-0" />

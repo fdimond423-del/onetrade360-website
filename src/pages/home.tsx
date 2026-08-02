@@ -160,7 +160,7 @@ export default function Home() {
                   {/* Card Header with Prominent Large Logo Image */}
                   <div className="flex flex-col items-center sm:items-start sm:flex-row sm:justify-between mb-6 pb-6 border-b border-white/10 gap-4">
                     <div className="p-2 rounded-2xl bg-white/95 border-2 border-amber-400/80 shadow-[0_0_25px_rgba(245,183,0,0.4)]">
-                      <img src="/logo.jpeg" alt="OneTrade360 Logo" className="h-16 w-auto object-contain max-w-[200px] rounded-xl" />
+                      <img src="/logo-transparent.png" alt="OneTrade360 Logo" className="h-16 sm:h-20 w-auto object-contain max-w-[240px] drop-shadow-[0_0_12px_rgba(255,255,255,0.7)]" />
                     </div>
                     <span className="px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-mono flex items-center gap-1.5 font-bold self-start">
                       <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
