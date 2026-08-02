@@ -10,23 +10,19 @@ interface FooterProps {
 
 export function Footer({ onReplaySplash, onOpenInquiry }: FooterProps) {
   return (
-    <footer className="bg-[#03060D] border-t border-white/10 text-slate-400 text-sm relative overflow-hidden font-sans">
-      {/* Ambient background glows */}
-      <div className="absolute bottom-0 left-1/4 w-[500px] h-[300px] bg-cyan-500/5 rounded-full blur-[140px] pointer-events-none" />
-      <div className="absolute bottom-0 right-1/4 w-[400px] h-[300px] bg-amber-500/5 rounded-full blur-[140px] pointer-events-none" />
-
+    <footer className="bg-slate-900 border-t border-slate-800 text-slate-400 text-sm relative overflow-hidden font-sans">
       <div className="container mx-auto px-4 sm:px-6 pt-16 pb-12 relative z-10">
         
         {/* Top Grid */}
-        <div className="grid lg:grid-cols-12 gap-10 pb-12 border-b border-white/10">
+        <div className="grid lg:grid-cols-12 gap-10 pb-12 border-b border-slate-800">
           
           {/* Column 1: Brand & Large Logo */}
           <div className="lg:col-span-4 space-y-6">
-            <div className="inline-block p-3 rounded-2xl bg-slate-900/90 border border-amber-400/80 shadow-[0_0_30px_rgba(245,183,0,0.35)] backdrop-blur-xl">
+            <div className="inline-block p-3 rounded-2xl bg-white border-2 border-amber-400 shadow-[0_4px_25px_rgba(245,183,0,0.3)]">
               <img 
                 src={logoImg} 
                 alt="OneTrade360 Logo" 
-                className="h-20 sm:h-24 w-auto object-contain max-w-[260px] filter drop-shadow-[0_0_12px_rgba(255,255,255,0.75)]" 
+                className="h-20 sm:h-24 w-auto object-contain max-w-[260px]" 
               />
             </div>
             
@@ -93,7 +89,7 @@ export function Footer({ onReplaySplash, onOpenInquiry }: FooterProps) {
             </h4>
             
             <div className="space-y-3 text-xs font-mono">
-              <div className="p-3 rounded-xl bg-slate-900/90 border border-white/10 space-y-1">
+              <div className="p-3 rounded-xl bg-slate-800/90 border border-slate-700 space-y-1">
                 <div className="text-slate-400 uppercase text-[10px]">India Office Line</div>
                 <div className="text-white font-bold flex items-center gap-2 text-sm">
                   <Phone className="w-4 h-4 text-emerald-400" />
@@ -101,7 +97,7 @@ export function Footer({ onReplaySplash, onOpenInquiry }: FooterProps) {
                 </div>
               </div>
 
-              <div className="p-3 rounded-xl bg-slate-900/90 border border-white/10 space-y-1">
+              <div className="p-3 rounded-xl bg-slate-800/90 border border-slate-700 space-y-1">
                 <div className="text-slate-400 uppercase text-[10px]">USA Headquarters Line</div>
                 <div className="text-white font-bold flex items-center gap-2 text-sm">
                   <Phone className="w-4 h-4 text-cyan-400" />
@@ -109,7 +105,7 @@ export function Footer({ onReplaySplash, onOpenInquiry }: FooterProps) {
                 </div>
               </div>
 
-              <div className="p-3 rounded-xl bg-slate-900/90 border border-white/10 space-y-1">
+              <div className="p-3 rounded-xl bg-slate-800/90 border border-slate-700 space-y-1">
                 <div className="text-slate-400 uppercase text-[10px]">Direct Email</div>
                 <div className="text-white font-bold flex items-center gap-2 text-xs truncate">
                   <Mail className="w-4 h-4 text-amber-400 shrink-0" />
