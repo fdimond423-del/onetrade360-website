@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap');
 @import 'tailwindcss';
 @import 'tw-animate-css';
 @plugin "@tailwindcss/typography";
@@ -51,27 +51,24 @@
 }
 
 :root {
-  --background: 226 50% 6%; 
+  --background: 226 50% 5%; 
   --foreground: 0 0% 100%;
 
   --border: 226 30% 16%;
   --input: 226 30% 16%;
-  --ring: 43 100% 60%;
+  --ring: 190 100% 50%;
 
-  --card: 226 40% 9%;
+  --card: 226 40% 8%;
   --card-foreground: 0 0% 100%;
   --card-border: 226 30% 16%;
 
-  --sidebar: 226 50% 6%;
+  --sidebar: 226 50% 5%;
   --sidebar-foreground: 0 0% 100%;
   --sidebar-border: 226 30% 16%;
-  --sidebar-primary: 43 100% 60%;
-  --sidebar-primary-foreground: 226 50% 6%;
-  --sidebar-accent: 226 30% 16%;
-  --sidebar-accent-foreground: 0 0% 100%;
-  --sidebar-ring: 43 100% 60%;
+  --sidebar-primary: 190 100% 50%;
+  --sidebar-primary-foreground: 226 50% 5%;
 
-  --popover: 226 40% 9%;
+  --popover: 226 40% 8%;
   --popover-foreground: 0 0% 100%;
   --popover-border: 226 30% 16%;
 
@@ -84,32 +81,17 @@
   --muted: 226 30% 16%;
   --muted-foreground: 215 14% 65%;
 
-  --accent: 226 30% 16%;
+  --accent: 190 100% 50%;
   --accent-foreground: 0 0% 100%;
 
   --destructive: 0 84% 60%;
   --destructive-foreground: 0 0% 100%;
 
-  --chart-1: 43 100% 60%;
-  --chart-2: 215 100% 60%;
-  --chart-3: 160 100% 40%;
-  --chart-4: 280 100% 60%;
-  --chart-5: 340 100% 60%;
-
   --app-font-sans: 'Inter', sans-serif;
   --app-font-serif: 'Space Grotesk', sans-serif;
   --app-font-mono: 'Space Mono', monospace;
   
-  --radius: 0.25rem;
-  --button-outline: rgba(255, 255, 255, 0.1);
-  --badge-outline: rgba(255, 255, 255, 0.05);
-  --opaque-button-border-intensity: 9;
-  --elevate-1: rgba(255, 255, 255, 0.04);
-  --elevate-2: rgba(255, 255, 255, 0.09);
-}
-
-.dark {
-  /* Same as root because we enforce dark mode */
+  --radius: 0.5rem;
 }
 
 @layer base {
@@ -122,10 +104,9 @@
   }
 
   body {
-    @apply font-sans antialiased bg-background text-foreground;
+    @apply font-sans antialiased bg-[#060A14] text-slate-100 selection:bg-cyan-500 selection:text-slate-950;
   }
 
-  
   h1, h2, h3, h4, h5, h6 {
     @apply font-serif tracking-tight;
   }
@@ -139,74 +120,69 @@
   clip-path: polygon(0 0, 100% 0, 100% calc(100% - 28px), calc(100% - 28px) 100%, 0 100%);
 }
 
-.bg-grid-white {
-  background-size: 40px 40px;
-  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+.bg-grid-cyber {
+  background-size: 50px 50px;
+  background-image: 
+    linear-gradient(to right, rgba(56, 189, 248, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(56, 189, 248, 0.04) 1px, transparent 1px);
 }
 
-.bg-radial-glow {
-  background: radial-gradient(circle at 50% 50%, rgba(245, 183, 0, 0.15), transparent 70%);
-}
-
-.glow-effect {
-  box-shadow: 0 0 40px -10px hsl(var(--primary) / 0.5);
-}
-
-.glow-gold-lg {
-  box-shadow: 0 0 60px -5px rgba(245, 183, 0, 0.35);
+.bg-dots-cyber {
+  background-size: 30px 30px;
+  background-image: radial-gradient(circle, rgba(99, 102, 241, 0.15) 1px, transparent 1px);
 }
 
 .glass-card {
-  background: rgba(15, 25, 45, 0.65);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  background: rgba(11, 18, 36, 0.65);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
+.glass-card-hover {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.glass-card-hover:hover {
+  border-color: rgba(56, 189, 248, 0.4);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -15px rgba(56, 189, 248, 0.15);
+}
+
+.glass-card-cyber {
+  background: rgba(13, 22, 45, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.45);
+}
+
 .glass-card-gold {
-  background: rgba(15, 25, 45, 0.7);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  background: rgba(18, 22, 38, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   border: 1px solid rgba(245, 183, 0, 0.25);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.45);
 }
 
-/* Custom Animations */
-@keyframes spin-slow {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes spin-reverse-slow {
-  from {
-    transform: rotate(360deg);
-  }
-  to {
-    transform: rotate(0deg);
-  }
-}
-
-@keyframes float-gentle {
+/* Animations */
+@keyframes pulse-cyan {
   0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-}
-
-@keyframes pulse-gold {
-  0%, 100% {
-    opacity: 0.4;
+    opacity: 0.35;
     transform: scale(1);
   }
   50% {
-    opacity: 0.9;
+    opacity: 0.8;
+    transform: scale(1.06);
+  }
+}
+
+@keyframes pulse-indigo {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
     transform: scale(1.08);
   }
 }
@@ -220,23 +196,24 @@
   }
 }
 
-.animate-spin-slow {
-  animation: spin-slow 25s linear infinite;
+.animate-pulse-cyan {
+  animation: pulse-cyan 4s ease-in-out infinite;
 }
 
-.animate-spin-reverse-slow {
-  animation: spin-reverse-slow 35s linear infinite;
-}
-
-.animate-float {
-  animation: float-gentle 4s ease-in-out infinite;
-}
-
-.animate-pulse-gold {
-  animation: pulse-gold 3s ease-in-out infinite;
+.animate-pulse-indigo {
+  animation: pulse-indigo 5s ease-in-out infinite;
 }
 
 .shimmer-text {
+  background: linear-gradient(90deg, #ffffff 0%, #38bdf8 30%, #f5b700 70%, #ffffff 100%);
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: shimmer 4s linear infinite;
+}
+
+.shimmer-text-gold {
   background: linear-gradient(90deg, #ffffff 0%, #f5b700 50%, #ffffff 100%);
   background-size: 200% auto;
   color: transparent;
@@ -245,20 +222,17 @@
   animation: shimmer 4s linear infinite;
 }
 
-/* Custom Scrollbar */
+/* Scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
 }
-
 ::-webkit-scrollbar-track {
-  background: hsl(226, 50%, 6%);
+  background: #060A14;
 }
-
 ::-webkit-scrollbar-thumb {
-  background: hsl(226, 30%, 20%);
+  background: #1E293B;
   border-radius: 4px;
 }
-
 ::-webkit-scrollbar-thumb:hover {
-  background: hsl(43, 100%, 60%);
+  background: #38BDF8;
 }
