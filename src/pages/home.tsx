@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "wouter";
-import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { Counter } from "@/components/Counter";
 import { SplashLoader } from "@/components/SplashLoader";
 import { InquiryModal } from "@/components/InquiryModal";
@@ -14,19 +14,19 @@ import {
   Globe, Building2, TrendingUp, Box, Shield, Activity, 
   Cpu, Layers, ArrowRight, ChevronRight, CheckCircle2, Factory, MonitorSmartphone, MapPin, Phone, Mail,
   Sparkles, Zap, Lock, RefreshCw, Briefcase, Award, ArrowUpRight, MessageSquare, ShieldCheck, Target, Compass,
-  DollarSign, ShoppingCart, Hotel, Utensils, Stethoscope, Store, Play, BarChart3, Radio
+  DollarSign, ShoppingCart, Hotel, Utensils, Stethoscope, Store, Play, BarChart3, Radio, ArrowDownRight, Users, Grid
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { AreaChart, Area, XAxis, YAxis, Tooltip, ResponsiveContainer } from "recharts";
 
 const FADE_UP = {
-  hidden: { opacity: 0, y: 35 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] } }
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] } }
 };
 
 const STAGGER = {
   hidden: { opacity: 0 },
-  visible: { opacity: 1, transition: { staggerChildren: 0.12 } }
+  visible: { opacity: 1, transition: { staggerChildren: 0.1 } }
 };
 
 const storeSkuData = [
@@ -60,7 +60,7 @@ export default function Home() {
       {showSplash && <SplashLoader onComplete={() => setShowSplash(false)} />}
       <InquiryModal isOpen={inquiryOpen} onClose={() => setInquiryOpen(false)} />
       
-      {/* Navigation Bar */}
+      {/* Navigation Header */}
       <Navbar onOpenInquiry={() => setInquiryOpen(true)} onReplaySplash={() => setShowSplash(true)} />
 
       {/* Top Live Ticker */}
@@ -68,222 +68,237 @@ export default function Home() {
         <LiveTicker />
       </div>
 
-      {/* Hero Section - Cyber Luxe Split Banner */}
-      <section className="relative pt-12 pb-24 lg:pt-20 lg:pb-32 overflow-hidden">
-        {/* Background Ambient Glow Spheres */}
-        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-gradient-to-tr from-cyan-500/10 via-amber-500/10 to-indigo-500/10 rounded-full blur-[180px] pointer-events-none" />
-        <div className="absolute top-10 right-10 w-96 h-96 bg-amber-500/10 rounded-full blur-[160px] pointer-events-none animate-pulse-gold" />
-        <div className="absolute bottom-10 left-10 w-96 h-96 bg-cyan-500/10 rounded-full blur-[160px] pointer-events-none animate-pulse-cyan" />
+      {/* SECTION 1: PRO MAX BENTO GRID HERO SHOWCASE */}
+      <section className="relative pt-10 pb-20 lg:pt-16 lg:pb-28 overflow-hidden">
+        {/* Cyber Background Glows */}
+        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[1100px] h-[550px] bg-gradient-to-tr from-cyan-500/10 via-amber-500/10 to-indigo-500/10 rounded-full blur-[190px] pointer-events-none" />
         <div className="absolute inset-0 bg-grid-cyber opacity-15 pointer-events-none" />
 
         <div className="container mx-auto px-4 sm:px-6 relative z-10">
-          <div className="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+          
+          {/* Header Title Bar */}
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-900/90 border border-cyan-400/40 text-cyan-400 text-xs font-mono font-semibold uppercase tracking-widest mb-4 shadow-[0_0_20px_rgba(56,189,248,0.2)]">
+              <Sparkles className="w-4 h-4 text-amber-400 animate-spin-slow" />
+              <span>One Platform. Global Connections. Endless Opportunities.</span>
+            </div>
             
-            {/* Left Column: Hero Text & Main CTAs */}
-            <motion.div 
-              initial="hidden"
-              animate="visible"
-              variants={STAGGER}
-              className="lg:col-span-7 space-y-6 text-center lg:text-left"
-            >
-              {/* Badge Pills */}
-              <motion.div variants={FADE_UP} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-900/90 border border-cyan-400/40 text-cyan-400 text-xs font-mono font-semibold uppercase tracking-wider shadow-[0_0_20px_rgba(56,189,248,0.2)]">
-                <Sparkles className="w-4 h-4 text-amber-400 animate-spin-slow" />
-                <span>One Platform. Global Connections. Endless Opportunities.</span>
-              </motion.div>
+            <h1 className="text-4xl sm:text-6xl xl:text-7xl font-serif font-extrabold tracking-tight text-white leading-[1.1] mb-4">
+              The Complete <span className="shimmer-text">Business Ecosystem</span>
+            </h1>
 
-              {/* Main Headline */}
-              <motion.h1 variants={FADE_UP} className="text-4xl sm:text-6xl xl:text-7xl font-serif font-extrabold tracking-tight text-white leading-[1.1]">
-                The Complete <br />
-                <span className="shimmer-text">Business Ecosystem</span> <br />
-                For Global Trade.
-              </motion.h1>
-
-              {/* Sub-headline */}
-              <motion.p variants={FADE_UP} className="text-base sm:text-lg text-slate-300 font-light max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-                OneTrade360™ brings together entrepreneurs, retailers, investors, manufacturers, suppliers, and service providers across <strong className="text-white font-medium">India 🇮🇳, USA 🇺🇸, and Canada 🇨🇦</strong> into one connected ecosystem.
-              </motion.p>
-
-              {/* CTAs Button Row */}
-              <motion.div variants={FADE_UP} className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
-                <Button 
-                  onClick={() => setInquiryOpen(true)}
-                  className="w-full sm:w-auto h-13 px-8 text-sm font-bold uppercase tracking-wider bg-gradient-to-r from-amber-400 via-amber-500 to-cyan-500 text-slate-950 clip-diagonal shadow-[0_0_30px_rgba(245,183,0,0.4)] hover:brightness-110 transition-all cursor-pointer flex items-center justify-center gap-2.5"
-                >
-                  <span>Explore Ecosystem Solutions</span>
-                  <ArrowRight className="w-4 h-4" />
-                </Button>
-
-                <Link href="/solutions">
-                  <Button 
-                    variant="outline" 
-                    className="w-full sm:w-auto h-13 px-8 text-sm font-bold uppercase tracking-wider border-white/20 text-white bg-slate-900/60 hover:bg-white/10 hover:border-cyan-400 transition-all clip-diagonal cursor-pointer flex items-center justify-center gap-2"
-                  >
-                    <span>View All Services</span>
-                    <ChevronRight className="w-4 h-4 text-cyan-400" />
-                  </Button>
-                </Link>
-              </motion.div>
-
-              {/* Verified Trust Stats Row */}
-              <motion.div variants={FADE_UP} className="pt-6 grid grid-cols-3 gap-4 border-t border-white/10 max-w-lg mx-auto lg:mx-0">
-                <div className="space-y-0.5">
-                  <div className="text-2xl sm:text-3xl font-serif font-extrabold text-white">
-                    <Counter end={1480} suffix="+" />
-                  </div>
-                  <div className="text-[11px] font-mono text-slate-400 uppercase">Retail Stores Synced</div>
-                </div>
-
-                <div className="space-y-0.5 border-l border-white/10 pl-4">
-                  <div className="text-2xl sm:text-3xl font-serif font-extrabold text-amber-400">
-                    <Counter end={120} suffix="+" />
-                  </div>
-                  <div className="text-[11px] font-mono text-slate-400 uppercase">Audited OEM Plants</div>
-                </div>
-
-                <div className="space-y-0.5 border-l border-white/10 pl-4">
-                  <div className="text-2xl sm:text-3xl font-serif font-extrabold text-cyan-400">
-                    <Counter end={3} suffix=" Corridors" />
-                  </div>
-                  <div className="text-[11px] font-mono text-slate-400 uppercase">India • USA • Canada</div>
-                </div>
-              </motion.div>
-            </motion.div>
-
-            {/* Right Column: High-End Glowing Badge Card & Live Interactive Dashboard */}
-            <div className="lg:col-span-5">
-              <motion.div 
-                initial={{ opacity: 0, scale: 0.9, y: 30 }}
-                animate={{ opacity: 1, scale: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.3 }}
-                className="relative"
-              >
-                {/* Glowing Card Container */}
-                <div className="relative glass-card-cyber rounded-3xl p-6 sm:p-8 overflow-hidden group">
-                  <div className="absolute top-0 right-0 w-40 h-40 bg-cyan-500/20 rounded-full blur-3xl pointer-events-none" />
-                  
-                  {/* Card Header with Prominent Large Logo Image */}
-                  <div className="flex flex-col items-center sm:items-start sm:flex-row sm:justify-between mb-6 pb-6 border-b border-white/10 gap-4">
-                    <div className="p-3 rounded-2xl bg-slate-900/90 border-2 border-amber-400/80 shadow-[0_0_35px_rgba(245,183,0,0.4)] backdrop-blur-xl">
-                      <img src={logoImg} alt="OneTrade360 Logo" className="h-16 sm:h-22 w-auto object-contain max-w-[260px] filter drop-shadow-[0_0_12px_rgba(255,255,255,0.75)]" />
-                    </div>
-                    <span className="px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-mono flex items-center gap-1.5 font-bold self-start">
-                      <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
-                      ACTIVE CORRIDOR
-                    </span>
-                  </div>
-
-                  {/* Ecosystem Quick Highlights */}
-                  <div className="space-y-3.5 mb-6">
-                    {[
-                      { title: "Direct Factory OEM Sourcing", tag: "India • USA • Canada", icon: Factory },
-                      { title: "StoreSKU™ AI Retail Engine", tag: "Store Operations", icon: Cpu },
-                      { title: "Turnkey Commercial Setup", tag: "Café, C-Store, Hotel", icon: Building2 },
-                      { title: "Business Acquisition Service", tag: "Buy & Sell Businesses", icon: Briefcase },
-                    ].map((item, idx) => {
-                      const ItemIcon = item.icon;
-                      return (
-                        <div key={idx} className="flex items-center justify-between p-3.5 rounded-2xl bg-slate-900/80 border border-white/10 hover:border-cyan-400/40 transition-colors">
-                          <div className="flex items-center gap-3">
-                            <div className="p-2 rounded-xl bg-amber-400/10 text-amber-400">
-                              <ItemIcon className="w-4 h-4" />
-                            </div>
-                            <span className="text-xs font-medium text-white">{item.title}</span>
-                          </div>
-                          <span className="text-[10px] font-mono px-2.5 py-1 rounded-full bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">
-                            {item.tag}
-                          </span>
-                        </div>
-                      );
-                    })}
-                  </div>
-
-                  {/* Quick Action Button */}
-                  <Button 
-                    onClick={() => setInquiryOpen(true)}
-                    className="w-full h-12 bg-gradient-to-r from-amber-400 to-cyan-400 text-slate-950 font-bold hover:brightness-110 transition-all clip-diagonal flex items-center justify-center gap-2 text-xs uppercase tracking-wider font-mono cursor-pointer"
-                  >
-                    <MessageSquare className="w-4 h-4" />
-                    Connect With OneTrade360™
-                  </Button>
-                </div>
-              </motion.div>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      {/* Global Trade Corridors Interactive Map Section */}
-      <section className="py-20 bg-[#040711] border-t border-b border-white/10 relative overflow-hidden">
-        <div className="container mx-auto px-4 sm:px-6 relative z-10">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-400/10 border border-amber-400/30 text-amber-400 text-xs font-mono font-semibold uppercase tracking-wider mb-4">
-              <Globe className="w-4 h-4 text-cyan-400" />
-              Global Corridors Network
-            </div>
-            <h2 className="text-3xl sm:text-5xl font-serif font-extrabold text-white mb-4">
-              Connecting <span className="shimmer-text">India, USA & Canada</span>
-            </h2>
-            <p className="text-slate-300 text-sm sm:text-base font-light">
-              Bridge international suppliers, OEM factories, and retail distribution channels through one unified platform.
+            <p className="text-slate-300 text-sm sm:text-base font-light max-w-2xl mx-auto leading-relaxed">
+              Connecting entrepreneurs, retailers, investors, manufacturers, suppliers, and service providers across <strong className="text-white font-medium">India 🇮🇳, USA 🇺🇸, and Canada 🇨🇦</strong> into one intelligent trade network.
             </p>
           </div>
 
-          {/* Interactive Country Selector */}
-          <div className="flex justify-center gap-3 mb-10">
-            {[
-              { id: "india", label: "India Corridor 🇮🇳", desc: "120+ Audited OEM Manufacturing Plants" },
-              { id: "usa", label: "United States Corridor 🇺🇸", desc: "1,480+ Retail Stores & Commercial Units" },
-              { id: "canada", label: "Canada Corridor 🇨🇦", desc: "Wholesale & Cross-Border Logistics" },
-            ].map((tab) => (
-              <button
-                key={tab.id}
-                onClick={() => setActiveCorridor(tab.id as any)}
-                className={`px-5 py-3 rounded-2xl text-xs sm:text-sm font-semibold font-sans transition-all cursor-pointer border ${
-                  activeCorridor === tab.id
-                    ? "bg-gradient-to-r from-amber-400 to-cyan-400 text-slate-950 border-amber-400 font-bold shadow-[0_0_25px_rgba(245,183,0,0.4)]"
-                    : "bg-slate-900/80 text-slate-300 border-white/10 hover:border-white/30"
-                }`}
-              >
-                {tab.label}
-              </button>
-            ))}
-          </div>
+          {/* MAIN BENTO GRID LANDING SHOWCASE */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+            
+            {/* Bento Cell 1: Prominent Large Logo Shield (2 Cols on Large Screens) */}
+            <motion.div 
+              whileHover={{ y: -4 }}
+              className="lg:col-span-2 glass-card-cyber rounded-3xl p-6 sm:p-8 flex flex-col justify-between border-2 border-amber-400/60 shadow-[0_0_40px_rgba(245,183,0,0.25)] relative overflow-hidden group"
+            >
+              <div className="absolute top-0 right-0 w-48 h-48 bg-amber-500/10 rounded-full blur-3xl pointer-events-none" />
 
-          {/* Active Corridor Card Info */}
-          <div className="max-w-4xl mx-auto glass-card-cyber rounded-3xl p-8 border border-cyan-400/30 shadow-[0_0_50px_rgba(56,189,248,0.15)]">
-            <div className="grid md:grid-cols-3 gap-6 text-center">
-              <div className="p-4 rounded-2xl bg-slate-900/80 border border-white/10">
-                <div className="text-amber-400 text-xs font-mono uppercase mb-1">Direct Factory Verification</div>
-                <div className="text-white font-bold text-lg">100% On-Site Audited</div>
+              <div className="flex flex-col sm:flex-row items-center justify-between gap-6 mb-6 pb-6 border-b border-white/10">
+                <div className="p-3 rounded-2xl bg-slate-900/95 border-2 border-amber-400/90 shadow-[0_0_35px_rgba(245,183,0,0.4)] backdrop-blur-xl">
+                  <img 
+                    src={logoImg} 
+                    alt="OneTrade360 Logo" 
+                    className="h-16 sm:h-22 w-auto object-contain max-w-[260px] filter drop-shadow-[0_0_15px_rgba(255,255,255,0.8)]" 
+                  />
+                </div>
+
+                <div className="flex flex-col items-center sm:items-end gap-1.5">
+                  <span className="px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-mono font-bold flex items-center gap-1.5">
+                    <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
+                    SYSTEM ONLINE
+                  </span>
+                  <span className="text-[11px] font-mono text-slate-400">Verified Global B2B Platform</span>
+                </div>
               </div>
-              <div className="p-4 rounded-2xl bg-slate-900/80 border border-white/10">
-                <div className="text-cyan-400 text-xs font-mono uppercase mb-1">Average Shipping Lead Time</div>
-                <div className="text-white font-bold text-lg">14-21 Door-to-Door Days</div>
+
+              <div className="space-y-4">
+                <h3 className="text-2xl font-serif font-bold text-white leading-snug">
+                  One Login. Unlimited Business Opportunities.
+                </h3>
+                <p className="text-xs sm:text-sm text-slate-300 font-light leading-relaxed">
+                  Whether launching your first business, expanding across multiple locations, sourcing products internationally, or investing in new opportunities — OneTrade360™ unifies your entire growth pipeline.
+                </p>
               </div>
-              <div className="p-4 rounded-2xl bg-slate-900/80 border border-white/10">
-                <div className="text-emerald-400 text-xs font-mono uppercase mb-1">Cost Savings Potential</div>
-                <div className="text-white font-bold text-lg">Up to 35% OEM Margin</div>
+
+              <div className="pt-6 flex items-center gap-3">
+                <Button 
+                  onClick={() => setInquiryOpen(true)}
+                  className="h-12 px-6 bg-gradient-to-r from-amber-400 via-amber-500 to-cyan-500 text-slate-950 font-bold uppercase font-mono text-xs clip-diagonal shadow-[0_0_25px_rgba(245,183,0,0.4)] cursor-pointer hover:brightness-110"
+                >
+                  Connect With Us Today
+                  <ArrowRight className="w-4 h-4 ml-1" />
+                </Button>
               </div>
-            </div>
+            </motion.div>
+
+            {/* Bento Cell 2: Global Trade Corridors Status */}
+            <motion.div 
+              whileHover={{ y: -4 }}
+              className="glass-card-cyber rounded-3xl p-6 flex flex-col justify-between border border-cyan-400/40 relative overflow-hidden"
+            >
+              <div className="space-y-4">
+                <div className="w-10 h-10 rounded-2xl bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 flex items-center justify-center">
+                  <Globe className="w-5 h-5 animate-spin-slow" />
+                </div>
+                <div>
+                  <div className="text-xs font-mono text-cyan-400 uppercase tracking-widest mb-1">Trade Corridors</div>
+                  <h4 className="text-xl font-serif font-bold text-white">India • USA • Canada</h4>
+                </div>
+                <p className="text-xs text-slate-300 font-light leading-relaxed">
+                  Direct cross-border sourcing, door-to-door export logistics, and verified manufacturer compliance.
+                </p>
+              </div>
+
+              <div className="pt-4 border-t border-white/10 flex items-center justify-between text-xs font-mono text-slate-400">
+                <span>Lead Time:</span>
+                <span className="text-emerald-400 font-bold">14-21 Days</span>
+              </div>
+            </motion.div>
+
+            {/* Bento Cell 3: StoreSKU™ AI Retail Engine Stats */}
+            <motion.div 
+              whileHover={{ y: -4 }}
+              className="glass-card-cyber rounded-3xl p-6 flex flex-col justify-between border border-white/10 relative overflow-hidden"
+            >
+              <div className="space-y-4">
+                <div className="w-10 h-10 rounded-2xl bg-amber-400/10 border border-amber-400/30 text-amber-400 flex items-center justify-center">
+                  <Cpu className="w-5 h-5" />
+                </div>
+                <div>
+                  <div className="text-xs font-mono text-amber-400 uppercase tracking-widest mb-1">StoreSKU™ Engine</div>
+                  <h4 className="text-2xl font-serif font-bold text-white">
+                    <Counter end={1480} suffix="+" /> Stores
+                  </h4>
+                </div>
+                <p className="text-xs text-slate-300 font-light leading-relaxed">
+                  Daily store operations, inventory tracking, task compliance & live analytics dashboard.
+                </p>
+              </div>
+
+              <div className="pt-4 border-t border-white/10 flex items-center justify-between text-xs font-mono text-slate-400">
+                <span>Sync Status:</span>
+                <span className="text-amber-400 font-bold">Real-Time</span>
+              </div>
+            </motion.div>
+
+            {/* Bento Cell 4: X-ON™ AI Security Telemetry */}
+            <motion.div 
+              whileHover={{ y: -4 }}
+              className="glass-card-cyber rounded-3xl p-6 flex flex-col justify-between border border-white/10 relative overflow-hidden"
+            >
+              <div className="space-y-4">
+                <div className="w-10 h-10 rounded-2xl bg-emerald-400/10 border border-emerald-400/30 text-emerald-400 flex items-center justify-center">
+                  <ShieldCheck className="w-5 h-5" />
+                </div>
+                <div>
+                  <div className="text-xs font-mono text-emerald-400 uppercase tracking-widest mb-1">X-ON™ Surveillance</div>
+                  <h4 className="text-2xl font-serif font-bold text-white">99.9% Safe</h4>
+                </div>
+                <p className="text-xs text-slate-300 font-light leading-relaxed">
+                  Smart AI camera systems, remote loss prevention & incident detection for commercial businesses.
+                </p>
+              </div>
+
+              <div className="pt-4 border-t border-white/10 flex items-center justify-between text-xs font-mono text-slate-400">
+                <span>Threat Filter:</span>
+                <span className="text-emerald-400 font-bold">1.4M / day</span>
+              </div>
+            </motion.div>
+
+            {/* Bento Cell 5: Global OEM Manufacturing (2 Cols) */}
+            <motion.div 
+              whileHover={{ y: -4 }}
+              className="md:col-span-2 glass-card-cyber rounded-3xl p-6 flex flex-col justify-between border border-white/10 relative overflow-hidden"
+            >
+              <div className="flex items-center justify-between mb-4">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-2xl bg-indigo-500/10 border border-indigo-500/30 text-indigo-400 flex items-center justify-center">
+                    <Factory className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <div className="text-xs font-mono text-indigo-400 uppercase tracking-widest">Manufacturing Network</div>
+                    <h4 className="text-lg font-serif font-bold text-white">120+ Audited OEM Plants</h4>
+                  </div>
+                </div>
+
+                <Link href="/manufacturing" className="text-xs font-mono text-cyan-400 hover:text-amber-400 transition-colors flex items-center gap-1">
+                  <span>Factory Portal</span>
+                  <ArrowUpRight className="w-4 h-4" />
+                </Link>
+              </div>
+
+              <p className="text-xs text-slate-300 font-light leading-relaxed mb-4">
+                Source directly from verified factories in Nutraceuticals, Pharma, Cosmetics, Food Packaging, Tissue, Cleaning, and Commercial Kitchen Equipment.
+              </p>
+
+              <div className="grid grid-cols-3 gap-3 text-center text-xs font-mono">
+                <div className="p-2.5 rounded-xl bg-slate-900/80 border border-white/10">
+                  <div className="text-slate-400 text-[10px]">OEM Sourcing</div>
+                  <div className="text-white font-bold">Direct Factory</div>
+                </div>
+                <div className="p-2.5 rounded-xl bg-slate-900/80 border border-white/10">
+                  <div className="text-slate-400 text-[10px]">QA Verification</div>
+                  <div className="text-white font-bold">100% Audited</div>
+                </div>
+                <div className="p-2.5 rounded-xl bg-slate-900/80 border border-white/10">
+                  <div className="text-slate-400 text-[10px]">Margin Boost</div>
+                  <div className="text-emerald-400 font-bold">Up to 35%</div>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Bento Cell 6: Global Business Service™ & Acquisition */}
+            <motion.div 
+              whileHover={{ y: -4 }}
+              className="glass-card-cyber rounded-3xl p-6 flex flex-col justify-between border border-white/10 relative overflow-hidden"
+            >
+              <div className="space-y-4">
+                <div className="w-10 h-10 rounded-2xl bg-amber-400/10 border border-amber-400/30 text-amber-400 flex items-center justify-center">
+                  <Briefcase className="w-5 h-5" />
+                </div>
+                <div>
+                  <div className="text-xs font-mono text-amber-400 uppercase tracking-widest mb-1">Business Acquisition</div>
+                  <h4 className="text-lg font-serif font-bold text-white">Buy & Sell Businesses</h4>
+                </div>
+                <p className="text-xs text-slate-300 font-light leading-relaxed">
+                  Gas Stations, C-Stores, Hotels, Restaurants, Car Washes & Laundromats valuation & consulting.
+                </p>
+              </div>
+
+              <div className="pt-4 border-t border-white/10">
+                <Link href="/consulting" className="inline-flex items-center gap-1.5 text-xs font-mono font-bold text-cyan-400 hover:text-amber-400 transition-colors">
+                  <span>View Services</span>
+                  <ChevronRight className="w-4 h-4" />
+                </Link>
+              </div>
+            </motion.div>
+
           </div>
         </div>
       </section>
 
-      {/* Solutions Ecosystem Cards */}
-      <section className="py-24 relative">
+      {/* SECTION 2: BENTO SOLUTIONS SHOWCASE */}
+      <section className="py-20 bg-[#040711] border-t border-b border-white/10 relative overflow-hidden">
         <div className="container mx-auto px-4 sm:px-6 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-xs font-mono font-semibold uppercase tracking-wider mb-4">
-              <Layers className="w-4 h-4 text-amber-400" />
-              Turnkey Ecosystem Solutions
+              <Grid className="w-4 h-4 text-amber-400" />
+              Turnkey Business Solutions
             </div>
             <h2 className="text-3xl sm:text-5xl font-serif font-extrabold text-white mb-4">
-              One Platform for <span className="shimmer-text">Every Business Need</span>
+              Designed for <span className="shimmer-text">High Performance Operations</span>
             </h2>
             <p className="text-slate-300 text-sm sm:text-base font-light">
-              From concept development to daily AI operations, sourcing, and expansion.
+              From concept development to daily store operational execution.
             </p>
           </div>
 
@@ -291,28 +306,28 @@ export default function Home() {
             {[
               {
                 title: "Restaurant & Café Solutions",
-                desc: "Complete café & restaurant setup, commercial kitchen design, coffee equipment, tea programs, delivery packaging & kiosks.",
+                desc: "Complete café & restaurant setup, commercial kitchen design, coffee equipment, tea programs, beverage solutions, food packaging & kiosks.",
                 icon: Utensils,
                 color: "from-amber-400 to-amber-600",
                 link: "/solutions"
               },
               {
-                title: "C-Store & Gas Station Setup",
-                desc: "StoreSKU™ AI, X-ON™ Security, POS systems, gondola shelving, refrigeration equipment & food service programs.",
+                title: "Convenience Store Solutions",
+                desc: "StoreSKU™ AI, X-ON™ Security, POS systems, gondola shelving, slatwall systems, refrigeration equipment, thermal paper rolls & store supplies.",
                 icon: Store,
                 color: "from-cyan-400 to-blue-600",
                 link: "/solutions"
               },
               {
-                title: "Hospitality & Hotel Supplies",
-                desc: "Hotel/motel furniture, fixtures, security systems, guest amenities, cleaning products & facility equipment.",
+                title: "Hospitality & Hotel Solutions",
+                desc: "Hotel/motel supplies, furniture & fixtures, security systems, cleaning products, tissue products, guest amenities & facility equipment.",
                 icon: Hotel,
                 color: "from-emerald-400 to-teal-600",
                 link: "/solutions"
               },
               {
                 title: "Wholesale & Distribution",
-                desc: "Bulk F&B supply, tissue products, coffee cups, packaging, kitchen equipment & commercial retail fixtures.",
+                desc: "Bulk F&B supply, tissue products, coffee cups, packaging containers, cleaning products, commercial equipment & medical supplies.",
                 icon: Box,
                 color: "from-indigo-400 to-purple-600",
                 link: "/solutions"
@@ -352,8 +367,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Proprietary Technology Suite Dashboard Teaser */}
-      <section className="py-24 bg-[#040711] border-t border-b border-white/10 relative overflow-hidden">
+      {/* SECTION 3: PROPRIETARY AI TECH SUITE CONSOLE */}
+      <section className="py-24 relative overflow-hidden">
         <div className="container mx-auto px-4 sm:px-6 relative z-10">
           <div className="grid lg:grid-cols-12 gap-12 items-center">
             
@@ -464,10 +479,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Interactive ROI Calculator Section */}
+      {/* Interactive Supply Chain ROI Calculator */}
       <TradeCalculator />
 
-      {/* Client Testimonials */}
+      {/* Verified Client Testimonials */}
       <TestimonialsSection />
 
       {/* Final Call to Action Section */}
@@ -482,7 +497,7 @@ export default function Home() {
             </h2>
 
             <p className="text-slate-300 text-sm sm:text-base font-light max-w-2xl mx-auto mb-8 leading-relaxed">
-              Whether you’re opening a new store, sourcing products globally, expanding your business, or investing in the next opportunity, OneTrade360™ gives you access to trusted suppliers, AI technology, and global manufacturing.
+              Whether opening a new store, sourcing products globally, expanding your enterprise, or investing in the next business opportunity — OneTrade360™ gives you direct access to trusted suppliers, AI technology, and global manufacturing.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
