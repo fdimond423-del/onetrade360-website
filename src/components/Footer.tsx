@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "wouter";
 import { Globe, Phone, Mail, MapPin, ChevronRight, RefreshCw, ArrowUpRight, ShieldCheck, Sparkles } from "lucide-react";
+import logoImg from "@/assets/logo.jpeg";
 
 interface FooterProps {
   onReplaySplash?: () => void;
@@ -21,11 +22,11 @@ export function Footer({ onReplaySplash, onOpenInquiry }: FooterProps) {
           
           {/* Column 1: Brand & Large Logo */}
           <div className="lg:col-span-4 space-y-6">
-            <div className="inline-block p-3 rounded-2xl bg-slate-900/90 border border-amber-400/80 shadow-[0_0_30px_rgba(245,183,0,0.35)] backdrop-blur-xl">
+            <div className="inline-block p-2.5 rounded-2xl bg-white border-2 border-amber-400 shadow-[0_0_30px_rgba(245,183,0,0.35)] overflow-hidden">
               <img 
-                src={`${import.meta.env.BASE_URL}logo-transparent.png`} 
+                src={logoImg} 
                 alt="OneTrade360 Logo" 
-                className="h-20 sm:h-24 w-auto object-contain max-w-[260px] drop-shadow-[0_0_12px_rgba(255,255,255,0.7)]" 
+                className="h-20 sm:h-24 w-auto object-contain max-w-[260px] rounded-xl" 
               />
             </div>
             

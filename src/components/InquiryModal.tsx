@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, Send, CheckCircle2, Globe, Mail, Phone, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logoImg from "@/assets/logo.jpeg";
 
 interface InquiryModalProps {
   isOpen: boolean;
@@ -74,8 +75,8 @@ export function InquiryModal({ isOpen, onClose }: InquiryModalProps) {
               <div>
                 {/* Logo & Header */}
                 <div className="flex items-center gap-3 mb-6 pb-4 border-b border-white/10">
-                  <div className="p-1.5 rounded-xl bg-white/95 border border-amber-400/80">
-                    <img src={`${import.meta.env.BASE_URL}logo-transparent.png`} alt="Logo" className="h-12 w-auto object-contain drop-shadow-[0_0_8px_rgba(255,255,255,0.7)]" />
+                  <div className="p-1.5 rounded-xl bg-white border border-amber-400/80">
+                    <img src={logoImg} alt="Logo" className="h-11 w-auto object-contain rounded-lg" />
                   </div>
                   <div>
                     <h3 className="text-lg font-serif font-bold text-white">Connect with OneTrade360™</h3>

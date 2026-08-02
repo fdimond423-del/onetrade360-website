@@ -6,6 +6,7 @@ import {
   Briefcase, Compass, Users, Phone, ArrowUpRight, Sparkles, Layers
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logoImg from "@/assets/logo.jpeg";
 
 interface NavbarProps {
   onOpenInquiry: () => void;
@@ -40,22 +41,22 @@ export function Navbar({ onOpenInquiry, onReplaySplash }: NavbarProps) {
       <header 
         className={`fixed top-0 w-full z-50 transition-all duration-300 ${
           isScrolled 
-            ? "bg-[#060A14]/90 backdrop-blur-2xl border-b border-white/10 py-3 shadow-[0_10px_40px_rgba(0,0,0,0.6)]" 
+            ? "bg-[#060A14]/90 backdrop-blur-2xl border-b border-white/10 py-2.5 shadow-[0_10px_40px_rgba(0,0,0,0.6)]" 
             : "bg-gradient-to-b from-[#060A14] via-[#060A14]/80 to-transparent py-4"
         }`}
       >
         <div className="container mx-auto px-4 sm:px-6 flex items-center justify-between">
           
-          {/* Prominent Large Logo Badge with Transparent Background */}
+          {/* Prominent Large Logo Badge with Original Logo Image */}
           <Link href="/" className="flex items-center gap-3.5 z-50 group">
             <motion.div 
               whileHover={{ scale: 1.04 }}
-              className="relative p-2.5 rounded-2xl bg-slate-900/90 border-2 border-amber-400/80 shadow-[0_0_30px_rgba(245,183,0,0.4)] backdrop-blur-xl group-hover:shadow-[0_0_40px_rgba(56,189,248,0.6)] transition-all duration-300"
+              className="relative p-2 rounded-2xl bg-white border-2 border-amber-400 shadow-[0_0_30px_rgba(245,183,0,0.4)] group-hover:shadow-[0_0_40px_rgba(56,189,248,0.6)] transition-all duration-300 overflow-hidden"
             >
               <img 
-                src={`${import.meta.env.BASE_URL}logo-transparent.png`} 
+                src={logoImg} 
                 alt="OneTrade360 Logo" 
-                className="h-12 sm:h-14 w-auto object-contain max-w-[200px] drop-shadow-[0_0_12px_rgba(255,255,255,0.7)]" 
+                className="h-11 sm:h-14 w-auto object-contain max-w-[210px] rounded-xl" 
               />
             </motion.div>
           </Link>

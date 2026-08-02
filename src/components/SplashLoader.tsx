@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Globe, Sparkles, ShieldCheck, Cpu } from "lucide-react";
+import logoImg from "@/assets/logo.jpeg";
 
 interface SplashLoaderProps {
   onComplete?: () => void;
@@ -65,7 +66,7 @@ export function SplashLoader({ onComplete }: SplashLoaderProps) {
           {/* Main Container */}
           <div className="relative z-10 flex flex-col items-center max-w-xl px-6 text-center">
             
-            {/* Very Large Prominent Transparent Logo Container with Dual Orbit Rings */}
+            {/* Very Large Prominent Logo Container with Dual Orbit Rings */}
             <div className="relative w-72 h-72 sm:w-96 sm:h-96 flex items-center justify-center mb-8">
               {/* Outer Golden Orbit Ring */}
               <motion.div 
@@ -85,17 +86,17 @@ export function SplashLoader({ onComplete }: SplashLoaderProps) {
                 <div className="w-3.5 h-3.5 bg-cyan-400 rounded-full shadow-[0_0_15px_#38BDF8] absolute -bottom-2 left-1/2 -translate-x-1/2" />
               </motion.div>
 
-              {/* Central Shield Container with Large Transparent Logo */}
+              {/* Central Shield Container with Original Logo */}
               <motion.div
                 initial={{ scale: 0.8, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ duration: 0.6, ease: "easeOut" }}
-                className="relative z-10 w-56 h-56 sm:w-72 sm:h-72 rounded-3xl bg-slate-900/90 border-2 border-amber-400/80 p-5 shadow-[0_0_70px_rgba(245,183,0,0.4)] backdrop-blur-2xl flex items-center justify-center overflow-hidden"
+                className="relative z-10 w-56 h-56 sm:w-72 sm:h-72 rounded-3xl bg-white border-4 border-amber-400 p-4 shadow-[0_0_70px_rgba(245,183,0,0.5)] flex items-center justify-center overflow-hidden"
               >
                 <img 
-                  src={`${import.meta.env.BASE_URL}logo-transparent.png`} 
+                  src={logoImg} 
                   alt="OneTrade360° Global Network Logo" 
-                  className="w-full h-full object-contain transform hover:scale-105 transition-transform duration-500 drop-shadow-[0_0_15px_rgba(255,255,255,0.7)]"
+                  className="w-full h-full object-contain transform hover:scale-105 transition-transform duration-500 rounded-2xl"
                 />
               </motion.div>
             </div>
