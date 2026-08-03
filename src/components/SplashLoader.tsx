@@ -67,7 +67,7 @@ export function SplashLoader({ onComplete }: SplashLoaderProps) {
           <div className="relative z-10 flex flex-col items-center max-w-xl px-6 text-center">
             
             {/* Logo Container with Dual Orbit Rings */}
-            <div className="relative w-72 h-72 sm:w-96 sm:h-96 flex items-center justify-center mb-8">
+            <div className="relative w-64 h-64 sm:w-[340px] sm:h-[340px] mt-4 flex items-center justify-center mb-8">
               {/* Outer Gold Orbit Ring */}
               <motion.div 
                 animate={{ rotate: 360 }}
@@ -91,7 +91,7 @@ export function SplashLoader({ onComplete }: SplashLoaderProps) {
                 initial={{ scale: 0.8, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ duration: 0.6, ease: "easeOut" }}
-                className="relative z-10 w-56 h-56 sm:w-72 sm:h-72 rounded-3xl bg-white border-2 border-amber-400 p-4 shadow-[0_20px_60px_rgba(245,158,11,0.25)] flex items-center justify-center overflow-hidden"
+                className="relative z-10 w-48 h-48 sm:w-[260px] sm:h-[260px] rounded-3xl bg-white border-2 border-amber-400 p-4 shadow-[0_20px_60px_rgba(245,158,11,0.25)] flex items-center justify-center overflow-hidden"
               >
                 <img 
                   src={logoImg} 
