@@ -22,7 +22,7 @@ export default function SolutionsPage() {
   const [activeTab, setActiveTab] = useState<"restaurant" | "cstore" | "hospitality" | "wholesale">("restaurant");
 
   return (
-    <div className="bg-[#060A14] min-h-screen text-slate-100 font-sans relative selection:bg-cyan-500 selection:text-slate-950 overflow-hidden">
+    <div className="bg-white min-h-screen text-slate-900 font-sans relative selection:bg-amber-400 selection:text-slate-950 overflow-hidden">
       {showSplash && <SplashLoader onComplete={() => setShowSplash(false)} />}
       <InquiryModal isOpen={inquiryOpen} onClose={() => setInquiryOpen(false)} />
       <Navbar onOpenInquiry={() => setInquiryOpen(true)} onReplaySplash={() => setShowSplash(true)} />
@@ -32,26 +32,26 @@ export default function SolutionsPage() {
       </div>
 
       {/* Hero Header */}
-      <section className="relative py-20 overflow-hidden border-b border-white/10">
-        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-gradient-to-r from-cyan-500/10 via-amber-500/10 to-indigo-500/10 blur-[160px] pointer-events-none" />
-        <div className="absolute inset-0 bg-grid-cyber opacity-20 pointer-events-none" />
+      <section className="relative py-20 overflow-hidden border-b border-slate-200 bg-slate-50">
+        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-gradient-to-r from-amber-100 via-blue-50 to-amber-50 blur-[160px] pointer-events-none" />
+        <div className="absolute inset-0 bg-grid-cyber opacity-30 pointer-events-none" />
 
         <div className="container mx-auto px-4 sm:px-6 relative z-10 text-center max-w-4xl">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-xs font-mono font-semibold uppercase tracking-wider mb-6">
-            <Layers className="w-4 h-4 text-amber-400" />
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-50 border border-amber-200 text-amber-800 text-xs font-mono font-semibold uppercase tracking-wider mb-6">
+            <Layers className="w-4 h-4 text-amber-600" />
             Turnkey Business Infrastructure
           </div>
 
-          <h1 className="text-4xl sm:text-6xl font-serif font-extrabold text-white mb-6 leading-tight">
+          <h1 className="text-4xl sm:text-6xl font-serif font-extrabold text-slate-950 mb-6 leading-tight">
             OneTrade360™ <span className="shimmer-text">Business Solutions</span>
           </h1>
 
-          <p className="text-lg sm:text-xl text-slate-300 font-light leading-relaxed mb-8">
+          <p className="text-lg sm:text-xl text-slate-600 font-light leading-relaxed mb-8">
             From concept design to direct OEM equipment sourcing and AI store operations, we provide the complete physical and digital infrastructure for high-growth enterprises.
           </p>
 
           {/* Quick Selector Tabs */}
-          <div className="flex flex-wrap items-center justify-center gap-3 p-2 rounded-2xl bg-slate-900/80 border border-white/10 backdrop-blur-md">
+          <div className="flex flex-wrap items-center justify-center gap-3 p-2 rounded-2xl bg-white border border-slate-200 shadow-sm">
             {[
               { id: "restaurant", label: "Restaurant & Café", icon: Utensils },
               { id: "cstore", label: "Convenience Store & Gas", icon: Store },
@@ -63,8 +63,8 @@ export default function SolutionsPage() {
                 onClick={() => setActiveTab(tab.id as any)}
                 className={`flex items-center gap-2.5 px-5 py-3 rounded-xl text-xs sm:text-sm font-semibold font-mono transition-all ${
                   activeTab === tab.id
-                    ? "bg-gradient-to-r from-amber-400 to-cyan-500 text-slate-950 font-bold shadow-[0_0_20px_rgba(56,189,248,0.35)]"
-                    : "text-slate-300 hover:text-white hover:bg-white/5"
+                    ? "bg-slate-950 text-white font-bold shadow-md"
+                    : "text-slate-700 hover:text-slate-950 hover:bg-slate-100"
                 }`}
               >
                 <tab.icon className="w-4 h-4" />
@@ -76,24 +76,24 @@ export default function SolutionsPage() {
       </section>
 
       {/* Main Solution Content Sections */}
-      <section className="py-24 relative">
+      <section className="py-24 relative bg-white">
         <div className="container mx-auto px-4 sm:px-6 relative z-10">
 
           {/* 1. Restaurant & Café Solutions */}
           {activeTab === "restaurant" && (
             <motion.div initial="hidden" animate="visible" variants={FADE_UP} className="space-y-12">
-              <div className="glass-card-cyber rounded-3xl p-8 sm:p-12">
+              <div className="bg-white border border-slate-200 rounded-3xl p-8 sm:p-12 shadow-sm">
                 <div className="flex items-center gap-4 mb-6">
-                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center text-slate-950 shadow-[0_0_30px_rgba(245,183,0,0.4)]">
+                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center text-white shadow-md">
                     <Utensils className="w-8 h-8" />
                   </div>
                   <div>
-                    <h2 className="text-3xl sm:text-4xl font-serif font-bold text-white">Restaurant & Café Solutions</h2>
-                    <p className="text-xs font-mono text-cyan-400">Concept to Operation • Commercial Equipment • Menu & Launch Support</p>
+                    <h2 className="text-3xl sm:text-4xl font-serif font-bold text-slate-950">Restaurant & Café Solutions</h2>
+                    <p className="text-xs font-mono text-amber-700">Concept to Operation • Commercial Equipment • Menu & Launch Support</p>
                   </div>
                 </div>
 
-                <p className="text-slate-300 text-base leading-relaxed mb-8 max-w-3xl font-light">
+                <p className="text-slate-600 text-base leading-relaxed mb-8 max-w-3xl font-light">
                   Helping entrepreneurs build successful food service businesses from concept to full scale operation. We provide factory-direct espresso gear, commercial kitchen design, packaging, and launch programs.
                 </p>
 
@@ -105,9 +105,9 @@ export default function SolutionsPage() {
                     "Franchise Development", "Eco Food Packaging", "Coffee Cups & Lids",
                     "Delivery Packaging", "Smart Kiosk Solutions"
                   ].map((service, i) => (
-                    <div key={i} className="p-4 rounded-xl bg-slate-900/90 border border-white/10 hover:border-cyan-400/50 transition-all flex items-start gap-3 group">
-                      <CheckCircle2 className="w-5 h-5 text-amber-400 shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />
-                      <span className="text-sm text-slate-200 font-medium">{service}</span>
+                    <div key={i} className="p-4 rounded-xl bg-slate-50 border border-slate-200 hover:border-amber-400 transition-all flex items-start gap-3 group">
+                      <CheckCircle2 className="w-5 h-5 text-amber-500 shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />
+                      <span className="text-sm text-slate-800 font-medium">{service}</span>
                     </div>
                   ))}
                 </div>
@@ -118,18 +118,18 @@ export default function SolutionsPage() {
           {/* 2. Convenience Store Solutions */}
           {activeTab === "cstore" && (
             <motion.div initial="hidden" animate="visible" variants={FADE_UP} className="space-y-12">
-              <div className="glass-card-cyber rounded-3xl p-8 sm:p-12">
+              <div className="bg-white border border-slate-200 rounded-3xl p-8 sm:p-12 shadow-sm">
                 <div className="flex items-center gap-4 mb-6">
-                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-cyan-400 to-blue-600 flex items-center justify-center text-slate-950 shadow-[0_0_30px_rgba(56,189,248,0.4)]">
+                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-600 to-indigo-700 flex items-center justify-center text-white shadow-md">
                     <Store className="w-8 h-8" />
                   </div>
                   <div>
-                    <h2 className="text-3xl sm:text-4xl font-serif font-bold text-white">Convenience Store & Gas Solutions</h2>
-                    <p className="text-xs font-mono text-amber-400">StoreSKU™ AI • X-ON™ AI Security • POS • Gondola & Refrigeration</p>
+                    <h2 className="text-3xl sm:text-4xl font-serif font-bold text-slate-950">Convenience Store & Gas Solutions</h2>
+                    <p className="text-xs font-mono text-blue-700">StoreSKU™ AI • X-ON™ AI Security • POS • Gondola & Refrigeration</p>
                   </div>
                 </div>
 
-                <p className="text-slate-300 text-base leading-relaxed mb-8 max-w-3xl font-light">
+                <p className="text-slate-600 text-base leading-relaxed mb-8 max-w-3xl font-light">
                   Complete operational solutions for convenience stores, gas stations, liquor stores, and travel centers to optimize layouts, prevent theft, and maximize sales.
                 </p>
 
@@ -140,9 +140,9 @@ export default function SolutionsPage() {
                     "Slatwall Display Systems", "Walk-In Refrigeration Equipment", "Hot & Cold Display Cases",
                     "Food Service & Deli Setup", "Thermal Receipt Paper Rolls", "Retail Operating Supplies"
                   ].map((service, i) => (
-                    <div key={i} className="p-4 rounded-xl bg-slate-900/90 border border-white/10 hover:border-amber-400/50 transition-all flex items-start gap-3 group">
-                      <CheckCircle2 className="w-5 h-5 text-cyan-400 shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />
-                      <span className="text-sm text-slate-200 font-medium">{service}</span>
+                    <div key={i} className="p-4 rounded-xl bg-slate-50 border border-slate-200 hover:border-blue-400 transition-all flex items-start gap-3 group">
+                      <CheckCircle2 className="w-5 h-5 text-blue-600 shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />
+                      <span className="text-sm text-slate-800 font-medium">{service}</span>
                     </div>
                   ))}
                 </div>
@@ -153,18 +153,18 @@ export default function SolutionsPage() {
           {/* 3. Hospitality Solutions */}
           {activeTab === "hospitality" && (
             <motion.div initial="hidden" animate="visible" variants={FADE_UP} className="space-y-12">
-              <div className="glass-card-cyber rounded-3xl p-8 sm:p-12">
+              <div className="bg-white border border-slate-200 rounded-3xl p-8 sm:p-12 shadow-sm">
                 <div className="flex items-center gap-4 mb-6">
-                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white shadow-[0_0_30px_rgba(99,102,241,0.4)]">
+                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white shadow-md">
                     <Hotel className="w-8 h-8" />
                   </div>
                   <div>
-                    <h2 className="text-3xl sm:text-4xl font-serif font-bold text-white">Hospitality & Hotel Solutions</h2>
-                    <p className="text-xs font-mono text-cyan-400">Hotels • Motels • Resorts • Guest Amenities & Asset Protection</p>
+                    <h2 className="text-3xl sm:text-4xl font-serif font-bold text-slate-950">Hospitality & Hotel Solutions</h2>
+                    <p className="text-xs font-mono text-indigo-700">Hotels • Motels • Resorts • Guest Amenities & Asset Protection</p>
                   </div>
                 </div>
 
-                <p className="text-slate-300 text-base leading-relaxed mb-8 max-w-3xl font-light">
+                <p className="text-slate-600 text-base leading-relaxed mb-8 max-w-3xl font-light">
                   Professional infrastructure and supply programs for hotels, motels, resorts, and travel hubs from guest room amenities to high-volume commercial laundry and perimeter security.
                 </p>
 
@@ -174,9 +174,9 @@ export default function SolutionsPage() {
                     "Eco Commercial Cleaning Products", "Tissue & Paper Products", "Luxury Guest Amenities",
                     "Property Operations Support", "Commercial Facility Equipment"
                   ].map((service, i) => (
-                    <div key={i} className="p-4 rounded-xl bg-slate-900/90 border border-white/10 hover:border-indigo-400/50 transition-all flex items-start gap-3 group">
-                      <CheckCircle2 className="w-5 h-5 text-indigo-400 shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />
-                      <span className="text-sm text-slate-200 font-medium">{service}</span>
+                    <div key={i} className="p-4 rounded-xl bg-slate-50 border border-slate-200 hover:border-indigo-400 transition-all flex items-start gap-3 group">
+                      <CheckCircle2 className="w-5 h-5 text-indigo-600 shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />
+                      <span className="text-sm text-slate-800 font-medium">{service}</span>
                     </div>
                   ))}
                 </div>
@@ -187,18 +187,18 @@ export default function SolutionsPage() {
           {/* 4. Wholesale & Distribution */}
           {activeTab === "wholesale" && (
             <motion.div initial="hidden" animate="visible" variants={FADE_UP} className="space-y-12">
-              <div className="glass-card-cyber rounded-3xl p-8 sm:p-12">
+              <div className="bg-white border border-slate-200 rounded-3xl p-8 sm:p-12 shadow-sm">
                 <div className="flex items-center gap-4 mb-6">
-                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-emerald-400 to-teal-600 flex items-center justify-center text-slate-950 shadow-[0_0_30px_rgba(16,185,129,0.4)]">
+                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center text-white shadow-md">
                     <Box className="w-8 h-8" />
                   </div>
                   <div>
-                    <h2 className="text-3xl sm:text-4xl font-serif font-bold text-white">Wholesale & Distribution</h2>
-                    <p className="text-xs font-mono text-amber-400">Direct Factory Importer Pricing • Bulk Supply Pipelines</p>
+                    <h2 className="text-3xl sm:text-4xl font-serif font-bold text-slate-950">Wholesale & Distribution</h2>
+                    <p className="text-xs font-mono text-emerald-700">Direct Factory Importer Pricing • Bulk Supply Pipelines</p>
                   </div>
                 </div>
 
-                <p className="text-slate-300 text-base leading-relaxed mb-8 max-w-3xl font-light">
+                <p className="text-slate-600 text-base leading-relaxed mb-8 max-w-3xl font-light">
                   Reliable wholesale supply for single or multi-location businesses connecting North American buyers directly to verified manufacturing plants across India and global hubs.
                 </p>
 
@@ -209,9 +209,9 @@ export default function SolutionsPage() {
                     "Kitchen & Cooking Gear", "Retail Store Fixtures", "Medical Supplies & PPE",
                     "Nutraceutical Wellness Products", "Commercial Equipment"
                   ].map((service, i) => (
-                    <div key={i} className="p-4 rounded-xl bg-slate-900/90 border border-white/10 hover:border-emerald-400/50 transition-all flex items-start gap-3 group">
-                      <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />
-                      <span className="text-sm text-slate-200 font-medium">{service}</span>
+                    <div key={i} className="p-4 rounded-xl bg-slate-50 border border-slate-200 hover:border-emerald-400 transition-all flex items-start gap-3 group">
+                      <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />
+                      <span className="text-sm text-slate-800 font-medium">{service}</span>
                     </div>
                   ))}
                 </div>
@@ -220,14 +220,14 @@ export default function SolutionsPage() {
           )}
 
           {/* CTA Banner */}
-          <div className="mt-16 text-center glass-card-gold rounded-3xl p-10 relative overflow-hidden">
+          <div className="mt-16 text-center bg-slate-900 rounded-3xl p-10 relative overflow-hidden border border-slate-800">
             <h3 className="text-3xl font-serif font-bold text-white mb-4">Need a Custom Turnkey Solution Package?</h3>
             <p className="text-slate-300 max-w-2xl mx-auto mb-8 font-light">
               Our specialists configure complete equipment, technology, and sourcing plans tailored to your specific budget and timeline.
             </p>
             <Button 
               onClick={() => setInquiryOpen(true)}
-              className="bg-gradient-to-r from-amber-400 to-cyan-500 text-slate-950 font-bold hover:brightness-110 clip-diagonal h-14 px-8 text-base shadow-[0_0_30px_rgba(245,183,0,0.4)]"
+              className="bg-amber-400 hover:bg-amber-500 text-slate-950 font-bold clip-diagonal h-14 px-8 text-base shadow-md"
             >
               Request Solution Proposal
               <ArrowRight className="ml-2 w-5 h-5" />

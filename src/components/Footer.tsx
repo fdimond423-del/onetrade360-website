@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "wouter";
-import { Globe, Phone, Mail, MapPin, ChevronRight, RefreshCw, ArrowUpRight, ShieldCheck, Sparkles } from "lucide-react";
-import logoImg from "@/assets/logo-transparent.png";
+import { Globe, Phone, Mail, MapPin, ChevronRight, RefreshCw, ArrowUpRight, ShieldCheck, Sparkles, Award, CheckCircle2 } from "lucide-react";
+import logoImg from "@/assets/logo.jpeg";
 
 interface FooterProps {
   onReplaySplash?: () => void;
@@ -10,7 +10,7 @@ interface FooterProps {
 
 export function Footer({ onReplaySplash, onOpenInquiry }: FooterProps) {
   return (
-    <footer className="bg-slate-900 border-t border-slate-800 text-slate-400 text-sm relative overflow-hidden font-sans">
+    <footer className="bg-slate-900 border-t border-slate-800 text-slate-300 text-sm relative overflow-hidden font-sans">
       <div className="container mx-auto px-4 sm:px-6 pt-16 pb-12 relative z-10">
         
         {/* Top Grid */}
@@ -18,7 +18,7 @@ export function Footer({ onReplaySplash, onOpenInquiry }: FooterProps) {
           
           {/* Column 1: Brand & Large Logo */}
           <div className="lg:col-span-4 space-y-6">
-            <div className="inline-block p-3 rounded-2xl bg-white border-2 border-amber-400 shadow-[0_4px_25px_rgba(245,183,0,0.3)]">
+            <div className="inline-block p-3 rounded-2xl bg-white border-2 border-amber-400 shadow-md">
               <img 
                 src={logoImg} 
                 alt="OneTrade360 Logo" 
@@ -30,15 +30,23 @@ export function Footer({ onReplaySplash, onOpenInquiry }: FooterProps) {
               <strong className="text-white font-medium">OneTrade360™</strong> — The Complete Business Ecosystem for Retail, Hospitality, Healthcare, Manufacturing & Global Trade. One Platform. Global Connections. Endless Opportunities.
             </p>
 
-            <div className="flex items-center gap-3 font-mono text-xs text-cyan-400 bg-cyan-500/10 border border-cyan-500/20 px-3.5 py-2 rounded-xl w-fit">
+            <div className="flex flex-wrap items-center gap-2 text-xs font-mono">
+              {["CONNECT", "TRADE", "GROW", "COLLABORATE", "SUCCEED"].map((p, idx) => (
+                <span key={idx} className="px-2.5 py-1 rounded bg-slate-800 border border-slate-700 text-amber-400 font-bold">
+                  {p}
+                </span>
+              ))}
+            </div>
+
+            <div className="flex items-center gap-3 font-mono text-xs text-slate-200 bg-slate-800 border border-slate-700 px-3.5 py-2 rounded-xl w-fit">
               <Globe className="w-4 h-4 text-amber-400 animate-spin-slow" />
-              <span>India • USA • Canada Trade Corridors</span>
+              <span>India 🇮🇳 • USA 🇺🇸 • Canada 🇨🇦 Corridors</span>
             </div>
           </div>
 
           {/* Column 2: Quick Links */}
           <div className="lg:col-span-3 space-y-4">
-            <h4 className="text-white font-serif font-bold text-base tracking-wide uppercase font-mono text-cyan-400">
+            <h4 className="text-white font-bold text-sm tracking-wide uppercase font-mono text-amber-400">
               Ecosystem Navigation
             </h4>
             <ul className="space-y-2.5 text-xs font-mono">
@@ -47,7 +55,7 @@ export function Footer({ onReplaySplash, onOpenInquiry }: FooterProps) {
                 { name: "Turnkey Solutions", href: "/solutions" },
                 { name: "Industries We Serve", href: "/industries" },
                 { name: "Business Service & Consulting", href: "/consulting" },
-                { name: "Global Manufacturing Network", href: "/manufacturing" },
+                { name: "Global OEM Manufacturing Network", href: "/manufacturing" },
                 { name: "StoreSKU™ & X-ON™ Tech", href: "/technology" },
                 { name: "Global Corridors & Network", href: "/network" },
                 { name: "Vision & Mission", href: "/about" },
@@ -58,7 +66,7 @@ export function Footer({ onReplaySplash, onOpenInquiry }: FooterProps) {
                     href={link.href} 
                     className="hover:text-amber-400 transition-colors flex items-center gap-2 group"
                   >
-                    <ChevronRight className="w-3 h-3 text-cyan-400 group-hover:translate-x-1 transition-transform" />
+                    <ChevronRight className="w-3 h-3 text-amber-500 group-hover:translate-x-1 transition-transform" />
                     <span>{link.name}</span>
                   </Link>
                 </li>
@@ -68,36 +76,36 @@ export function Footer({ onReplaySplash, onOpenInquiry }: FooterProps) {
 
           {/* Column 3: Key Platforms */}
           <div className="lg:col-span-2 space-y-4">
-            <h4 className="text-white font-serif font-bold text-base tracking-wide uppercase font-mono text-amber-400">
+            <h4 className="text-white font-bold text-sm tracking-wide uppercase font-mono text-cyan-400">
               Key Platforms
             </h4>
             <ul className="space-y-2 text-xs text-slate-300">
-              <li>StoreSKU™ AI Retail Management</li>
-              <li>X-ON™ AI Surveillance</li>
-              <li>Direct Factory OEM Sourcing</li>
-              <li>Café & Restaurant Setup</li>
-              <li>C-Store & Gas Station Setup</li>
-              <li>Business Acquisition</li>
-              <li>Wholesale Marketplace</li>
+              <li className="flex items-center gap-1.5"><CheckCircle2 className="w-3 h-3 text-emerald-400 shrink-0" /> StoreSKU™ AI POS</li>
+              <li className="flex items-center gap-1.5"><CheckCircle2 className="w-3 h-3 text-emerald-400 shrink-0" /> X-ON™ AI Surveillance</li>
+              <li className="flex items-center gap-1.5"><CheckCircle2 className="w-3 h-3 text-emerald-400 shrink-0" /> Direct Factory OEM</li>
+              <li className="flex items-center gap-1.5"><CheckCircle2 className="w-3 h-3 text-emerald-400 shrink-0" /> Café & Restaurant Setup</li>
+              <li className="flex items-center gap-1.5"><CheckCircle2 className="w-3 h-3 text-emerald-400 shrink-0" /> C-Store & Gas Station Setup</li>
+              <li className="flex items-center gap-1.5"><CheckCircle2 className="w-3 h-3 text-emerald-400 shrink-0" /> Business M&A Buy/Sell</li>
+              <li className="flex items-center gap-1.5"><CheckCircle2 className="w-3 h-3 text-emerald-400 shrink-0" /> Wholesale Marketplace</li>
             </ul>
           </div>
 
           {/* Column 4: Direct Contact Lines */}
           <div className="lg:col-span-3 space-y-4">
-            <h4 className="text-white font-serif font-bold text-base tracking-wide uppercase font-mono text-emerald-400">
-              Global Support
+            <h4 className="text-white font-bold text-sm tracking-wide uppercase font-mono text-emerald-400">
+              Global Support Lines
             </h4>
             
             <div className="space-y-3 text-xs font-mono">
-              <div className="p-3 rounded-xl bg-slate-800/90 border border-slate-700 space-y-1">
+              <div className="p-3 rounded-xl bg-slate-800 border border-slate-700 space-y-1">
                 <div className="text-slate-400 uppercase text-[10px]">India Office Line</div>
                 <div className="text-white font-bold flex items-center gap-2 text-sm">
-                  <Phone className="w-4 h-4 text-emerald-400" />
+                  <Phone className="w-4 h-4 text-amber-400" />
                   +91-7984171515
                 </div>
               </div>
 
-              <div className="p-3 rounded-xl bg-slate-800/90 border border-slate-700 space-y-1">
+              <div className="p-3 rounded-xl bg-slate-800 border border-slate-700 space-y-1">
                 <div className="text-slate-400 uppercase text-[10px]">USA Headquarters Line</div>
                 <div className="text-white font-bold flex items-center gap-2 text-sm">
                   <Phone className="w-4 h-4 text-cyan-400" />
@@ -105,10 +113,10 @@ export function Footer({ onReplaySplash, onOpenInquiry }: FooterProps) {
                 </div>
               </div>
 
-              <div className="p-3 rounded-xl bg-slate-800/90 border border-slate-700 space-y-1">
+              <div className="p-3 rounded-xl bg-slate-800 border border-slate-700 space-y-1">
                 <div className="text-slate-400 uppercase text-[10px]">Direct Email</div>
                 <div className="text-white font-bold flex items-center gap-2 text-xs truncate">
-                  <Mail className="w-4 h-4 text-amber-400 shrink-0" />
+                  <Mail className="w-4 h-4 text-emerald-400 shrink-0" />
                   onetradeworld360@gmail.com
                 </div>
               </div>
@@ -120,14 +128,14 @@ export function Footer({ onReplaySplash, onOpenInquiry }: FooterProps) {
         {/* Bottom Bar */}
         <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs">
           <div className="text-slate-400 font-mono">
-            © {new Date().getFullYear()} OneTrade360™. All rights reserved.
+            © {new Date().getFullYear()} OneTrade360™ GLOBAL NETWORK. All rights reserved.
           </div>
 
           <div className="flex items-center gap-6 font-mono text-slate-400">
             {onReplaySplash && (
               <button 
                 onClick={onReplaySplash} 
-                className="hover:text-cyan-400 transition-colors flex items-center gap-1.5 cursor-pointer"
+                className="hover:text-amber-400 transition-colors flex items-center gap-1.5 cursor-pointer"
               >
                 <RefreshCw className="w-3.5 h-3.5" /> Replay Loader
               </button>
