@@ -20,7 +20,7 @@ export default function ConsultingPage() {
     { title: "Convenience Stores", desc: "High-volume independent & chain C-stores across USA & Canada.", icon: Building2 },
     { title: "Liquor Stores", desc: "Licensed retail liquor & beverage business opportunities.", icon: Store },
     { title: "Hotels & Motels", desc: "Boutique hotels, chain motels & resort property acquisitions.", icon: Hotel },
-    { title: "Restaurants & QSR", desc: "Established fast food, cafes & fine dining operations.", icon: Utensils },
+    { title: "Restaurants & QSR", desc: "Established fast food, cafés & fine dining operations.", icon: Utensils },
     { title: "Car Washes", desc: "Express tunnel & self-serve car wash cash-flow assets.", icon: Briefcase },
     { title: "Laundromats", desc: "Coin & card operated laundromats with strong ROI.", icon: Building2 },
     { title: "Retail Businesses", desc: "Specialty retail, grocery & multi-unit franchise portfolios.", icon: Store },
