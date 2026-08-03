@@ -58,31 +58,6 @@ export function Navbar({ onOpenInquiry, onReplaySplash }: NavbarProps) {
           </div>
 
           <div className="flex items-center gap-4">
-            {/* Live 1-Click Theme Switcher */}
-            <div className="flex items-center gap-1.5 bg-gray-100 border border-gray-300 p-1 rounded-full text-[11px] font-mono">
-              <Palette className="w-3 h-3 text-amber-400 ml-1.5" />
-              <span className="text-gray-600 text-[10px] mr-1 hidden lg:inline">Theme:</span>
-              <button
-                onClick={() => setTheme("light")}
-                className={`px-2.5 py-0.5 rounded-full text-[10px] font-bold transition-all cursor-pointer ${
-                  theme === "light"
-                    ? "bg-amber-400 text-slate-950 shadow-sm"
-                    : "text-gray-600 hover:text-white"
-                }`}
-              >
-                ⚪ Light White
-              </button>
-              <button
-                onClick={() => setTheme("fortune500")}
-                className={`px-2.5 py-0.5 rounded-full text-[10px] font-bold transition-all cursor-pointer ${
-                  theme === "fortune500"
-                    ? "bg-gray-950 text-slate-950 shadow-sm"
-                    : "text-gray-600 hover:text-white"
-                }`}
-              >
-                ⚫ Dark Mode
-              </button>
-            </div>
 
             <button 
               onClick={onOpenInquiry}
@@ -124,13 +99,22 @@ export function Navbar({ onOpenInquiry, onReplaySplash }: NavbarProps) {
                 <Link
                   key={link.name}
                   href={link.href}
-                  className={`px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold tracking-wide transition-all ${
+                  className={`relative px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold tracking-wide transition-all group overflow-hidden ${
                     isActive
-                      ? "text-slate-950 bg-amber-400 font-bold shadow-sm"
-                      : "text-slate-700 hover:text-slate-950 hover:bg-slate-100"
+                      ? "text-slate-950 font-bold"
+                      : "text-slate-700 hover:text-slate-950"
                   }`}
                 >
-                  {link.name}
+                  <span className="relative z-10">{link.name}</span>
+                  {isActive && (
+                    <motion.div 
+                      layoutId="navbar-indicator" 
+                      className="absolute inset-0 bg-amber-400 rounded-xl z-0 shadow-sm" 
+                    />
+                  )}
+                  {!isActive && (
+                    <div className="absolute inset-0 bg-slate-100 rounded-xl scale-0 group-hover:scale-100 transition-transform duration-300 ease-out z-0" />
+                  )}
                 </Link>
               );
             })}

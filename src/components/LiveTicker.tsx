@@ -14,7 +14,7 @@ export function LiveTicker() {
   ];
 
   return (
-    <div className="w-full bg-black/90 border-y border-gray-200 py-2.5 overflow-hidden font-mono text-xs z-30 relative backdrop-blur-md">
+    <div className="w-full bg-gray-50 border-y border-gray-200 py-2.5 overflow-hidden font-mono text-xs z-30 relative backdrop-blur-md">
       <div className="flex w-full whitespace-nowrap">
         <motion.div
           animate={{ x: ["0%", "-50%"] }}
@@ -24,12 +24,12 @@ export function LiveTicker() {
           {[...tickerItems, ...tickerItems].map((item, idx) => (
             <div key={idx} className="inline-flex items-center gap-2.5 text-gray-600">
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-              <span className="text-gray-500 font-medium">{item.label}:</span>
-              <span className="font-bold text-white">{item.val}</span>
+              <span className="text-gray-600 font-medium">{item.label}:</span>
+              <span className="font-bold text-gray-900 font-extrabold">{item.val}</span>
               <span className="px-1.5 py-0.5 rounded text-[10px] bg-primary/10 text-primary border border-primary/30">
                 {item.change}
               </span>
-              <span className="text-slate-700 mx-2">|</span>
+              <span className="text-gray-300 mx-2">|</span>
             </div>
           ))}
         </motion.div>
