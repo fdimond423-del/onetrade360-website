@@ -53,7 +53,7 @@ export default function Home() {
 
   const corridorData = {
     india: {
-      flag: "ðŸ‡®ðŸ‡³",
+      flag: "🇮🇳",
       name: "India Corridor",
       subtitle: "Manufacturing & OEM Export Hub",
       stat1: "120+ Audited OEM Plants",
@@ -62,7 +62,7 @@ export default function Home() {
       desc: "Direct access to audited manufacturing plants in Gujarat, Maharashtra, and NCR for paper packaging, coffee gear, nutraceuticals, and commercial fixtures."
     },
     usa: {
-      flag: "ðŸ‡ºðŸ‡¸",
+      flag: "🇺🇸",
       name: "United States Corridor",
       subtitle: "Retail & Commercial Store Distribution",
       stat1: "1,480+ Active StoreSKU Outlets",
@@ -71,7 +71,7 @@ export default function Home() {
       desc: "Empowering convenience stores, gas stations, supermarkets, and restaurants across NY, TX, CA, and FL with automated POS and direct inventory replenishment."
     },
     canada: {
-      flag: "ðŸ‡¨ðŸ‡¦",
+      flag: "🇨🇦",
       name: "Canada Corridor",
       subtitle: "Wholesale & Business Brokerage Hub",
       stat1: "100+ Verified Business Listings",
@@ -80,9 +80,9 @@ export default function Home() {
       desc: "Comprehensive business acquisition support for gas stations, car washes, and laundromats, alongside bulk wholesale distribution across ON & BC."
     },
     global: {
-      flag: "ðŸŒ",
+      flag: "🌐",
       name: "Global Network",
-      subtitle: "360Â° International Trade Ecosystem",
+      subtitle: "360° International Trade Ecosystem",
       stat1: "$85M+ Facilitated Volume",
       stat2: "3 Tier-1 Shipping Hubs",
       stat3: "End-to-End Customs Audit",
@@ -102,8 +102,8 @@ export default function Home() {
       { title: "Industrial Boba & Tea Brewer", desc: "Programmable temperature control, high throughput", code: "OEM-EQU-309" },
     ],
     pos: [
-      { title: "StoreSKUâ„¢ Dual-Screen POS Terminal", desc: "Built-in thermal printer, inventory auto-sync", code: "TECH-POS-101" },
-      { title: "X-ONâ„¢ AI Smart Security Camera", desc: "Loss prevention, license plate recognition", code: "TECH-SEC-202" },
+      { title: "StoreSKU™ Dual-Screen POS Terminal", desc: "Built-in thermal printer, inventory auto-sync", code: "TECH-POS-101" },
+      { title: "X-ON™ AI Smart Security Camera", desc: "Loss prevention, license plate recognition", code: "TECH-SEC-202" },
       { title: "Handheld Wireless Inventory Scanner", desc: "Bar-code & QR, 50m range, rugged casing", code: "TECH-POS-105" },
     ],
     hotel: [
@@ -130,7 +130,7 @@ export default function Home() {
         <ParticleNetwork />
 
         <div className="container mx-auto px-4 sm:px-6 relative z-10">
-          <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+          <div className="grid lg:grid-cols-12 gap-12 items-center">
             
             {/* Left Hero Statement */}
             <motion.div 
@@ -157,7 +157,7 @@ export default function Home() {
               </h1>
 
               <p className="text-slate-600 text-base sm:text-lg font-light max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-                OneTrade360â„¢ unifies entrepreneurs, retailers, investors, manufacturers, suppliers, and service providers across <strong className="text-slate-900 font-semibold">India ðŸ‡®ðŸ‡³, USA ðŸ‡ºðŸ‡¸, and Canada ðŸ‡¨ðŸ‡¦</strong> into one trusted, connected trade network.
+                OneTrade360™ unifies entrepreneurs, retailers, investors, manufacturers, suppliers, and service providers across <strong className="text-slate-900 font-semibold">India 🇮🇳, USA 🇺🇸, and Canada 🇨🇦</strong> into one trusted, connected trade network.
               </p>
 
               {/* Action Buttons */}
@@ -206,12 +206,12 @@ export default function Home() {
                   <div className="text-2xl sm:text-3xl font-serif font-extrabold text-gray-900">
                     <Counter value={3} suffix=" Corridors" />
                   </div>
-                  <div className="text-[11px] font-mono text-slate-600 uppercase">India â€¢ USA â€¢ Canada</div>
+                  <div className="text-[11px] font-mono text-slate-600 uppercase">India • USA • Canada</div>
                 </div>
               </div>
             </motion.div>
 
-            {/* Right Card — No logo, clean white card with feature highlights */}
+            {/* Right Card — Clean white card with feature highlights */}
             <motion.div 
               initial="hidden"
               whileInView="visible"
@@ -220,8 +220,6 @@ export default function Home() {
               className="lg:col-span-5"
             >
               <div className="bg-white rounded-2xl border border-gray-200 shadow-lg overflow-hidden">
-
-                {/* Card Header */}
                 <div className="bg-gray-950 px-6 py-4 flex items-center justify-between">
                   <span className="text-sm font-bold text-white font-mono tracking-wide">OneTrade360™ Ecosystem</span>
                   <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 text-[10px] font-mono font-bold">
@@ -229,8 +227,6 @@ export default function Home() {
                     VERIFIED
                   </div>
                 </div>
-
-                {/* Features List */}
                 <div className="divide-y divide-gray-100">
                   {[
                     { title: "Direct Factory OEM Sourcing", desc: "120+ Audited Plants — India, USA & Canada", icon: Factory, accent: "bg-amber-50 text-amber-700 border-amber-200" },
@@ -260,8 +256,6 @@ export default function Home() {
                     );
                   })}
                 </div>
-
-                {/* CTA Footer */}
                 <div className="px-5 py-4 bg-gray-50 border-t border-gray-100">
                   <Button 
                     onClick={() => setInquiryOpen(true)}
@@ -323,7 +317,7 @@ export default function Home() {
                 pillar: "GROW",
                 icon: TrendingUp,
                 color: "from-gray-700 to-gray-800",
-                text: "Scaling store revenue with StoreSKUâ„¢ POS AI automation and direct factory cost savings."
+                text: "Scaling store revenue with StoreSKU™ POS AI automation and direct factory cost savings."
               },
               {
                 pillar: "COLLABORATE",
@@ -384,7 +378,7 @@ export default function Home() {
             className="text-center max-w-3xl mx-auto mb-12"
           >
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gray-100 border border-gray-300 text-gray-900 text-xs font-mono font-semibold uppercase tracking-wider mb-4">
-              <Network className="w-3.5 h-3.5 text-gray-700" />
+              <Network className="w-3.5 h-3.5 text-blue-600" />
               Interactive Cross-Border Trade Corridors
             </div>
             <h2 className="text-3xl sm:text-5xl font-serif font-extrabold text-slate-950 mb-4">
@@ -501,14 +495,14 @@ export default function Home() {
           >
             {[
               {
-                title: "Restaurant & CafÃ© Setup",
-                desc: "Complete cafÃ© & restaurant setup, commercial kitchen design, espresso machines, tea programs, delivery packaging & kiosks.",
+                title: "Restaurant & Café Setup",
+                desc: "Complete café & restaurant setup, commercial kitchen design, espresso machines, tea programs, delivery packaging & kiosks.",
                 icon: Utensils,
                 link: "/solutions"
               },
               {
                 title: "C-Store & Gas Station",
-                desc: "StoreSKUâ„¢ AI, X-ONâ„¢ Security, POS systems, gondola shelving, slatwall systems, refrigeration & store supplies.",
+                desc: "StoreSKU™ AI, X-ON™ Security, POS systems, gondola shelving, slatwall systems, refrigeration & store supplies.",
                 icon: Store,
                 link: "/solutions"
               },
@@ -585,7 +579,7 @@ export default function Home() {
             <div className="flex flex-wrap items-center justify-center gap-2 mt-8 p-1.5 rounded-2xl bg-slate-100 border border-slate-200">
               {[
                 { id: "packaging", label: "Paper & Packaging" },
-                { id: "coffee", label: "CafÃ© & Coffee Gear" },
+                { id: "coffee", label: "Café & Coffee Gear" },
                 { id: "pos", label: "StoreSKU POS & AI Hardware" },
                 { id: "hotel", label: "Hotel & Facility Supplies" },
               ].map((tab) => (
@@ -690,4 +684,3 @@ export default function Home() {
     </div>
   );
 }
-
