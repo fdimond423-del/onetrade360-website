@@ -23,7 +23,7 @@ export function TradeCalculator({ onOpenInquiry }: TradeCalculatorProps) {
     <section className="py-24 relative bg-white border-y border-slate-800 overflow-hidden">
       {/* Subtle ambient glows */}
       <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-[500px] h-[500px] bg-amber-500/8 rounded-full blur-[140px] pointer-events-none" />
-      <div className="absolute bottom-0 right-10 w-[400px] h-[400px] bg-blue-600/8 rounded-full blur-[130px] pointer-events-none" />
+      <div className="absolute bottom-0 right-10 w-[400px] h-[400px] bg-amber-600/8 rounded-full blur-[130px] pointer-events-none" />
 
       <div className="container mx-auto px-4 sm:px-6 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16">

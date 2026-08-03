@@ -49,7 +49,7 @@ export function InquiryModal({ isOpen, onClose }: InquiryModalProps) {
             className="relative w-full max-w-lg bg-[#0A0F1F] border border-gray-200 rounded-3xl p-6 sm:p-8 shadow-[0_0_60px_rgba(56,189,248,0.25)] z-10 overflow-hidden"
           >
             {/* Background Ambient Glow */}
-            <div className="absolute -top-24 -right-24 w-48 h-48 bg-cyan-500/20 rounded-full blur-3xl pointer-events-none" />
+            <div className="absolute -top-24 -right-24 w-48 h-48 bg-amber-500/20 rounded-full blur-3xl pointer-events-none" />
 
             <button
               onClick={onClose}
@@ -160,7 +160,7 @@ export function InquiryModal({ isOpen, onClose }: InquiryModalProps) {
                     />
                   </div>
 
-                  <Button type="submit" className="w-full h-12 bg-gradient-to-r from-amber-400 via-amber-500 to-cyan-500 text-slate-950 font-bold hover:brightness-110 clip-diagonal flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(245,183,0,0.3)] cursor-pointer">
+                  <Button type="submit" className="w-full h-12 bg-gradient-to-r from-amber-400 via-amber-500 to-amber-500 text-slate-950 font-bold hover:brightness-110 clip-diagonal flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(245,183,0,0.3)] cursor-pointer">
                     Submit Inquiry
                     <Send className="w-4 h-4" />
                   </Button>

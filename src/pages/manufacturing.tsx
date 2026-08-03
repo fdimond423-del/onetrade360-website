@@ -33,7 +33,7 @@ export default function ManufacturingPage() {
   ];
 
   return (
-    <div className="bg-[#060A14] min-h-screen text-slate-100 font-sans relative selection:bg-cyan-500 selection:text-slate-950 overflow-hidden">
+    <div className="bg-white min-h-screen text-gray-900 font-sans relative selection:bg-amber-400 selection:text-slate-950 overflow-hidden">
       {showSplash && <SplashLoader onComplete={() => setShowSplash(false)} />}
       <InquiryModal isOpen={inquiryOpen} onClose={() => setInquiryOpen(false)} />
       <Navbar onOpenInquiry={() => setInquiryOpen(true)} onReplaySplash={() => setShowSplash(true)} />
@@ -44,7 +44,7 @@ export default function ManufacturingPage() {
 
       {/* Hero Header */}
       <section className="relative py-20 border-b border-gray-200 overflow-hidden">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[850px] h-[450px] bg-gradient-to-r from-amber-500/10 via-cyan-500/10 to-indigo-500/10 blur-[160px] pointer-events-none" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[850px] h-[450px] bg-gradient-to-r from-amber-500/10 via-cyan-500/10 to-amber-500/10 blur-[160px] pointer-events-none" />
         <div className="container mx-auto px-4 sm:px-6 relative z-10 text-center max-w-4xl">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-400/10 border border-amber-400/30 text-amber-400 text-xs font-mono font-semibold uppercase tracking-wider mb-6">
             <Factory className="w-4 h-4 text-amber-700" />
@@ -83,7 +83,7 @@ export default function ManufacturingPage() {
                 transition={{ delay: idx * 0.05 }}
                 className="p-4 rounded-xl bg-gray-50/90 border border-gray-200 hover:border-amber-400/60 transition-all flex items-center gap-3 group"
               >
-                <div className="w-8 h-8 rounded-lg bg-cyan-400/10 border border-amber-400/30 flex items-center justify-center text-amber-700 group-hover:bg-cyan-400 group-hover:text-slate-950 transition-colors">
+                <div className="w-8 h-8 rounded-lg bg-amber-50 border border-amber-400/30 flex items-center justify-center text-amber-700 group-hover:bg-gray-950 text-white group-hover:text-slate-950 transition-colors">
                   <CheckCircle2 className="w-4 h-4" />
                 </div>
                 <span className="text-sm text-gray-700 font-semibold">{ind}</span>
@@ -132,7 +132,7 @@ export default function ManufacturingPage() {
             </p>
             <Button 
               onClick={() => setInquiryOpen(true)}
-              className="bg-gradient-to-r from-amber-400 via-amber-500 to-cyan-500 text-slate-950 font-bold hover:brightness-110 clip-diagonal h-14 px-8 text-base shadow-[0_0_30px_rgba(245,183,0,0.4)]"
+              className="bg-gradient-to-r from-amber-400 via-amber-500 to-amber-500 text-slate-950 font-bold hover:brightness-110 clip-diagonal h-14 px-8 text-base shadow-[0_0_30px_rgba(245,183,0,0.4)]"
             >
               Submit Factory RFQ Request
               <ArrowRight className="ml-2 w-5 h-5" />

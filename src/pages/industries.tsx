@@ -33,7 +33,7 @@ export default function IndustriesPage() {
       title: "Restaurant & Hospitality",
       desc: "Turnkey equipment, commercial kitchen layout design, guest amenities, and supply chain for food & lodging.",
       icon: Utensils,
-      accent: "from-cyan-400 to-blue-600",
+      accent: "from-gray-400 to-gray-600",
       border: "border-amber-400/30",
       items: [
         "Coffee Shops", "Cafés", "Full Service Restaurants", "QSR Chains", 
@@ -57,8 +57,8 @@ export default function IndustriesPage() {
       title: "Commercial & Industrial",
       desc: "Direct factory OEM manufacturing, cross-border logistics, warehouse equipment, and industrial site surveillance.",
       icon: Factory,
-      accent: "from-purple-500 to-indigo-600",
-      border: "border-purple-400/30",
+      accent: "from-gray-700 to-gray-800",
+      border: "border-gray-300",
       items: [
         "Warehouses", "Manufacturing Plants", "Industrial Parks", 
         "Commercial Offices", "Shopping Centers", "Distribution Centers"
@@ -67,7 +67,7 @@ export default function IndustriesPage() {
   ];
 
   return (
-    <div className="bg-[#060A14] min-h-screen text-slate-100 font-sans relative selection:bg-cyan-500 selection:text-slate-950 overflow-hidden">
+    <div className="bg-white min-h-screen text-gray-900 font-sans relative selection:bg-amber-400 selection:text-slate-950 overflow-hidden">
       {showSplash && <SplashLoader onComplete={() => setShowSplash(false)} />}
       <InquiryModal isOpen={inquiryOpen} onClose={() => setInquiryOpen(false)} />
       <Navbar onOpenInquiry={() => setInquiryOpen(true)} onReplaySplash={() => setShowSplash(true)} />
@@ -78,7 +78,7 @@ export default function IndustriesPage() {
 
       {/* Header */}
       <section className="relative py-20 border-b border-gray-200 overflow-hidden">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[750px] h-[400px] bg-gradient-to-r from-amber-500/10 via-cyan-500/10 to-indigo-500/10 blur-[150px] pointer-events-none" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[750px] h-[400px] bg-gradient-to-r from-amber-500/10 via-cyan-500/10 to-amber-500/10 blur-[150px] pointer-events-none" />
         <div className="container mx-auto px-4 sm:px-6 relative z-10 text-center max-w-4xl">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-400/10 border border-amber-400/30 text-amber-400 text-xs font-mono font-semibold uppercase tracking-wider mb-6">
             <Building2 className="w-4 h-4 text-amber-700" />
@@ -143,7 +143,7 @@ export default function IndustriesPage() {
             </p>
             <Button 
               onClick={() => setInquiryOpen(true)}
-              className="bg-gradient-to-r from-amber-400 via-amber-500 to-cyan-500 text-slate-950 font-bold hover:brightness-110 clip-diagonal h-14 px-8 text-base shadow-[0_0_30px_rgba(56,189,248,0.4)]"
+              className="bg-gradient-to-r from-amber-400 via-amber-500 to-amber-500 text-slate-950 font-bold hover:brightness-110 clip-diagonal h-14 px-8 text-base shadow-[0_0_30px_rgba(245,183,0,0.4)]"
             >
               Consult Industry Specialists
               <ArrowRight className="ml-2 w-5 h-5" />

@@ -60,7 +60,7 @@ export function SplashLoader({ onComplete }: SplashLoaderProps) {
         >
           {/* Subtle ambient glows on white */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-amber-100 rounded-full blur-[180px] opacity-80 pointer-events-none" />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-blue-50 rounded-full blur-[160px] opacity-60 pointer-events-none" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-amber-50 rounded-full blur-[160px] opacity-60 pointer-events-none" />
           <div className="absolute inset-0 bg-grid-cyber opacity-40 pointer-events-none" />
 
           {/* Main Container */}
@@ -155,7 +155,7 @@ export function SplashLoader({ onComplete }: SplashLoaderProps) {
               </span>
               <span className="text-gray-600">•</span>
               <span className="flex items-center gap-1.5 font-bold">
-                <span className="w-2 h-2 rounded-full bg-blue-600 animate-pulse" />
+                <span className="w-2 h-2 rounded-full bg-gray-800 animate-pulse" />
                 USA 🇺🇸
               </span>
               <span className="text-gray-600">•</span>

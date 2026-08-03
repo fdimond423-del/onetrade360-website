@@ -33,7 +33,7 @@ export default function SolutionsPage() {
 
       {/* Hero Header */}
       <section className="relative py-20 overflow-hidden border-b border-slate-200 bg-slate-50">
-        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-gradient-to-r from-amber-100 via-blue-50 to-amber-50 blur-[160px] pointer-events-none" />
+        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-gradient-to-r from-amber-100 via-amber-50 to-amber-50 blur-[160px] pointer-events-none" />
         <div className="absolute inset-0 bg-grid-cyber opacity-30 pointer-events-none" />
 
         <div className="container mx-auto px-4 sm:px-6 relative z-10 text-center max-w-4xl">
@@ -120,12 +120,12 @@ export default function SolutionsPage() {
             <motion.div initial="hidden" animate="visible" variants={FADE_UP} className="space-y-12">
               <div className="bg-white border border-slate-200 rounded-3xl p-8 sm:p-12 shadow-sm">
                 <div className="flex items-center gap-4 mb-6">
-                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-600 to-indigo-700 flex items-center justify-center text-gray-900 shadow-md">
+                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center text-gray-900 shadow-md">
                     <Store className="w-8 h-8" />
                   </div>
                   <div>
                     <h2 className="text-3xl sm:text-4xl font-serif font-bold text-slate-950">Convenience Store & Gas Solutions</h2>
-                    <p className="text-xs font-mono text-blue-700">StoreSKU™ AI • X-ON™ AI Security • POS • Gondola & Refrigeration</p>
+                    <p className="text-xs font-mono text-gray-900">StoreSKU™ AI • X-ON™ AI Security • POS • Gondola & Refrigeration</p>
                   </div>
                 </div>
 
@@ -140,8 +140,8 @@ export default function SolutionsPage() {
                     "Slatwall Display Systems", "Walk-In Refrigeration Equipment", "Hot & Cold Display Cases",
                     "Food Service & Deli Setup", "Thermal Receipt Paper Rolls", "Retail Operating Supplies"
                   ].map((service, i) => (
-                    <div key={i} className="p-4 rounded-xl bg-slate-50 border border-slate-200 hover:border-blue-400 transition-all flex items-start gap-3 group">
-                      <CheckCircle2 className="w-5 h-5 text-blue-600 shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />
+                    <div key={i} className="p-4 rounded-xl bg-slate-50 border border-slate-200 hover:border-gray-400 transition-all flex items-start gap-3 group">
+                      <CheckCircle2 className="w-5 h-5 text-gray-900 shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />
                       <span className="text-sm text-slate-800 font-medium">{service}</span>
                     </div>
                   ))}
@@ -155,12 +155,12 @@ export default function SolutionsPage() {
             <motion.div initial="hidden" animate="visible" variants={FADE_UP} className="space-y-12">
               <div className="bg-white border border-slate-200 rounded-3xl p-8 sm:p-12 shadow-sm">
                 <div className="flex items-center gap-4 mb-6">
-                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-gray-900 shadow-md">
+                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center text-gray-900 shadow-md">
                     <Hotel className="w-8 h-8" />
                   </div>
                   <div>
                     <h2 className="text-3xl sm:text-4xl font-serif font-bold text-slate-950">Hospitality & Hotel Solutions</h2>
-                    <p className="text-xs font-mono text-indigo-700">Hotels • Motels • Resorts • Guest Amenities & Asset Protection</p>
+                    <p className="text-xs font-mono text-gray-900">Hotels • Motels • Resorts • Guest Amenities & Asset Protection</p>
                   </div>
                 </div>
 
@@ -174,8 +174,8 @@ export default function SolutionsPage() {
                     "Eco Commercial Cleaning Products", "Tissue & Paper Products", "Luxury Guest Amenities",
                     "Property Operations Support", "Commercial Facility Equipment"
                   ].map((service, i) => (
-                    <div key={i} className="p-4 rounded-xl bg-slate-50 border border-slate-200 hover:border-indigo-400 transition-all flex items-start gap-3 group">
-                      <CheckCircle2 className="w-5 h-5 text-indigo-600 shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />
+                    <div key={i} className="p-4 rounded-xl bg-slate-50 border border-slate-200 hover:border-gray-400 transition-all flex items-start gap-3 group">
+                      <CheckCircle2 className="w-5 h-5 text-gray-900 shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />
                       <span className="text-sm text-slate-800 font-medium">{service}</span>
                     </div>
                   ))}

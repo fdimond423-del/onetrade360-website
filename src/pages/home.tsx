@@ -378,7 +378,7 @@ export default function Home() {
             className="text-center max-w-3xl mx-auto mb-12"
           >
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gray-100 border border-gray-300 text-gray-900 text-xs font-mono font-semibold uppercase tracking-wider mb-4">
-              <Network className="w-3.5 h-3.5 text-blue-600" />
+              <Network className="w-3.5 h-3.5 text-gray-900" />
               Interactive Cross-Border Trade Corridors
             </div>
             <h2 className="text-3xl sm:text-5xl font-serif font-extrabold text-slate-950 mb-4">

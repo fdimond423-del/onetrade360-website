@@ -42,9 +42,9 @@ export default function ContactPage() {
 
       {/* Hero Header */}
       <section className="relative py-16 border-b border-gray-200 overflow-hidden">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-gradient-to-r from-cyan-500/10 via-amber-500/10 to-indigo-500/10 blur-[160px] pointer-events-none" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-gradient-to-r from-cyan-500/10 via-amber-500/10 to-amber-500/10 blur-[160px] pointer-events-none" />
         <div className="container mx-auto px-4 sm:px-6 relative z-10 text-center max-w-3xl">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-400/10 border border-amber-400/30 text-amber-700 text-xs font-mono font-semibold uppercase tracking-wider mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-50 border border-amber-400/30 text-amber-700 text-xs font-mono font-semibold uppercase tracking-wider mb-6">
             <MessageSquare className="w-4 h-4 text-amber-400" />
             Direct Global Support
           </div>
@@ -197,7 +197,7 @@ export default function ContactPage() {
                       />
                     </div>
 
-                    <Button type="submit" className="w-full h-14 bg-gradient-to-r from-amber-400 via-amber-500 to-cyan-500 text-slate-950 font-bold text-base clip-diagonal shadow-[0_0_25px_rgba(245,183,0,0.35)]">
+                    <Button type="submit" className="w-full h-14 bg-gradient-to-r from-amber-400 via-amber-500 to-amber-500 text-slate-950 font-bold text-base clip-diagonal shadow-[0_0_25px_rgba(245,183,0,0.35)]">
                       Submit Inquiry Now
                       <Send className="ml-2 w-5 h-5" />
                     </Button>

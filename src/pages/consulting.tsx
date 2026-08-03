@@ -38,7 +38,7 @@ export default function ConsultingPage() {
   ];
 
   return (
-    <div className="bg-[#060A14] min-h-screen text-slate-100 font-sans relative selection:bg-cyan-500 selection:text-slate-950 overflow-hidden">
+    <div className="bg-white min-h-screen text-gray-900 font-sans relative selection:bg-amber-400 selection:text-slate-950 overflow-hidden">
       {showSplash && <SplashLoader onComplete={() => setShowSplash(false)} />}
       <InquiryModal isOpen={inquiryOpen} onClose={() => setInquiryOpen(false)} />
       <Navbar onOpenInquiry={() => setInquiryOpen(true)} onReplaySplash={() => setShowSplash(true)} />
@@ -49,7 +49,7 @@ export default function ConsultingPage() {
 
       {/* Hero Header */}
       <section className="relative py-20 border-b border-gray-200 overflow-hidden">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[450px] bg-gradient-to-r from-emerald-500/10 via-amber-500/10 to-cyan-500/10 blur-[160px] pointer-events-none" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[450px] bg-gradient-to-r from-emerald-500/10 via-amber-500/10 to-amber-500/10 blur-[160px] pointer-events-none" />
         <div className="container mx-auto px-4 sm:px-6 relative z-10 text-center max-w-4xl">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-400/10 border border-emerald-400/30 text-emerald-700 text-xs font-mono font-semibold uppercase tracking-wider mb-6">
             <Briefcase className="w-4 h-4 text-amber-400" />
@@ -129,7 +129,7 @@ export default function ConsultingPage() {
                 transition={{ delay: idx * 0.08 }}
                 className="glass-card-cyber p-6 rounded-2xl hover:border-amber-400/70 transition-all duration-300 group hover:-translate-y-1"
               >
-                <div className="w-12 h-12 rounded-xl bg-cyan-400/10 border border-amber-400/30 flex items-center justify-center text-amber-700 mb-4 group-hover:bg-cyan-400 group-hover:text-slate-950 transition-colors">
+                <div className="w-12 h-12 rounded-xl bg-amber-50 border border-amber-400/30 flex items-center justify-center text-amber-700 mb-4 group-hover:bg-gray-950 text-white group-hover:text-slate-950 transition-colors">
                   <service.icon className="w-6 h-6" />
                 </div>
                 <h3 className="text-lg font-serif font-bold text-gray-900 mb-2">{service.title}</h3>
@@ -146,7 +146,7 @@ export default function ConsultingPage() {
             </p>
             <Button 
               onClick={() => setInquiryOpen(true)}
-              className="bg-gradient-to-r from-amber-400 via-amber-500 to-cyan-500 text-slate-950 font-bold hover:brightness-110 clip-diagonal h-14 px-8 text-base shadow-[0_0_30px_rgba(245,183,0,0.4)]"
+              className="bg-gradient-to-r from-amber-400 via-amber-500 to-amber-500 text-slate-950 font-bold hover:brightness-110 clip-diagonal h-14 px-8 text-base shadow-[0_0_30px_rgba(245,183,0,0.4)]"
             >
               Schedule Acquisition Consultation
               <ArrowRight className="ml-2 w-5 h-5" />

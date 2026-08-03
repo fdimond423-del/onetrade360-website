@@ -76,11 +76,11 @@ export function Navbar({ onOpenInquiry, onReplaySplash }: NavbarProps) {
                 onClick={() => setTheme("fortune500")}
                 className={`px-2.5 py-0.5 rounded-full text-[10px] font-bold transition-all cursor-pointer ${
                   theme === "fortune500"
-                    ? "bg-cyan-500 text-slate-950 shadow-sm"
+                    ? "bg-gray-950 text-slate-950 shadow-sm"
                     : "text-gray-600 hover:text-white"
                 }`}
               >
-                🔵 Dark Navy
+                ⚫ Dark Mode
               </button>
             </div>
 

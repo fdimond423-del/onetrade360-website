@@ -38,7 +38,7 @@ export default function TechnologyPage() {
   const [activeTech, setActiveTech] = useState<"storesku" | "xon">("storesku");
 
   return (
-    <div className="bg-[#060A14] min-h-screen text-slate-100 font-sans relative selection:bg-cyan-500 selection:text-slate-950 overflow-hidden">
+    <div className="bg-white min-h-screen text-gray-900 font-sans relative selection:bg-amber-400 selection:text-slate-950 overflow-hidden">
       {showSplash && <SplashLoader onComplete={() => setShowSplash(false)} />}
       <InquiryModal isOpen={inquiryOpen} onClose={() => setInquiryOpen(false)} />
       <Navbar onOpenInquiry={() => setInquiryOpen(true)} onReplaySplash={() => setShowSplash(true)} />
@@ -49,9 +49,9 @@ export default function TechnologyPage() {
 
       {/* Hero Header */}
       <section className="relative py-20 border-b border-gray-200 overflow-hidden">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[850px] h-[450px] bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-indigo-500/10 blur-[160px] pointer-events-none" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[850px] h-[450px] bg-gradient-to-r from-amber-100 via-amber-50 to-amber-100 blur-[160px] pointer-events-none" />
         <div className="container mx-auto px-4 sm:px-6 relative z-10 text-center max-w-4xl">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-400/10 border border-amber-400/30 text-amber-700 text-xs font-mono font-semibold uppercase tracking-wider mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-50 border border-amber-400/30 text-amber-700 text-xs font-mono font-semibold uppercase tracking-wider mb-6">
             <Cpu className="w-4 h-4 text-amber-400" />
             Proprietary Tech Suite
           </div>
@@ -80,7 +80,7 @@ export default function TechnologyPage() {
               onClick={() => setActiveTech("xon")}
               className={`px-6 py-3 rounded-xl text-xs sm:text-sm font-semibold font-mono transition-all ${
                 activeTech === "xon"
-                  ? "bg-gradient-to-r from-cyan-400 to-blue-500 text-slate-950 font-bold shadow-[0_0_20px_rgba(56,189,248,0.35)]"
+                  ? "bg-gradient-to-r from-amber-400 to-amber-500 text-slate-950 font-bold shadow-[0_0_20px_rgba(245,183,0,0.35)]"
                   : "text-gray-500 hover:text-gray-900"
               }`}
             >
@@ -159,7 +159,7 @@ export default function TechnologyPage() {
                     ))}
                   </div>
 
-                  <Button onClick={() => setInquiryOpen(true)} className="bg-cyan-400 text-slate-950 font-bold hover:bg-cyan-500 h-14 px-8 clip-diagonal text-base">
+                  <Button onClick={() => setInquiryOpen(true)} className="bg-gray-950 text-white text-slate-950 font-bold hover:bg-gray-800 h-14 px-8 clip-diagonal text-base">
                     Request X-ON™ Security Specs
                   </Button>
                 </div>

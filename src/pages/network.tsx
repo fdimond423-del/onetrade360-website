@@ -48,9 +48,9 @@ export default function NetworkPage() {
 
       {/* Hero Header */}
       <section className="relative py-20 border-b border-gray-200 overflow-hidden">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[850px] h-[450px] bg-gradient-to-r from-cyan-500/10 via-amber-500/10 to-indigo-500/10 blur-[160px] pointer-events-none" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[850px] h-[450px] bg-gradient-to-r from-cyan-500/10 via-amber-500/10 to-amber-500/10 blur-[160px] pointer-events-none" />
         <div className="container mx-auto px-4 sm:px-6 relative z-10 text-center max-w-4xl">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-400/10 border border-amber-400/30 text-amber-700 text-xs font-mono font-semibold uppercase tracking-wider mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-50 border border-amber-400/30 text-amber-700 text-xs font-mono font-semibold uppercase tracking-wider mb-6">
             <Globe className="w-4 h-4 text-amber-400" />
             One Platform. Global Connections.
           </div>
@@ -91,7 +91,7 @@ export default function NetworkPage() {
                 transition={{ delay: idx * 0.1 }}
                 className="glass-card-cyber p-8 rounded-3xl border border-gray-200 hover:border-amber-400/60 transition-all text-center group"
               >
-                <div className="w-16 h-16 rounded-2xl bg-cyan-400/10 border border-amber-400/30 flex items-center justify-center text-amber-700 mx-auto mb-4 group-hover:scale-110 transition-transform">
+                <div className="w-16 h-16 rounded-2xl bg-amber-50 border border-amber-400/30 flex items-center justify-center text-amber-700 mx-auto mb-4 group-hover:scale-110 transition-transform">
                   <MapPin className="w-8 h-8 text-amber-400" />
                 </div>
                 <span className="px-3 py-1 rounded bg-amber-400/20 text-amber-400 text-xs font-mono font-bold">{node.code}</span>
@@ -149,7 +149,7 @@ export default function NetworkPage() {
                 transition={{ delay: idx * 0.05 }}
                 className="glass-card p-6 rounded-2xl border border-gray-200 hover:border-amber-400/50 transition-all duration-300"
               >
-                <div className="w-12 h-12 rounded-xl bg-cyan-400/10 border border-amber-400/30 flex items-center justify-center text-amber-700 mb-4">
+                <div className="w-12 h-12 rounded-xl bg-amber-50 border border-amber-400/30 flex items-center justify-center text-amber-700 mb-4">
                   <item.icon className="w-6 h-6" />
                 </div>
                 <h3 className="text-lg font-serif font-bold text-gray-900 mb-2">{item.title}</h3>
@@ -166,7 +166,7 @@ export default function NetworkPage() {
             </p>
             <Button 
               onClick={() => setInquiryOpen(true)}
-              className="bg-gradient-to-r from-amber-400 via-amber-500 to-cyan-500 text-slate-950 font-bold hover:brightness-110 clip-diagonal h-14 px-8 text-base shadow-[0_0_30px_rgba(245,183,0,0.4)]"
+              className="bg-gradient-to-r from-amber-400 via-amber-500 to-amber-500 text-slate-950 font-bold hover:brightness-110 clip-diagonal h-14 px-8 text-base shadow-[0_0_30px_rgba(245,183,0,0.4)]"
             >
               Enter Global Network Now
               <ArrowRight className="ml-2 w-5 h-5" />
