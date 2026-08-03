@@ -82,24 +82,24 @@ export function Navbar({ onOpenInquiry, onReplaySplash }: NavbarProps) {
           
           {/* Logo Card */}
           <Link href="/" className="flex items-center gap-3 z-50 group">
-            <div className="p-2 sm:p-2.5 rounded-xl bg-white border-2 border-amber-400 shadow-md group-hover:shadow-lg transition-all">
+            <div className="p-1.5 sm:p-2 rounded-xl bg-white border-2 border-amber-400 shadow-md group-hover:shadow-lg transition-all">
               <img 
                 src={logoImg} 
                 alt="OneTrade360 Logo" 
-                className="h-11 sm:h-14 w-auto object-contain max-w-[200px] sm:max-w-[250px]" 
+                className="h-9 sm:h-12 w-auto object-contain max-w-[180px] sm:max-w-[220px]" 
               />
             </div>
           </Link>
           
           {/* Corporate Navigation Links */}
-          <nav className="hidden lg:flex items-center gap-1 xl:gap-1.5">
+          <nav className="hidden lg:flex items-center gap-0.5 xl:gap-1">
             {navLinks.map((link) => {
               const isActive = location === link.href;
               return (
                 <Link
                   key={link.name}
                   href={link.href}
-                  className={`relative px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold tracking-wide transition-all group overflow-hidden ${
+                  className={`relative px-2.5 py-1.5 rounded-lg text-[10px] xl:text-xs font-semibold tracking-wide transition-all group overflow-hidden ${
                     isActive
                       ? "text-slate-950 font-bold"
                       : "text-slate-700 hover:text-slate-950"
@@ -124,7 +124,7 @@ export function Navbar({ onOpenInquiry, onReplaySplash }: NavbarProps) {
           <div className="hidden lg:flex items-center gap-3">
             <Button 
               onClick={onOpenInquiry} 
-              className="bg-white hover:bg-gray-800 text-gray-900 font-bold h-11 px-6 text-xs uppercase font-sans tracking-wider shadow-md hover:brightness-110 cursor-pointer flex items-center gap-2 rounded-xl"
+              className="bg-white hover:bg-gray-800 text-gray-900 font-bold h-9 px-4 text-[11px] uppercase font-sans tracking-wider shadow-md hover:brightness-110 cursor-pointer flex items-center gap-2 rounded-xl"
             >
               <span>Connect With Us</span>
               <ArrowRight className="w-4 h-4 text-amber-400" />
