@@ -81,7 +81,7 @@ export function SplashLoader({ onComplete }: SplashLoaderProps) {
               <motion.div 
                 animate={{ rotate: -360 }}
                 transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
-                className="absolute inset-4 rounded-full border border-slate-300"
+                className="absolute inset-4 rounded-full border border-gray-200"
               >
                 <div className="w-3.5 h-3.5 bg-white rounded-full shadow-[0_0_15px_rgba(15,23,42,0.4)] absolute -bottom-2 left-1/2 -translate-x-1/2" />
               </motion.div>
@@ -112,20 +112,20 @@ export function SplashLoader({ onComplete }: SplashLoaderProps) {
                 Global Business Ecosystem
               </div>
 
-              <h2 className="text-3xl sm:text-4xl font-serif font-extrabold text-slate-950 tracking-tight mb-2">
+              <h2 className="text-3xl sm:text-4xl font-serif font-extrabold text-gray-950 tracking-tight mb-2">
                 OneTrade<span className="text-amber-600">360™</span>
               </h2>
               
-              <p className="text-xs sm:text-sm text-slate-600 font-sans max-w-md mb-6 leading-relaxed">
+              <p className="text-xs sm:text-sm text-gray-600 font-sans max-w-md mb-6 leading-relaxed">
                 One Platform. Global Connections. Endless Opportunities.
               </p>
             </motion.div>
 
             {/* Progress Bar Container */}
             <div className="w-full max-w-sm space-y-3">
-              <div className="relative w-full h-3 bg-slate-100 rounded-full overflow-hidden p-0.5 border border-slate-200 shadow-inner">
+              <div className="relative w-full h-3 bg-gray-100 rounded-full overflow-hidden p-0.5 border border-gray-200 shadow-inner">
                 <motion.div 
-                  className="h-full bg-gradient-to-r from-slate-900 via-amber-500 to-amber-400 rounded-full"
+                  className="h-full bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 rounded-full"
                   style={{ width: `${progress}%` }}
                   transition={{ ease: "easeOut" }}
                 />
@@ -133,7 +133,7 @@ export function SplashLoader({ onComplete }: SplashLoaderProps) {
 
               {/* Status and Percentage */}
               <div className="flex items-center justify-between text-xs font-mono text-slate-500">
-                <span className="truncate max-w-[260px] text-left text-slate-700 font-sans text-[11px]">
+                <span className="truncate max-w-[260px] text-left text-gray-700 font-sans text-[11px]">
                   {statusText}
                 </span>
                 <span className="font-bold text-amber-600 text-sm ml-2">
@@ -147,7 +147,7 @@ export function SplashLoader({ onComplete }: SplashLoaderProps) {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4 }}
-              className="mt-8 flex items-center justify-center gap-6 text-[11px] font-mono text-slate-700 border-t border-slate-200 pt-4 w-full"
+              className="mt-8 flex items-center justify-center gap-6 text-[11px] font-mono text-gray-700 border-t border-gray-200 pt-4 w-full"
             >
               <span className="flex items-center gap-1.5 font-bold">
                 <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />

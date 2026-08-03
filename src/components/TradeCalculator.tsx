@@ -41,7 +41,7 @@ export function TradeCalculator({ onOpenInquiry }: TradeCalculatorProps) {
 
         <div className="grid lg:grid-cols-12 gap-8 items-stretch max-w-6xl mx-auto">
           {/* Controls Panel */}
-          <div className="lg:col-span-6 bg-slate-800 border border-slate-700 rounded-3xl p-6 sm:p-8 flex flex-col justify-between space-y-6">
+          <div className="lg:col-span-6 bg-white border border-gray-200 rounded-3xl p-6 sm:p-8 flex flex-col justify-between space-y-6">
             <div>
               <h3 className="text-xl font-serif font-bold text-gray-900 mb-6 flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-amber-400" />
@@ -66,7 +66,7 @@ export function TradeCalculator({ onOpenInquiry }: TradeCalculatorProps) {
                       className={`flex items-center gap-2.5 p-3 rounded-xl border text-xs font-semibold transition-all ${
                         sector === item.id
                           ? "bg-amber-400 text-slate-950 border-amber-400 font-bold shadow-md"
-                          : "bg-white/80 border-slate-700 text-gray-600 hover:border-slate-500"
+                          : "bg-white/80 border-gray-200 text-gray-600 hover:border-slate-500"
                       }`}
                     >
                       <item.icon className="w-4 h-4 shrink-0" />
@@ -93,7 +93,7 @@ export function TradeCalculator({ onOpenInquiry }: TradeCalculatorProps) {
                       className={`p-2.5 rounded-xl border text-xs font-semibold text-center transition-all ${
                         region === item.id
                           ? "bg-amber-400/20 text-amber-300 border-amber-400"
-                          : "bg-white/60 border-slate-700 text-gray-500 hover:text-white"
+                          : "bg-white/60 border-gray-200 text-gray-500 hover:text-gray-900"
                       }`}
                     >
                       {item.label}
@@ -118,7 +118,7 @@ export function TradeCalculator({ onOpenInquiry }: TradeCalculatorProps) {
                   max="20"
                   value={scale}
                   onChange={(e) => setScale(parseInt(e.target.value))}
-                  className="w-full h-2 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-amber-400"
+                  className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-amber-400"
                 />
                 <div className="flex justify-between text-[10px] font-mono text-slate-500 mt-1">
                   <span>1 Unit</span>
@@ -128,7 +128,7 @@ export function TradeCalculator({ onOpenInquiry }: TradeCalculatorProps) {
               </div>
             </div>
 
-            <div className="p-4 rounded-xl bg-white border border-slate-700 text-xs text-gray-500 font-mono flex items-center justify-between">
+            <div className="p-4 rounded-xl bg-white border border-gray-200 text-xs text-gray-500 font-mono flex items-center justify-between">
               <span>Verified Factory Supply Chain Direct API</span>
               <span className="text-emerald-700 flex items-center gap-1 font-bold">
                 <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping" />
@@ -138,11 +138,11 @@ export function TradeCalculator({ onOpenInquiry }: TradeCalculatorProps) {
           </div>
 
           {/* Results Output Panel */}
-          <div className="lg:col-span-6 bg-slate-800 border-2 border-amber-400/40 rounded-3xl p-6 sm:p-8 flex flex-col justify-between relative overflow-hidden shadow-[0_0_40px_rgba(245,183,0,0.12)]">
+          <div className="lg:col-span-6 bg-white border-2 border-amber-400/40 rounded-3xl p-6 sm:p-8 flex flex-col justify-between relative overflow-hidden shadow-[0_0_40px_rgba(245,183,0,0.12)]">
             <div className="absolute top-0 right-0 w-40 h-40 bg-amber-400/8 rounded-full blur-2xl pointer-events-none" />
 
             <div>
-              <div className="flex items-center justify-between pb-4 mb-6 border-b border-slate-700">
+              <div className="flex items-center justify-between pb-4 mb-6 border-b border-gray-200">
                 <div className="text-xs font-mono text-amber-400 uppercase tracking-wider">Estimated Business Impact</div>
                 <span className="px-2.5 py-0.5 rounded bg-emerald-500/20 text-emerald-700 border border-emerald-500/40 text-[10px] font-mono font-bold">
                   UPDATED TODAY
@@ -152,7 +152,7 @@ export function TradeCalculator({ onOpenInquiry }: TradeCalculatorProps) {
               {/* Big Stat Box */}
               <div className="bg-white p-6 rounded-2xl border border-amber-400/30 mb-6 shadow-inner text-center sm:text-left">
                 <div className="text-xs text-gray-500 uppercase font-mono mb-1">Estimated Annual Supply Chain Savings</div>
-                <div className="text-4xl sm:text-5xl font-serif font-extrabold text-white tracking-tight">
+                <div className="text-4xl sm:text-5xl font-serif font-extrabold text-gray-900 tracking-tight">
                   ${annualSavings.toLocaleString()} <span className="text-amber-400 text-xl font-mono">USD</span>
                 </div>
                 <div className="mt-2 flex items-center justify-center sm:justify-start gap-2 text-xs text-emerald-700 font-mono">
@@ -163,16 +163,16 @@ export function TradeCalculator({ onOpenInquiry }: TradeCalculatorProps) {
 
               {/* Breakdown Grid */}
               <div className="grid grid-cols-2 gap-4 mb-6">
-                <div className="p-4 rounded-xl bg-white border border-slate-700">
+                <div className="p-4 rounded-xl bg-white border border-gray-200">
                   <div className="flex items-center gap-2 text-gray-500 text-xs mb-1">
                     <Clock className="w-4 h-4 text-amber-400" />
                     <span>Time Saved</span>
                   </div>
-                  <div className="text-2xl font-serif font-bold text-white">{timeSavedWeeks} Weeks</div>
+                  <div className="text-2xl font-serif font-bold text-gray-900">{timeSavedWeeks} Weeks</div>
                   <div className="text-[10px] text-gray-500 font-mono">Faster Turnkey Deployment</div>
                 </div>
 
-                <div className="p-4 rounded-xl bg-white border border-slate-700">
+                <div className="p-4 rounded-xl bg-white border border-gray-200">
                   <div className="flex items-center gap-2 text-gray-500 text-xs mb-1">
                     <Zap className="w-4 h-4 text-amber-400" />
                     <span>StoreSKU Efficiency</span>

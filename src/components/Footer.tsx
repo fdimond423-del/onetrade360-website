@@ -10,11 +10,11 @@ interface FooterProps {
 
 export function Footer({ onReplaySplash, onOpenInquiry }: FooterProps) {
   return (
-    <footer className="bg-white border-t border-slate-800 text-gray-600 text-sm relative overflow-hidden font-sans">
+    <footer className="bg-white border-t border-gray-200 text-gray-600 text-sm relative overflow-hidden font-sans">
       <div className="container mx-auto px-4 sm:px-6 pt-16 pb-12 relative z-10">
         
         {/* Top Grid */}
-        <div className="grid lg:grid-cols-12 gap-10 pb-12 border-b border-slate-800">
+        <div className="grid lg:grid-cols-12 gap-10 pb-12 border-b border-gray-200">
           
           {/* Column 1: Brand & Large Logo */}
           <div className="lg:col-span-4 space-y-6">
@@ -27,18 +27,18 @@ export function Footer({ onReplaySplash, onOpenInquiry }: FooterProps) {
             </div>
             
             <p className="text-gray-600 text-sm font-light leading-relaxed max-w-sm">
-              <strong className="text-white font-medium">OneTrade360™</strong> — The Complete Business Ecosystem for Retail, Hospitality, Healthcare, Manufacturing & Global Trade. One Platform. Global Connections. Endless Opportunities.
+              <strong className="text-gray-950 font-medium">OneTrade360™</strong> — The Complete Business Ecosystem for Retail, Hospitality, Healthcare, Manufacturing & Global Trade. One Platform. Global Connections. Endless Opportunities.
             </p>
 
             <div className="flex flex-wrap items-center gap-2 text-xs font-mono">
               {["CONNECT", "TRADE", "GROW", "COLLABORATE", "SUCCEED"].map((p, idx) => (
-                <span key={idx} className="px-2.5 py-1 rounded bg-slate-800 border border-slate-700 text-amber-400 font-bold">
+                <span key={idx} className="px-2.5 py-1 rounded bg-gray-50 border border-gray-200 text-amber-400 font-bold">
                   {p}
                 </span>
               ))}
             </div>
 
-            <div className="flex items-center gap-3 font-mono text-xs text-gray-700 bg-slate-800 border border-slate-700 px-3.5 py-2 rounded-xl w-fit">
+            <div className="flex items-center gap-3 font-mono text-xs text-gray-700 bg-gray-50 border border-gray-200 px-3.5 py-2 rounded-xl w-fit">
               <Globe className="w-4 h-4 text-amber-400 animate-spin-slow" />
               <span>India 🇮🇳 • USA 🇺🇸 • Canada 🇨🇦 Corridors</span>
             </div>
@@ -97,7 +97,7 @@ export function Footer({ onReplaySplash, onOpenInquiry }: FooterProps) {
             </h4>
             
             <div className="space-y-3 text-xs font-mono">
-              <div className="p-3 rounded-xl bg-slate-800 border border-slate-700 space-y-1">
+              <div className="p-3 rounded-xl bg-gray-50 border border-gray-200 space-y-1">
                 <div className="text-gray-500 uppercase text-[10px]">India Office Line</div>
                 <div className="text-gray-900 font-bold flex items-center gap-2 text-sm">
                   <Phone className="w-4 h-4 text-amber-400" />
@@ -105,7 +105,7 @@ export function Footer({ onReplaySplash, onOpenInquiry }: FooterProps) {
                 </div>
               </div>
 
-              <div className="p-3 rounded-xl bg-slate-800 border border-slate-700 space-y-1">
+              <div className="p-3 rounded-xl bg-gray-50 border border-gray-200 space-y-1">
                 <div className="text-gray-500 uppercase text-[10px]">USA Headquarters Line</div>
                 <div className="text-gray-900 font-bold flex items-center gap-2 text-sm">
                   <Phone className="w-4 h-4 text-amber-700" />
@@ -113,7 +113,7 @@ export function Footer({ onReplaySplash, onOpenInquiry }: FooterProps) {
                 </div>
               </div>
 
-              <div className="p-3 rounded-xl bg-slate-800 border border-slate-700 space-y-1">
+              <div className="p-3 rounded-xl bg-gray-50 border border-gray-200 space-y-1">
                 <div className="text-gray-500 uppercase text-[10px]">Direct Email</div>
                 <div className="text-gray-900 font-bold flex items-center gap-2 text-xs truncate">
                   <Mail className="w-4 h-4 text-emerald-700 shrink-0" />
