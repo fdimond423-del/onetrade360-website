@@ -304,31 +304,31 @@ export default function Home() {
               {
                 pillar: "CONNECT",
                 icon: Handshake,
-                color: "from-gray-800 to-gray-900",
+                color: "from-amber-400 to-amber-600 text-white",
                 text: "Linking buyers, suppliers, OEM plants, and retail outlets into one unified digital trade ecosystem."
               },
               {
                 pillar: "TRADE",
                 icon: Globe,
-                color: "from-amber-500 to-yellow-600",
+                color: "from-orange-400 to-orange-600 text-white",
                 text: "Streamlining international shipping, customs, cross-border payments, and supply chain logistics."
               },
               {
                 pillar: "GROW",
                 icon: TrendingUp,
-                color: "from-gray-700 to-gray-800",
+                color: "from-emerald-400 to-emerald-600 text-white",
                 text: "Scaling store revenue with StoreSKU™ POS AI automation and direct factory cost savings."
               },
               {
                 pillar: "COLLABORATE",
                 icon: Users,
-                color: "from-gray-900 to-gray-700",
+                color: "from-gray-700 to-gray-900 text-white",
                 text: "Uniting investors, franchisors, and business brokers for turnkey acquisition deals."
               },
               {
                 pillar: "SUCCEED",
                 icon: Target,
-                color: "from-amber-600 to-amber-700",
+                color: "from-yellow-400 to-yellow-600 text-white",
                 text: "Ensuring long-term profitability, operational compliance, and business enterprise value."
               },
             ].map((item, idx) => {
@@ -342,7 +342,7 @@ export default function Home() {
                   className="orion-card p-5 flex flex-col justify-between group hover:border-amber-400"
                 >
                   <div className="space-y-4">
-                    <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${item.color} text-gray-900 flex items-center justify-center font-extrabold shadow-md`}>
+                    <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${item.color} flex items-center justify-center font-extrabold shadow-md`}>
                       <IconComp className="w-6 h-6" />
                     </div>
 

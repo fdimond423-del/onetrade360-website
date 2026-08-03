@@ -5,9 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && node -e \"require('fs').copyFileSync('dist/public/index.html', 'dist/public/404.html')\"",
     "serve": "vite preview",
     "typecheck": "tsc -p tsconfig.json --noEmit",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "predeploy": "vite build",
     "deploy": "gh-pages -d dist/public"
   },

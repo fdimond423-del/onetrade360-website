@@ -12,6 +12,7 @@ import NetworkPage from '@/pages/network';
 import AboutPage from '@/pages/about';
 import ContactPage from '@/pages/contact';
 import { Route, Switch, Router as WouterRouter } from 'wouter';
+import { useHashLocation } from "wouter/use-hash-location";
 import { ThemeProvider } from '@/context/ThemeContext';
 
 const queryClient = new QueryClient();
@@ -38,7 +39,7 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <ThemeProvider>
         <TooltipProvider>
-          <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, '')}>
+          <WouterRouter hook={useHashLocation}>
             <Router />
           </WouterRouter>
           <Toaster />
