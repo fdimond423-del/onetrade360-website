@@ -92,7 +92,7 @@ export function TestimonialsSection() {
                     <h4 className="text-lg font-bold text-slate-950 font-serif">{current.name}</h4>
                     <p className="text-xs text-amber-700 font-mono">{current.role}</p>
                     <p className="text-xs text-slate-500 font-sans flex items-center gap-1 mt-0.5">
-                      <MapPin className="w-3 h-3 text-slate-400" />
+                      <MapPin className="w-3 h-3 text-gray-500" />
                       {current.location}
                     </p>
                   </div>

@@ -164,7 +164,7 @@ export default function Home() {
               <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
                 <Button 
                   onClick={() => setInquiryOpen(true)}
-                  className="w-full sm:w-auto h-13 px-8 text-xs font-bold uppercase tracking-wider bg-slate-950 hover:bg-slate-800 text-white shadow-lg hover:brightness-110 cursor-pointer flex items-center justify-center gap-2 rounded-xl border border-slate-900"
+                  className="w-full sm:w-auto h-13 px-8 text-xs font-bold uppercase tracking-wider bg-white hover:bg-gray-100 text-gray-900 shadow-lg hover:brightness-110 cursor-pointer flex items-center justify-center gap-2 rounded-xl border border-slate-900"
                 >
                   <span>Explore Ecosystem Solutions</span>
                   <ArrowRight className="w-4 h-4 text-amber-400" />
@@ -221,8 +221,8 @@ export default function Home() {
             >
               <div className="bg-white rounded-2xl border border-gray-200 shadow-lg overflow-hidden">
                 <div className="bg-gray-950 px-6 py-4 flex items-center justify-between">
-                  <span className="text-sm font-bold text-white font-mono tracking-wide">OneTrade360™ Ecosystem</span>
-                  <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 text-[10px] font-mono font-bold">
+                  <span className="text-sm font-bold text-gray-900 font-mono tracking-wide">OneTrade360™ Ecosystem</span>
+                  <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-500/20 border border-emerald-200 text-emerald-700 text-[10px] font-mono font-bold">
                     <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping" />
                     VERIFIED
                   </div>
@@ -259,7 +259,7 @@ export default function Home() {
                 <div className="px-5 py-4 bg-gray-50 border-t border-gray-100">
                   <Button 
                     onClick={() => setInquiryOpen(true)}
-                    className="w-full h-11 bg-gray-950 hover:bg-amber-500 hover:text-black text-white font-bold text-xs uppercase tracking-wider rounded-xl cursor-pointer transition-colors"
+                    className="w-full h-11 bg-gray-950-white font-bold text-xs uppercase tracking-wider rounded-xl cursor-pointer transition-colors"
                   >
                     Schedule Free Consultation
                   </Button>
@@ -342,7 +342,7 @@ export default function Home() {
                   className="orion-card p-5 flex flex-col justify-between group hover:border-amber-400"
                 >
                   <div className="space-y-4">
-                    <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${item.color} text-white flex items-center justify-center font-extrabold shadow-md`}>
+                    <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${item.color} text-gray-900 flex items-center justify-center font-extrabold shadow-md`}>
                       <IconComp className="w-6 h-6" />
                     </div>
 
@@ -396,7 +396,7 @@ export default function Home() {
                   onClick={() => setActiveCorridor(key)}
                   className={`flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-mono font-bold transition-all ${
                     activeCorridor === key
-                      ? "bg-slate-950 text-white shadow-md"
+                      ? "bg-white text-gray-900 shadow-md"
                       : "text-slate-700 hover:text-slate-950 hover:bg-white"
                   }`}
                 >
@@ -413,45 +413,45 @@ export default function Home() {
             initial={{ opacity: 0, scale: 0.95, y: 15 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             transition={{ duration: 0.4 }}
-            className="max-w-4xl mx-auto orion-card-navy p-8 sm:p-12 border-slate-800 relative"
+            className="max-w-4xl mx-auto orion-card-navy p-8 sm:p-12 border-gray-200 relative"
           >
             <div className="grid md:grid-cols-12 gap-8 items-center">
               <div className="md:col-span-7 space-y-4">
                 <div className="flex items-center gap-3">
                   <span className="text-4xl">{corridorData[activeCorridor].flag}</span>
                   <div>
-                    <h3 className="text-2xl font-serif font-bold text-white">{corridorData[activeCorridor].name}</h3>
+                    <h3 className="text-2xl font-serif font-bold text-gray-900">{corridorData[activeCorridor].name}</h3>
                     <p className="text-xs font-mono text-amber-400">{corridorData[activeCorridor].subtitle}</p>
                   </div>
                 </div>
 
-                <p className="text-slate-300 text-sm font-light leading-relaxed">
+                <p className="text-gray-600 text-sm font-light leading-relaxed">
                   {corridorData[activeCorridor].desc}
                 </p>
 
                 <div className="space-y-2 pt-2">
                   <div className="flex items-center gap-2 text-xs font-mono text-amber-300">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+                    <CheckCircle2 className="w-4 h-4 text-emerald-700" />
                     <span>{corridorData[activeCorridor].stat1}</span>
                   </div>
                   <div className="flex items-center gap-2 text-xs font-mono text-amber-300">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+                    <CheckCircle2 className="w-4 h-4 text-emerald-700" />
                     <span>{corridorData[activeCorridor].stat2}</span>
                   </div>
                   <div className="flex items-center gap-2 text-xs font-mono text-amber-300">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+                    <CheckCircle2 className="w-4 h-4 text-emerald-700" />
                     <span>{corridorData[activeCorridor].stat3}</span>
                   </div>
                 </div>
               </div>
 
-              <div className="md:col-span-5 flex flex-col justify-center space-y-4 bg-slate-900 p-6 rounded-2xl border border-slate-800 text-center">
-                <div className="text-xs font-mono text-slate-400 uppercase">Live Corridor Status</div>
-                <div className="text-3xl font-serif font-bold text-emerald-400 flex items-center justify-center gap-2">
+              <div className="md:col-span-5 flex flex-col justify-center space-y-4 bg-gray-50 p-6 rounded-2xl border border-gray-200 text-center">
+                <div className="text-xs font-mono text-gray-500 uppercase">Live Corridor Status</div>
+                <div className="text-3xl font-serif font-bold text-emerald-700 flex items-center justify-center gap-2">
                   <span className="w-3 h-3 rounded-full bg-emerald-400 animate-ping" />
                   100% ACTIVE
                 </div>
-                <p className="text-xs text-slate-400 font-light">Customs Cleared & Standardized Logistics Protocols</p>
+                <p className="text-xs text-gray-500 font-light">Customs Cleared & Standardized Logistics Protocols</p>
                 <Button 
                   onClick={() => setInquiryOpen(true)}
                   className="w-full h-11 bg-amber-400 hover:bg-amber-500 text-slate-950 font-bold text-xs uppercase cursor-pointer rounded-xl"
@@ -625,7 +625,7 @@ export default function Home() {
                   <Button 
                     onClick={() => setInquiryOpen(true)}
                     size="sm"
-                    className="h-8 text-[11px] bg-slate-950 hover:bg-amber-500 hover:text-slate-950 text-white font-mono font-bold rounded-lg cursor-pointer transition-colors"
+                    className="h-8 text-[11px] bg-white hover:bg-amber-500 hover:text-slate-950 text-gray-900 font-mono font-bold rounded-lg cursor-pointer transition-colors"
                   >
                     Request Quote
                   </Button>
@@ -664,7 +664,7 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Button 
                 onClick={() => setInquiryOpen(true)}
-                className="w-full sm:w-auto h-13 px-10 bg-slate-950 hover:bg-slate-800 text-white font-bold text-xs uppercase tracking-wider shadow-lg cursor-pointer rounded-xl"
+                className="w-full sm:w-auto h-13 px-10 bg-white hover:bg-gray-100 text-gray-900 font-bold text-xs uppercase tracking-wider shadow-lg cursor-pointer rounded-xl"
               >
                 Schedule Executive Consultation
               </Button>

@@ -83,7 +83,7 @@ export function SplashLoader({ onComplete }: SplashLoaderProps) {
                 transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
                 className="absolute inset-4 rounded-full border border-slate-300"
               >
-                <div className="w-3.5 h-3.5 bg-slate-900 rounded-full shadow-[0_0_15px_rgba(15,23,42,0.4)] absolute -bottom-2 left-1/2 -translate-x-1/2" />
+                <div className="w-3.5 h-3.5 bg-white rounded-full shadow-[0_0_15px_rgba(15,23,42,0.4)] absolute -bottom-2 left-1/2 -translate-x-1/2" />
               </motion.div>
 
               {/* Central Logo Box */}
@@ -153,12 +153,12 @@ export function SplashLoader({ onComplete }: SplashLoaderProps) {
                 <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
                 INDIA 🇮🇳
               </span>
-              <span className="text-slate-300">•</span>
+              <span className="text-gray-600">•</span>
               <span className="flex items-center gap-1.5 font-bold">
                 <span className="w-2 h-2 rounded-full bg-blue-600 animate-pulse" />
                 USA 🇺🇸
               </span>
-              <span className="text-slate-300">•</span>
+              <span className="text-gray-600">•</span>
               <span className="flex items-center gap-1.5 font-bold">
                 <span className="w-2 h-2 rounded-full bg-amber-600 animate-pulse" />
                 CANADA 🇨🇦

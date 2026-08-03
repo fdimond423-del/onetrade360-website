@@ -48,30 +48,30 @@ export default function TechnologyPage() {
       </div>
 
       {/* Hero Header */}
-      <section className="relative py-20 border-b border-white/10 overflow-hidden">
+      <section className="relative py-20 border-b border-gray-200 overflow-hidden">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[850px] h-[450px] bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-indigo-500/10 blur-[160px] pointer-events-none" />
         <div className="container mx-auto px-4 sm:px-6 relative z-10 text-center max-w-4xl">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-400/10 border border-cyan-400/30 text-cyan-400 text-xs font-mono font-semibold uppercase tracking-wider mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-400/10 border border-amber-400/30 text-amber-700 text-xs font-mono font-semibold uppercase tracking-wider mb-6">
             <Cpu className="w-4 h-4 text-amber-400" />
             Proprietary Tech Suite
           </div>
 
-          <h1 className="text-4xl sm:text-6xl font-serif font-extrabold text-white mb-6 leading-tight">
+          <h1 className="text-4xl sm:text-6xl font-serif font-extrabold text-gray-900 mb-6 leading-tight">
             AI-Powered <span className="shimmer-text">Business Solutions</span>
           </h1>
 
-          <p className="text-lg sm:text-xl text-slate-300 font-light leading-relaxed mb-8">
+          <p className="text-lg sm:text-xl text-gray-600 font-light leading-relaxed mb-8">
             Smart software platforms engineered to automate daily store operations and safeguard commercial enterprise assets 24/7.
           </p>
 
           {/* Toggle Buttons */}
-          <div className="inline-flex p-1.5 rounded-2xl bg-slate-900 border border-white/10 backdrop-blur-md">
+          <div className="inline-flex p-1.5 rounded-2xl bg-gray-50 border border-gray-200 backdrop-blur-md">
             <button
               onClick={() => setActiveTech("storesku")}
               className={`px-6 py-3 rounded-xl text-xs sm:text-sm font-semibold font-mono transition-all ${
                 activeTech === "storesku"
                   ? "bg-gradient-to-r from-amber-400 to-amber-500 text-slate-950 font-bold shadow-[0_0_20px_rgba(245,183,0,0.35)]"
-                  : "text-slate-400 hover:text-white"
+                  : "text-gray-500 hover:text-gray-900"
               }`}
             >
               StoreSKU™ AI Retail
@@ -81,7 +81,7 @@ export default function TechnologyPage() {
               className={`px-6 py-3 rounded-xl text-xs sm:text-sm font-semibold font-mono transition-all ${
                 activeTech === "xon"
                   ? "bg-gradient-to-r from-cyan-400 to-blue-500 text-slate-950 font-bold shadow-[0_0_20px_rgba(56,189,248,0.35)]"
-                  : "text-slate-400 hover:text-white"
+                  : "text-gray-500 hover:text-gray-900"
               }`}
             >
               X-ON™ AI Security
@@ -103,9 +103,9 @@ export default function TechnologyPage() {
                     <MonitorSmartphone className="w-8 h-8" />
                   </div>
                   
-                  <h2 className="text-3xl sm:text-4xl font-serif font-bold text-white">StoreSKU™ AI Platform</h2>
+                  <h2 className="text-3xl sm:text-4xl font-serif font-bold text-gray-900">StoreSKU™ AI Platform</h2>
                   
-                  <p className="text-slate-300 leading-relaxed font-light">
+                  <p className="text-gray-600 leading-relaxed font-light">
                     Retail operations management platform for convenience stores, gas stations, liquor stores, and multi-location retail chains.
                   </p>
 
@@ -119,7 +119,7 @@ export default function TechnologyPage() {
                       "Real-time Business Analytics & POS Reordering",
                       "Cloud Performance Dashboard & Mobile App"
                     ].map((feat, i) => (
-                      <div key={i} className="flex items-center gap-3 text-sm text-slate-200">
+                      <div key={i} className="flex items-center gap-3 text-sm text-gray-700">
                         <CheckCircle2 className="w-4 h-4 text-amber-400 shrink-0" />
                         <span>{feat}</span>
                       </div>
@@ -132,13 +132,13 @@ export default function TechnologyPage() {
                 </div>
               ) : (
                 <div className="space-y-6">
-                  <div className="w-16 h-16 rounded-2xl bg-cyan-400/20 border border-cyan-400/40 flex items-center justify-center text-cyan-400 shadow-[0_0_30px_rgba(56,189,248,0.3)]">
+                  <div className="w-16 h-16 rounded-2xl bg-gray-100 border border-gray-200 flex items-center justify-center text-amber-700 shadow-[0_0_30px_rgba(56,189,248,0.3)]">
                     <Shield className="w-8 h-8" />
                   </div>
                   
-                  <h2 className="text-3xl sm:text-4xl font-serif font-bold text-white">X-ON™ AI Security System</h2>
+                  <h2 className="text-3xl sm:text-4xl font-serif font-bold text-gray-900">X-ON™ AI Security System</h2>
                   
-                  <p className="text-slate-300 leading-relaxed font-light">
+                  <p className="text-gray-600 leading-relaxed font-light">
                     Smart surveillance and AI-powered security engineered for commercial retail stores, warehouses, hotels, and industrial plants.
                   </p>
 
@@ -152,8 +152,8 @@ export default function TechnologyPage() {
                       "Mobile App Control & Instant Alerts",
                       "Commercial Business Security Intelligence"
                     ].map((feat, i) => (
-                      <div key={i} className="flex items-center gap-3 text-sm text-slate-200">
-                        <CheckCircle2 className="w-4 h-4 text-cyan-400 shrink-0" />
+                      <div key={i} className="flex items-center gap-3 text-sm text-gray-700">
+                        <CheckCircle2 className="w-4 h-4 text-amber-700 shrink-0" />
                         <span>{feat}</span>
                       </div>
                     ))}
@@ -169,23 +169,23 @@ export default function TechnologyPage() {
             {/* Right Interactive Visual Box */}
             <div className="lg:col-span-6">
               <div className="glass-card-cyber rounded-3xl p-6 sm:p-8 relative overflow-hidden font-mono text-xs">
-                <div className="flex items-center justify-between pb-4 mb-4 border-b border-white/10 text-slate-400">
+                <div className="flex items-center justify-between pb-4 mb-4 border-b border-gray-200 text-gray-500">
                   <div className="flex items-center gap-2">
                     <div className="w-3 h-3 rounded-full bg-red-500" />
                     <div className="w-3 h-3 rounded-full bg-amber-500" />
                     <div className="w-3 h-3 rounded-full bg-emerald-500" />
-                    <span className="ml-2 font-bold text-slate-200">
+                    <span className="ml-2 font-bold text-gray-700">
                       {activeTech === "storesku" ? "StoreSKU™_v4.2_NODE" : "X-ON_AI_NODE_09"}
                     </span>
                   </div>
-                  <span className="text-emerald-400 flex items-center gap-1 font-bold">
+                  <span className="text-emerald-700 flex items-center gap-1 font-bold">
                     <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
                     ONLINE
                   </span>
                 </div>
 
                 {/* Dynamic Chart */}
-                <div className="h-56 w-full mb-4 bg-slate-900/60 p-3 rounded-xl border border-white/5">
+                <div className="h-56 w-full mb-4 bg-gray-50/60 p-3 rounded-xl border border-gray-100">
                   <ResponsiveContainer width="100%" height="100%">
                     <AreaChart data={activeTech === "storesku" ? storeSkuData : xonData}>
                       <defs>
@@ -202,12 +202,12 @@ export default function TechnologyPage() {
                   </ResponsiveContainer>
                 </div>
 
-                <div className="p-4 bg-slate-900/90 rounded-xl border border-white/5 space-y-2 text-slate-300 text-xs">
+                <div className="p-4 bg-gray-50/90 rounded-xl border border-gray-100 space-y-2 text-gray-600 text-xs">
                   <div className="flex justify-between">
                     <span>SYSTEM STATUS:</span>
-                    <span className="text-emerald-400 font-bold">100% OPERATIONAL</span>
+                    <span className="text-emerald-700 font-bold">100% OPERATIONAL</span>
                   </div>
-                  <div className="text-[11px] text-slate-400 font-mono">
+                  <div className="text-[11px] text-gray-500 font-mono">
                     {activeTech === "storesku" 
                       ? "[StoreSKU AI]: POS sync active. Inventory auto-reorder trigger evaluated across 1,480 stores."
                       : "[X-ON AI]: 24/7 Threat analytics streaming. Zero intrusion breaches logged across connected sites."}

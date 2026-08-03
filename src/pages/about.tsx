@@ -86,7 +86,7 @@ export default function AboutPage() {
               viewport={{ once: true }}
               className="glass-card-cyber rounded-3xl p-8 sm:p-10 border border-gray-200 relative overflow-hidden"
             >
-              <div className="w-14 h-14 rounded-2xl bg-cyan-400/20 border border-gray-200 flex items-center justify-center text-gray-700 mb-6">
+              <div className="w-14 h-14 rounded-2xl bg-gray-100 border border-gray-200 flex items-center justify-center text-gray-700 mb-6">
                 <Target className="w-7 h-7" />
               </div>
               <h2 className="text-3xl font-serif font-bold text-gray-950 mb-4">Our Mission</h2>
@@ -133,7 +133,7 @@ export default function AboutPage() {
           {/* CTA Box */}
           <div className="mt-16 text-center glass-card-gold rounded-3xl p-10 relative overflow-hidden">
             <h3 className="text-3xl font-serif font-bold text-gray-950 mb-4">Everything Your Business Needs. All in One Place.</h3>
-            <p className="text-slate-300 max-w-2xl mx-auto mb-8 font-light">
+            <p className="text-gray-600 max-w-2xl mx-auto mb-8 font-light">
               OneTrade360™ — One Platform. One Click. Endless Business Opportunities.
             </p>
             <Button 

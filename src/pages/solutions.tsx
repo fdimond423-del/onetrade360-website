@@ -63,7 +63,7 @@ export default function SolutionsPage() {
                 onClick={() => setActiveTab(tab.id as any)}
                 className={`flex items-center gap-2.5 px-5 py-3 rounded-xl text-xs sm:text-sm font-semibold font-mono transition-all ${
                   activeTab === tab.id
-                    ? "bg-slate-950 text-white font-bold shadow-md"
+                    ? "bg-white text-gray-900 font-bold shadow-md"
                     : "text-slate-700 hover:text-slate-950 hover:bg-slate-100"
                 }`}
               >
@@ -84,7 +84,7 @@ export default function SolutionsPage() {
             <motion.div initial="hidden" animate="visible" variants={FADE_UP} className="space-y-12">
               <div className="bg-white border border-slate-200 rounded-3xl p-8 sm:p-12 shadow-sm">
                 <div className="flex items-center gap-4 mb-6">
-                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center text-white shadow-md">
+                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center text-gray-900 shadow-md">
                     <Utensils className="w-8 h-8" />
                   </div>
                   <div>
@@ -120,7 +120,7 @@ export default function SolutionsPage() {
             <motion.div initial="hidden" animate="visible" variants={FADE_UP} className="space-y-12">
               <div className="bg-white border border-slate-200 rounded-3xl p-8 sm:p-12 shadow-sm">
                 <div className="flex items-center gap-4 mb-6">
-                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-600 to-indigo-700 flex items-center justify-center text-white shadow-md">
+                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-600 to-indigo-700 flex items-center justify-center text-gray-900 shadow-md">
                     <Store className="w-8 h-8" />
                   </div>
                   <div>
@@ -155,7 +155,7 @@ export default function SolutionsPage() {
             <motion.div initial="hidden" animate="visible" variants={FADE_UP} className="space-y-12">
               <div className="bg-white border border-slate-200 rounded-3xl p-8 sm:p-12 shadow-sm">
                 <div className="flex items-center gap-4 mb-6">
-                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white shadow-md">
+                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-gray-900 shadow-md">
                     <Hotel className="w-8 h-8" />
                   </div>
                   <div>
@@ -189,7 +189,7 @@ export default function SolutionsPage() {
             <motion.div initial="hidden" animate="visible" variants={FADE_UP} className="space-y-12">
               <div className="bg-white border border-slate-200 rounded-3xl p-8 sm:p-12 shadow-sm">
                 <div className="flex items-center gap-4 mb-6">
-                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center text-white shadow-md">
+                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center text-gray-900 shadow-md">
                     <Box className="w-8 h-8" />
                   </div>
                   <div>
@@ -220,9 +220,9 @@ export default function SolutionsPage() {
           )}
 
           {/* CTA Banner */}
-          <div className="mt-16 text-center bg-slate-900 rounded-3xl p-10 relative overflow-hidden border border-slate-800">
-            <h3 className="text-3xl font-serif font-bold text-white mb-4">Need a Custom Turnkey Solution Package?</h3>
-            <p className="text-slate-300 max-w-2xl mx-auto mb-8 font-light">
+          <div className="mt-16 text-center bg-gray-50 rounded-3xl p-10 relative overflow-hidden border border-gray-200">
+            <h3 className="text-3xl font-serif font-bold text-gray-900 mb-4">Need a Custom Turnkey Solution Package?</h3>
+            <p className="text-gray-600 max-w-2xl mx-auto mb-8 font-light">
               Our specialists configure complete equipment, technology, and sourcing plans tailored to your specific budget and timeline.
             </p>
             <Button 

@@ -20,7 +20,7 @@ export function TradeCalculator({ onOpenInquiry }: TradeCalculatorProps) {
   const efficiencyGain = sector === "retail" ? 34 : sector === "restaurant" ? 42 : sector === "hotel" ? 29 : 48;
 
   return (
-    <section className="py-24 relative bg-slate-900 border-y border-slate-800 overflow-hidden">
+    <section className="py-24 relative bg-white border-y border-slate-800 overflow-hidden">
       {/* Subtle ambient glows */}
       <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-[500px] h-[500px] bg-amber-500/8 rounded-full blur-[140px] pointer-events-none" />
       <div className="absolute bottom-0 right-10 w-[400px] h-[400px] bg-blue-600/8 rounded-full blur-[130px] pointer-events-none" />
@@ -31,10 +31,10 @@ export function TradeCalculator({ onOpenInquiry }: TradeCalculatorProps) {
             <Calculator className="w-3.5 h-3.5" />
             Interactive ROI & Sourcing Estimator
           </div>
-          <h2 className="text-4xl sm:text-5xl font-serif font-bold text-white mb-4">
+          <h2 className="text-4xl sm:text-5xl font-serif font-bold text-gray-900 mb-4">
             Calculate Your <span className="shimmer-text">Ecosystem Savings</span>
           </h2>
-          <p className="text-slate-300 text-base sm:text-lg font-light">
+          <p className="text-gray-600 text-base sm:text-lg font-light">
             See how much your enterprise saves by tapping into direct OEM factory supply chains and StoreSKU™ AI automation.
           </p>
         </div>
@@ -43,14 +43,14 @@ export function TradeCalculator({ onOpenInquiry }: TradeCalculatorProps) {
           {/* Controls Panel */}
           <div className="lg:col-span-6 bg-slate-800 border border-slate-700 rounded-3xl p-6 sm:p-8 flex flex-col justify-between space-y-6">
             <div>
-              <h3 className="text-xl font-serif font-bold text-white mb-6 flex items-center gap-2">
+              <h3 className="text-xl font-serif font-bold text-gray-900 mb-6 flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-amber-400" />
                 Select Business Parameters
               </h3>
 
               {/* 1. Industry Sector */}
               <div className="mb-6">
-                <label className="block text-xs font-mono text-slate-400 uppercase tracking-wider mb-3">
+                <label className="block text-xs font-mono text-gray-500 uppercase tracking-wider mb-3">
                   1. Business Sector
                 </label>
                 <div className="grid grid-cols-2 gap-3">
@@ -66,7 +66,7 @@ export function TradeCalculator({ onOpenInquiry }: TradeCalculatorProps) {
                       className={`flex items-center gap-2.5 p-3 rounded-xl border text-xs font-semibold transition-all ${
                         sector === item.id
                           ? "bg-amber-400 text-slate-950 border-amber-400 font-bold shadow-md"
-                          : "bg-slate-900/80 border-slate-700 text-slate-300 hover:border-slate-500"
+                          : "bg-white/80 border-slate-700 text-gray-600 hover:border-slate-500"
                       }`}
                     >
                       <item.icon className="w-4 h-4 shrink-0" />
@@ -78,7 +78,7 @@ export function TradeCalculator({ onOpenInquiry }: TradeCalculatorProps) {
 
               {/* 2. Target Region */}
               <div className="mb-6">
-                <label className="block text-xs font-mono text-slate-400 uppercase tracking-wider mb-3">
+                <label className="block text-xs font-mono text-gray-500 uppercase tracking-wider mb-3">
                   2. Primary Operations Hub
                 </label>
                 <div className="grid grid-cols-3 gap-3">
@@ -93,7 +93,7 @@ export function TradeCalculator({ onOpenInquiry }: TradeCalculatorProps) {
                       className={`p-2.5 rounded-xl border text-xs font-semibold text-center transition-all ${
                         region === item.id
                           ? "bg-amber-400/20 text-amber-300 border-amber-400"
-                          : "bg-slate-900/60 border-slate-700 text-slate-400 hover:text-white"
+                          : "bg-white/60 border-slate-700 text-gray-500 hover:text-white"
                       }`}
                     >
                       {item.label}
@@ -105,7 +105,7 @@ export function TradeCalculator({ onOpenInquiry }: TradeCalculatorProps) {
               {/* 3. Scale Slider */}
               <div>
                 <div className="flex justify-between items-center mb-2">
-                  <label className="text-xs font-mono text-slate-400 uppercase tracking-wider">
+                  <label className="text-xs font-mono text-gray-500 uppercase tracking-wider">
                     3. Number of Locations / Scale
                   </label>
                   <span className="text-sm font-bold font-mono text-amber-400 bg-amber-400/10 px-2.5 py-0.5 rounded-md border border-amber-400/30">
@@ -128,9 +128,9 @@ export function TradeCalculator({ onOpenInquiry }: TradeCalculatorProps) {
               </div>
             </div>
 
-            <div className="p-4 rounded-xl bg-slate-900 border border-slate-700 text-xs text-slate-400 font-mono flex items-center justify-between">
+            <div className="p-4 rounded-xl bg-white border border-slate-700 text-xs text-gray-500 font-mono flex items-center justify-between">
               <span>Verified Factory Supply Chain Direct API</span>
-              <span className="text-emerald-400 flex items-center gap-1 font-bold">
+              <span className="text-emerald-700 flex items-center gap-1 font-bold">
                 <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping" />
                 LIVE
               </span>
@@ -144,18 +144,18 @@ export function TradeCalculator({ onOpenInquiry }: TradeCalculatorProps) {
             <div>
               <div className="flex items-center justify-between pb-4 mb-6 border-b border-slate-700">
                 <div className="text-xs font-mono text-amber-400 uppercase tracking-wider">Estimated Business Impact</div>
-                <span className="px-2.5 py-0.5 rounded bg-emerald-500/20 text-emerald-400 border border-emerald-500/40 text-[10px] font-mono font-bold">
+                <span className="px-2.5 py-0.5 rounded bg-emerald-500/20 text-emerald-700 border border-emerald-500/40 text-[10px] font-mono font-bold">
                   UPDATED TODAY
                 </span>
               </div>
 
               {/* Big Stat Box */}
-              <div className="bg-slate-900 p-6 rounded-2xl border border-amber-400/30 mb-6 shadow-inner text-center sm:text-left">
-                <div className="text-xs text-slate-400 uppercase font-mono mb-1">Estimated Annual Supply Chain Savings</div>
+              <div className="bg-white p-6 rounded-2xl border border-amber-400/30 mb-6 shadow-inner text-center sm:text-left">
+                <div className="text-xs text-gray-500 uppercase font-mono mb-1">Estimated Annual Supply Chain Savings</div>
                 <div className="text-4xl sm:text-5xl font-serif font-extrabold text-white tracking-tight">
                   ${annualSavings.toLocaleString()} <span className="text-amber-400 text-xl font-mono">USD</span>
                 </div>
-                <div className="mt-2 flex items-center justify-center sm:justify-start gap-2 text-xs text-emerald-400 font-mono">
+                <div className="mt-2 flex items-center justify-center sm:justify-start gap-2 text-xs text-emerald-700 font-mono">
                   <TrendingUp className="w-4 h-4" />
                   <span>Up to {sourcingDiscountPercent}% direct OEM cost reduction</span>
                 </div>
@@ -163,22 +163,22 @@ export function TradeCalculator({ onOpenInquiry }: TradeCalculatorProps) {
 
               {/* Breakdown Grid */}
               <div className="grid grid-cols-2 gap-4 mb-6">
-                <div className="p-4 rounded-xl bg-slate-900 border border-slate-700">
-                  <div className="flex items-center gap-2 text-slate-400 text-xs mb-1">
+                <div className="p-4 rounded-xl bg-white border border-slate-700">
+                  <div className="flex items-center gap-2 text-gray-500 text-xs mb-1">
                     <Clock className="w-4 h-4 text-amber-400" />
                     <span>Time Saved</span>
                   </div>
                   <div className="text-2xl font-serif font-bold text-white">{timeSavedWeeks} Weeks</div>
-                  <div className="text-[10px] text-slate-400 font-mono">Faster Turnkey Deployment</div>
+                  <div className="text-[10px] text-gray-500 font-mono">Faster Turnkey Deployment</div>
                 </div>
 
-                <div className="p-4 rounded-xl bg-slate-900 border border-slate-700">
-                  <div className="flex items-center gap-2 text-slate-400 text-xs mb-1">
+                <div className="p-4 rounded-xl bg-white border border-slate-700">
+                  <div className="flex items-center gap-2 text-gray-500 text-xs mb-1">
                     <Zap className="w-4 h-4 text-amber-400" />
                     <span>StoreSKU Efficiency</span>
                   </div>
-                  <div className="text-2xl font-serif font-bold text-emerald-400">+{efficiencyGain}%</div>
-                  <div className="text-[10px] text-slate-400 font-mono">Operations Boost</div>
+                  <div className="text-2xl font-serif font-bold text-emerald-700">+{efficiencyGain}%</div>
+                  <div className="text-[10px] text-gray-500 font-mono">Operations Boost</div>
                 </div>
               </div>
             </div>
@@ -192,7 +192,7 @@ export function TradeCalculator({ onOpenInquiry }: TradeCalculatorProps) {
                 Lock In Your Custom Estimate
                 <ArrowRight className="w-5 h-5" />
               </Button>
-              <p className="text-center text-[11px] text-slate-400 mt-2 font-mono">
+              <p className="text-center text-[11px] text-gray-500 mt-2 font-mono">
                 No obligation • Free consultation with OneTrade360 specialists
               </p>
             </div>

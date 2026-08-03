@@ -47,32 +47,32 @@ export default function NetworkPage() {
       </div>
 
       {/* Hero Header */}
-      <section className="relative py-20 border-b border-white/10 overflow-hidden">
+      <section className="relative py-20 border-b border-gray-200 overflow-hidden">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[850px] h-[450px] bg-gradient-to-r from-cyan-500/10 via-amber-500/10 to-indigo-500/10 blur-[160px] pointer-events-none" />
         <div className="container mx-auto px-4 sm:px-6 relative z-10 text-center max-w-4xl">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-400/10 border border-cyan-400/30 text-cyan-400 text-xs font-mono font-semibold uppercase tracking-wider mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-400/10 border border-amber-400/30 text-amber-700 text-xs font-mono font-semibold uppercase tracking-wider mb-6">
             <Globe className="w-4 h-4 text-amber-400" />
             One Platform. Global Connections.
           </div>
 
-          <h1 className="text-4xl sm:text-6xl font-serif font-extrabold text-white mb-6 leading-tight">
+          <h1 className="text-4xl sm:text-6xl font-serif font-extrabold text-gray-900 mb-6 leading-tight">
             Global Network & <span className="shimmer-text">Trade Corridors</span>
           </h1>
 
-          <p className="text-lg sm:text-xl text-slate-300 font-light leading-relaxed">
+          <p className="text-lg sm:text-xl text-gray-600 font-light leading-relaxed">
             Connecting businesses across India, USA, and Canada through one integrated B2B ecosystem.
           </p>
         </div>
       </section>
 
       {/* Countries Served Section */}
-      <section className="py-20 relative border-b border-white/10">
+      <section className="py-20 relative border-b border-gray-200">
         <div className="container mx-auto px-4 sm:px-6 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl sm:text-4xl font-serif font-bold text-white mb-4">
+            <h2 className="text-3xl sm:text-4xl font-serif font-bold text-gray-900 mb-4">
               Countries We <span className="text-amber-400">Serve</span>
             </h2>
-            <p className="text-slate-300 font-light text-base">
+            <p className="text-gray-600 font-light text-base">
               Active primary hubs with expanding international trade partnerships.
             </p>
           </div>
@@ -89,15 +89,15 @@ export default function NetworkPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1 }}
-                className="glass-card-cyber p-8 rounded-3xl border border-white/10 hover:border-cyan-400/60 transition-all text-center group"
+                className="glass-card-cyber p-8 rounded-3xl border border-gray-200 hover:border-amber-400/60 transition-all text-center group"
               >
-                <div className="w-16 h-16 rounded-2xl bg-cyan-400/10 border border-cyan-400/30 flex items-center justify-center text-cyan-400 mx-auto mb-4 group-hover:scale-110 transition-transform">
+                <div className="w-16 h-16 rounded-2xl bg-cyan-400/10 border border-amber-400/30 flex items-center justify-center text-amber-700 mx-auto mb-4 group-hover:scale-110 transition-transform">
                   <MapPin className="w-8 h-8 text-amber-400" />
                 </div>
                 <span className="px-3 py-1 rounded bg-amber-400/20 text-amber-400 text-xs font-mono font-bold">{node.code}</span>
-                <h3 className="text-2xl font-serif font-bold text-white mt-3 mb-2">{node.country}</h3>
-                <p className="text-xs text-cyan-400 font-mono mb-3">{node.cities}</p>
-                <p className="text-xs text-slate-400 font-light border-t border-white/10 pt-3">{node.hub}</p>
+                <h3 className="text-2xl font-serif font-bold text-gray-900 mt-3 mb-2">{node.country}</h3>
+                <p className="text-xs text-amber-700 font-mono mb-3">{node.cities}</p>
+                <p className="text-xs text-gray-500 font-light border-t border-gray-200 pt-3">{node.hub}</p>
               </motion.div>
             ))}
           </div>
@@ -105,22 +105,22 @@ export default function NetworkPage() {
       </section>
 
       {/* Who We Connect Grid */}
-      <section className="py-20 relative border-b border-white/10">
+      <section className="py-20 relative border-b border-gray-200">
         <div className="container mx-auto px-4 sm:px-6 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl sm:text-4xl font-serif font-bold text-white mb-4">
-              Who We <span className="text-cyan-400">Connect</span>
+            <h2 className="text-3xl sm:text-4xl font-serif font-bold text-gray-900 mb-4">
+              Who We <span className="text-amber-700">Connect</span>
             </h2>
-            <p className="text-slate-300 font-light text-base">
+            <p className="text-gray-600 font-light text-base">
               Uniting key business decision-makers across the commercial trade spectrum.
             </p>
           </div>
 
           <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {connectedStakeholders.map((person, idx) => (
-              <div key={idx} className="p-4 rounded-xl bg-slate-900/90 border border-white/10 flex items-center gap-3 hover:border-amber-400/50 transition-colors">
+              <div key={idx} className="p-4 rounded-xl bg-gray-50/90 border border-gray-200 flex items-center gap-3 hover:border-amber-400/50 transition-colors">
                 <CheckCircle2 className="w-5 h-5 text-amber-400 shrink-0" />
-                <span className="text-sm font-semibold text-slate-200">{person}</span>
+                <span className="text-sm font-semibold text-gray-700">{person}</span>
               </div>
             ))}
           </div>
@@ -131,10 +131,10 @@ export default function NetworkPage() {
       <section className="py-20 relative">
         <div className="container mx-auto px-4 sm:px-6 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl sm:text-4xl font-serif font-bold text-white mb-4">
+            <h2 className="text-3xl sm:text-4xl font-serif font-bold text-gray-900 mb-4">
               Perfect <span className="text-amber-400">For Your Enterprise</span>
             </h2>
-            <p className="text-slate-300 font-light text-base">
+            <p className="text-gray-600 font-light text-base">
               Built to serve businesses at every stage of growth and international expansion.
             </p>
           </div>
@@ -147,21 +147,21 @@ export default function NetworkPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.05 }}
-                className="glass-card p-6 rounded-2xl border border-white/10 hover:border-cyan-400/50 transition-all duration-300"
+                className="glass-card p-6 rounded-2xl border border-gray-200 hover:border-amber-400/50 transition-all duration-300"
               >
-                <div className="w-12 h-12 rounded-xl bg-cyan-400/10 border border-cyan-400/30 flex items-center justify-center text-cyan-400 mb-4">
+                <div className="w-12 h-12 rounded-xl bg-cyan-400/10 border border-amber-400/30 flex items-center justify-center text-amber-700 mb-4">
                   <item.icon className="w-6 h-6" />
                 </div>
-                <h3 className="text-lg font-serif font-bold text-white mb-2">{item.title}</h3>
-                <p className="text-xs text-slate-300 leading-relaxed font-light">{item.desc}</p>
+                <h3 className="text-lg font-serif font-bold text-gray-900 mb-2">{item.title}</h3>
+                <p className="text-xs text-gray-600 leading-relaxed font-light">{item.desc}</p>
               </motion.div>
             ))}
           </div>
 
           {/* CTA Box */}
           <div className="mt-16 text-center glass-card-gold rounded-3xl p-10 relative overflow-hidden">
-            <h3 className="text-3xl font-serif font-bold text-white mb-4">Join the OneTrade360™ Global Network</h3>
-            <p className="text-slate-300 max-w-2xl mx-auto mb-8 font-light">
+            <h3 className="text-3xl font-serif font-bold text-gray-900 mb-4">Join the OneTrade360™ Global Network</h3>
+            <p className="text-gray-600 max-w-2xl mx-auto mb-8 font-light">
               One Platform. One Login. Unlimited Business Opportunities. Connect with verified suppliers, investors, and manufacturers today.
             </p>
             <Button 

@@ -34,7 +34,7 @@ export default function IndustriesPage() {
       desc: "Turnkey equipment, commercial kitchen layout design, guest amenities, and supply chain for food & lodging.",
       icon: Utensils,
       accent: "from-cyan-400 to-blue-600",
-      border: "border-cyan-400/30",
+      border: "border-amber-400/30",
       items: [
         "Coffee Shops", "Cafés", "Full Service Restaurants", "QSR Chains", 
         "Bakeries", "Hotels", "Motels", "Resorts", "Travel Centers"
@@ -77,19 +77,19 @@ export default function IndustriesPage() {
       </div>
 
       {/* Header */}
-      <section className="relative py-20 border-b border-white/10 overflow-hidden">
+      <section className="relative py-20 border-b border-gray-200 overflow-hidden">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[750px] h-[400px] bg-gradient-to-r from-amber-500/10 via-cyan-500/10 to-indigo-500/10 blur-[150px] pointer-events-none" />
         <div className="container mx-auto px-4 sm:px-6 relative z-10 text-center max-w-4xl">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-400/10 border border-amber-400/30 text-amber-400 text-xs font-mono font-semibold uppercase tracking-wider mb-6">
-            <Building2 className="w-4 h-4 text-cyan-400" />
+            <Building2 className="w-4 h-4 text-amber-700" />
             Core Industry Portfolios
           </div>
 
-          <h1 className="text-4xl sm:text-6xl font-serif font-extrabold text-white mb-6 leading-tight">
+          <h1 className="text-4xl sm:text-6xl font-serif font-extrabold text-gray-900 mb-6 leading-tight">
             Industries We <span className="shimmer-text">Serve Globally</span>
           </h1>
 
-          <p className="text-lg sm:text-xl text-slate-300 font-light leading-relaxed">
+          <p className="text-lg sm:text-xl text-gray-600 font-light leading-relaxed">
             Tailored supply chain, technology, and commercial setup solutions for high-demand business sectors across USA, India, and Canada.
           </p>
         </div>
@@ -106,26 +106,26 @@ export default function IndustriesPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1 }}
-                className={`glass-card rounded-3xl p-8 sm:p-10 border ${sec.border} hover:border-cyan-400/60 transition-all duration-300 group hover:-translate-y-1.5 relative overflow-hidden`}
+                className={`glass-card rounded-3xl p-8 sm:p-10 border ${sec.border} hover:border-amber-400/60 transition-all duration-300 group hover:-translate-y-1.5 relative overflow-hidden`}
               >
                 <div className="flex items-center gap-4 mb-6">
                   <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${sec.accent} flex items-center justify-center text-slate-950 shadow-lg`}>
                     <sec.icon className="w-7 h-7" />
                   </div>
                   <div>
-                    <h3 className="text-2xl sm:text-3xl font-serif font-bold text-white">{sec.title}</h3>
-                    <span className="text-xs font-mono text-cyan-400">Industry Vertical #{idx + 1}</span>
+                    <h3 className="text-2xl sm:text-3xl font-serif font-bold text-gray-900">{sec.title}</h3>
+                    <span className="text-xs font-mono text-amber-700">Industry Vertical #{idx + 1}</span>
                   </div>
                 </div>
 
-                <p className="text-slate-300 text-sm leading-relaxed mb-6 font-light">{sec.desc}</p>
+                <p className="text-gray-600 text-sm leading-relaxed mb-6 font-light">{sec.desc}</p>
 
-                <div className="border-t border-white/10 pt-6">
-                  <h4 className="text-xs font-mono uppercase text-slate-400 mb-4 tracking-wider">Sub-Sectors & Businesses Served</h4>
+                <div className="border-t border-gray-200 pt-6">
+                  <h4 className="text-xs font-mono uppercase text-gray-500 mb-4 tracking-wider">Sub-Sectors & Businesses Served</h4>
                   <div className="grid sm:grid-cols-2 gap-3">
                     {sec.items.map((item, i) => (
-                      <div key={i} className="flex items-center gap-2 text-xs font-semibold text-slate-200 bg-slate-900/80 p-2.5 rounded-xl border border-white/5">
-                        <ChevronRight className="w-4 h-4 text-cyan-400 shrink-0" />
+                      <div key={i} className="flex items-center gap-2 text-xs font-semibold text-gray-700 bg-gray-50/80 p-2.5 rounded-xl border border-gray-100">
+                        <ChevronRight className="w-4 h-4 text-amber-700 shrink-0" />
                         <span>{item}</span>
                       </div>
                     ))}
@@ -137,8 +137,8 @@ export default function IndustriesPage() {
 
           {/* CTA */}
           <div className="mt-16 text-center glass-card-cyber rounded-3xl p-10 relative overflow-hidden">
-            <h3 className="text-3xl font-serif font-bold text-white mb-4">Don't See Your Specific Business Type?</h3>
-            <p className="text-slate-300 max-w-2xl mx-auto mb-8 font-light">
+            <h3 className="text-3xl font-serif font-bold text-gray-900 mb-4">Don't See Your Specific Business Type?</h3>
+            <p className="text-gray-600 max-w-2xl mx-auto mb-8 font-light">
               OneTrade360 serves over 18+ business categories. Contact our team for customized global sourcing and operational match-making.
             </p>
             <Button 

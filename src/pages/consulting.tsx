@@ -48,38 +48,38 @@ export default function ConsultingPage() {
       </div>
 
       {/* Hero Header */}
-      <section className="relative py-20 border-b border-white/10 overflow-hidden">
+      <section className="relative py-20 border-b border-gray-200 overflow-hidden">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[450px] bg-gradient-to-r from-emerald-500/10 via-amber-500/10 to-cyan-500/10 blur-[160px] pointer-events-none" />
         <div className="container mx-auto px-4 sm:px-6 relative z-10 text-center max-w-4xl">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-400/10 border border-emerald-400/30 text-emerald-400 text-xs font-mono font-semibold uppercase tracking-wider mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-400/10 border border-emerald-400/30 text-emerald-700 text-xs font-mono font-semibold uppercase tracking-wider mb-6">
             <Briefcase className="w-4 h-4 text-amber-400" />
             Global Business Service™
           </div>
 
-          <h1 className="text-4xl sm:text-6xl font-serif font-extrabold text-white mb-6 leading-tight">
+          <h1 className="text-4xl sm:text-6xl font-serif font-extrabold text-gray-900 mb-6 leading-tight">
             Business Acquisition & <span className="shimmer-text">Consulting</span>
           </h1>
 
-          <p className="text-lg sm:text-xl text-slate-300 font-light leading-relaxed">
+          <p className="text-lg sm:text-xl text-gray-600 font-light leading-relaxed">
             Helping entrepreneurs buy, sell, grow, and manage profitable businesses across North America and India with verified due diligence and strategic match-making.
           </p>
         </div>
       </section>
 
       {/* Business Acquisition Section */}
-      <section className="py-20 relative border-b border-white/10">
+      <section className="py-20 relative border-b border-gray-200">
         <div className="container mx-auto px-4 sm:px-6 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl sm:text-4xl font-serif font-bold text-white mb-4">
+            <h2 className="text-3xl sm:text-4xl font-serif font-bold text-gray-900 mb-4">
               Business <span className="text-amber-400">Acquisition Services</span>
             </h2>
-            <p className="text-slate-300 font-light text-base">
+            <p className="text-gray-600 font-light text-base">
               Buy, sell, expand, or match with verified investors for prime commercial enterprises.
             </p>
 
             <div className="flex flex-wrap justify-center gap-3 mt-6">
               {["Buy Businesses", "Sell Businesses", "Franchise Opportunities", "Investor Matching", "Business Expansion"].map((pillar, i) => (
-                <span key={i} className="px-3.5 py-1.5 rounded-lg bg-slate-900 border border-white/10 text-xs font-mono text-cyan-400 font-semibold">
+                <span key={i} className="px-3.5 py-1.5 rounded-lg bg-gray-50 border border-gray-200 text-xs font-mono text-amber-700 font-semibold">
                   {pillar}
                 </span>
               ))}
@@ -94,13 +94,13 @@ export default function ConsultingPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.08 }}
-                className="glass-card p-6 rounded-2xl border border-white/10 hover:border-amber-400/50 transition-all duration-300 group hover:-translate-y-1"
+                className="glass-card p-6 rounded-2xl border border-gray-200 hover:border-amber-400/50 transition-all duration-300 group hover:-translate-y-1"
               >
                 <div className="w-12 h-12 rounded-xl bg-amber-400/10 border border-amber-400/30 flex items-center justify-center text-amber-400 mb-4 group-hover:bg-amber-400 group-hover:text-slate-950 transition-colors">
                   <cat.icon className="w-6 h-6" />
                 </div>
-                <h3 className="text-lg font-serif font-bold text-white mb-2">{cat.title}</h3>
-                <p className="text-xs text-slate-400 leading-relaxed font-light">{cat.desc}</p>
+                <h3 className="text-lg font-serif font-bold text-gray-900 mb-2">{cat.title}</h3>
+                <p className="text-xs text-gray-500 leading-relaxed font-light">{cat.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -111,10 +111,10 @@ export default function ConsultingPage() {
       <section className="py-20 relative">
         <div className="container mx-auto px-4 sm:px-6 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl sm:text-4xl font-serif font-bold text-white mb-4">
-              Professional <span className="text-cyan-400">Consulting & Due Diligence</span>
+            <h2 className="text-3xl sm:text-4xl font-serif font-bold text-gray-900 mb-4">
+              Professional <span className="text-amber-700">Consulting & Due Diligence</span>
             </h2>
-            <p className="text-slate-300 font-light text-base">
+            <p className="text-gray-600 font-light text-base">
               Expert advisory services to minimize risk and maximize enterprise valuation.
             </p>
           </div>
@@ -127,21 +127,21 @@ export default function ConsultingPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.08 }}
-                className="glass-card-cyber p-6 rounded-2xl hover:border-cyan-400/70 transition-all duration-300 group hover:-translate-y-1"
+                className="glass-card-cyber p-6 rounded-2xl hover:border-amber-400/70 transition-all duration-300 group hover:-translate-y-1"
               >
-                <div className="w-12 h-12 rounded-xl bg-cyan-400/10 border border-cyan-400/30 flex items-center justify-center text-cyan-400 mb-4 group-hover:bg-cyan-400 group-hover:text-slate-950 transition-colors">
+                <div className="w-12 h-12 rounded-xl bg-cyan-400/10 border border-amber-400/30 flex items-center justify-center text-amber-700 mb-4 group-hover:bg-cyan-400 group-hover:text-slate-950 transition-colors">
                   <service.icon className="w-6 h-6" />
                 </div>
-                <h3 className="text-lg font-serif font-bold text-white mb-2">{service.title}</h3>
-                <p className="text-xs text-slate-300 leading-relaxed font-light">{service.desc}</p>
+                <h3 className="text-lg font-serif font-bold text-gray-900 mb-2">{service.title}</h3>
+                <p className="text-xs text-gray-600 leading-relaxed font-light">{service.desc}</p>
               </motion.div>
             ))}
           </div>
 
           {/* CTA Box */}
           <div className="mt-16 text-center glass-card-gold rounded-3xl p-10 relative overflow-hidden">
-            <h3 className="text-3xl font-serif font-bold text-white mb-4">Looking to Buy or Sell a Commercial Business?</h3>
-            <p className="text-slate-300 max-w-2xl mx-auto mb-8 font-light">
+            <h3 className="text-3xl font-serif font-bold text-gray-900 mb-4">Looking to Buy or Sell a Commercial Business?</h3>
+            <p className="text-gray-600 max-w-2xl mx-auto mb-8 font-light">
               Connect with OneTrade360 certified business brokers and valuation advisors in USA, India, & Canada.
             </p>
             <Button 
