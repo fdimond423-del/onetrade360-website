@@ -10,7 +10,6 @@ import { TestimonialsSection } from "@/components/TestimonialsSection";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { ParticleNetwork } from "@/components/ParticleNetwork";
-import logoImg from "@/assets/logo.jpeg";
 import { 
   Globe, Building2, TrendingUp, Box, Shield, Activity, 
   Cpu, Layers, ArrowRight, ChevronRight, CheckCircle2, Factory, MonitorSmartphone, MapPin, Phone, Mail,
@@ -54,7 +53,7 @@ export default function Home() {
 
   const corridorData = {
     india: {
-      flag: "🇮🇳",
+      flag: "ðŸ‡®ðŸ‡³",
       name: "India Corridor",
       subtitle: "Manufacturing & OEM Export Hub",
       stat1: "120+ Audited OEM Plants",
@@ -63,7 +62,7 @@ export default function Home() {
       desc: "Direct access to audited manufacturing plants in Gujarat, Maharashtra, and NCR for paper packaging, coffee gear, nutraceuticals, and commercial fixtures."
     },
     usa: {
-      flag: "🇺🇸",
+      flag: "ðŸ‡ºðŸ‡¸",
       name: "United States Corridor",
       subtitle: "Retail & Commercial Store Distribution",
       stat1: "1,480+ Active StoreSKU Outlets",
@@ -72,7 +71,7 @@ export default function Home() {
       desc: "Empowering convenience stores, gas stations, supermarkets, and restaurants across NY, TX, CA, and FL with automated POS and direct inventory replenishment."
     },
     canada: {
-      flag: "🇨🇦",
+      flag: "ðŸ‡¨ðŸ‡¦",
       name: "Canada Corridor",
       subtitle: "Wholesale & Business Brokerage Hub",
       stat1: "100+ Verified Business Listings",
@@ -81,9 +80,9 @@ export default function Home() {
       desc: "Comprehensive business acquisition support for gas stations, car washes, and laundromats, alongside bulk wholesale distribution across ON & BC."
     },
     global: {
-      flag: "🌐",
+      flag: "ðŸŒ",
       name: "Global Network",
-      subtitle: "360° International Trade Ecosystem",
+      subtitle: "360Â° International Trade Ecosystem",
       stat1: "$85M+ Facilitated Volume",
       stat2: "3 Tier-1 Shipping Hubs",
       stat3: "End-to-End Customs Audit",
@@ -103,8 +102,8 @@ export default function Home() {
       { title: "Industrial Boba & Tea Brewer", desc: "Programmable temperature control, high throughput", code: "OEM-EQU-309" },
     ],
     pos: [
-      { title: "StoreSKU™ Dual-Screen POS Terminal", desc: "Built-in thermal printer, inventory auto-sync", code: "TECH-POS-101" },
-      { title: "X-ON™ AI Smart Security Camera", desc: "Loss prevention, license plate recognition", code: "TECH-SEC-202" },
+      { title: "StoreSKUâ„¢ Dual-Screen POS Terminal", desc: "Built-in thermal printer, inventory auto-sync", code: "TECH-POS-101" },
+      { title: "X-ONâ„¢ AI Smart Security Camera", desc: "Loss prevention, license plate recognition", code: "TECH-SEC-202" },
       { title: "Handheld Wireless Inventory Scanner", desc: "Bar-code & QR, 50m range, rugged casing", code: "TECH-POS-105" },
     ],
     hotel: [
@@ -125,13 +124,13 @@ export default function Home() {
       {/* Top Live Ticker Strip */}
       <LiveTicker />
 
-      {/* SECTION 1: EXECUTIVE LIGHT HERO GATEWAY (WHITE BACKGROUND) */}
-      <section className="relative pt-16 pb-24 lg:pt-20 lg:pb-32 border-b border-slate-200 overflow-hidden bg-radial-glow min-h-[85vh] flex items-center bg-white">
+      {/* SECTION 1: HERO */}
+      <section className="relative pt-16 pb-20 lg:pt-20 lg:pb-28 border-b border-gray-200 overflow-hidden bg-white">
         {/* Interactive 3D Canvas Particles */}
         <ParticleNetwork />
 
         <div className="container mx-auto px-4 sm:px-6 relative z-10">
-          <div className="grid lg:grid-cols-12 gap-12 items-center">
+          <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             
             {/* Left Hero Statement */}
             <motion.div 
@@ -158,7 +157,7 @@ export default function Home() {
               </h1>
 
               <p className="text-slate-600 text-base sm:text-lg font-light max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-                OneTrade360™ unifies entrepreneurs, retailers, investors, manufacturers, suppliers, and service providers across <strong className="text-slate-900 font-semibold">India 🇮🇳, USA 🇺🇸, and Canada 🇨🇦</strong> into one trusted, connected trade network.
+                OneTrade360â„¢ unifies entrepreneurs, retailers, investors, manufacturers, suppliers, and service providers across <strong className="text-slate-900 font-semibold">India ðŸ‡®ðŸ‡³, USA ðŸ‡ºðŸ‡¸, and Canada ðŸ‡¨ðŸ‡¦</strong> into one trusted, connected trade network.
               </p>
 
               {/* Action Buttons */}
@@ -179,9 +178,9 @@ export default function Home() {
                 >
                   <Button 
                     variant="outline" 
-                    className="w-full h-13 px-8 text-xs font-bold uppercase tracking-wider border-emerald-600/60 text-emerald-700 bg-emerald-50 hover:bg-emerald-100 cursor-pointer flex items-center justify-center gap-2 rounded-xl"
+                    className="w-full h-13 px-8 text-xs font-bold uppercase tracking-wider border-emerald-600/60 text-gray-900 bg-emerald-50 hover:bg-emerald-100 cursor-pointer flex items-center justify-center gap-2 rounded-xl"
                   >
-                    <MessageSquare className="w-4 h-4 text-emerald-600" />
+                    <MessageSquare className="w-4 h-4 text-gray-700" />
                     <span>Instant WhatsApp</span>
                   </Button>
                 </a>
@@ -204,15 +203,15 @@ export default function Home() {
                 </div>
 
                 <div className="space-y-0.5 border-l border-slate-200 pl-4">
-                  <div className="text-2xl sm:text-3xl font-serif font-extrabold text-blue-700">
+                  <div className="text-2xl sm:text-3xl font-serif font-extrabold text-gray-900">
                     <Counter value={3} suffix=" Corridors" />
                   </div>
-                  <div className="text-[11px] font-mono text-slate-600 uppercase">India • USA • Canada</div>
+                  <div className="text-[11px] font-mono text-slate-600 uppercase">India â€¢ USA â€¢ Canada</div>
                 </div>
               </div>
             </motion.div>
 
-            {/* Right Card Featured Executive Shield */}
+            {/* Right Card — No logo, clean white card with feature highlights */}
             <motion.div 
               initial="hidden"
               whileInView="visible"
@@ -220,54 +219,57 @@ export default function Home() {
               variants={SLIDE_RIGHT}
               className="lg:col-span-5"
             >
-              <div className="orion-card-navy p-6 sm:p-8 space-y-6 relative overflow-hidden border-slate-800">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-amber-500/10 rounded-full blur-2xl pointer-events-none animate-pulse" />
-                
-                {/* Header Logo Badge */}
-                <div className="flex flex-col sm:flex-row items-center justify-between pb-6 border-b border-slate-800 gap-4">
-                  <div className="p-3 rounded-xl bg-white border-2 border-amber-400 shadow-md">
-                    <img 
-                      src={logoImg} 
-                      alt="OneTrade360 Logo" 
-                      className="h-16 sm:h-20 w-auto object-contain max-w-[240px]" 
-                    />
-                  </div>
+              <div className="bg-white rounded-2xl border border-gray-200 shadow-lg overflow-hidden">
 
-                  <div className="px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-mono font-bold flex items-center gap-1.5 self-start sm:self-center">
-                    <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
-                    VERIFIED B2B NETWORK
+                {/* Card Header */}
+                <div className="bg-gray-950 px-6 py-4 flex items-center justify-between">
+                  <span className="text-sm font-bold text-white font-mono tracking-wide">OneTrade360™ Ecosystem</span>
+                  <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 text-[10px] font-mono font-bold">
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping" />
+                    VERIFIED
                   </div>
                 </div>
 
-                {/* Executive Highlights */}
-                <div className="space-y-3.5">
+                {/* Features List */}
+                <div className="divide-y divide-gray-100">
                   {[
-                    { title: "Direct Factory OEM Sourcing", desc: "120+ Audited Plants in India, USA & Canada", icon: Factory },
-                    { title: "StoreSKU™ Retail Management", desc: "1,480+ Active Multi-Location Stores", icon: Cpu },
-                    { title: "Turnkey Commercial Setup", desc: "Café, C-Store, Hotel & Wholesale Infrastructure", icon: Building2 },
-                    { title: "Business Acquisition Service", desc: "Gas Stations, C-Stores, Laundromats & Car Washes", icon: Briefcase },
+                    { title: "Direct Factory OEM Sourcing", desc: "120+ Audited Plants — India, USA & Canada", icon: Factory, accent: "bg-amber-50 text-amber-700 border-amber-200" },
+                    { title: "StoreSKU™ Retail Management", desc: "1,480+ Active Multi-Location Stores", icon: Cpu, accent: "bg-gray-100 text-gray-800 border-gray-200" },
+                    { title: "Turnkey Commercial Setup", desc: "Café, C-Store, Hotel & Wholesale Infrastructure", icon: Building2, accent: "bg-amber-50 text-amber-700 border-amber-200" },
+                    { title: "Business Acquisition Service", desc: "Gas Stations, C-Stores, Laundromats & Car Washes", icon: Briefcase, accent: "bg-gray-100 text-gray-800 border-gray-200" },
                   ].map((item, idx) => {
                     const ItemIcon = item.icon;
                     return (
-                      <div key={idx} className="p-3.5 rounded-xl bg-slate-900 border border-slate-800 hover:border-amber-400/50 transition-colors flex items-start gap-3.5">
-                        <div className="p-2 rounded-lg bg-amber-400/20 border border-amber-400/40 text-amber-400 shrink-0 mt-0.5">
-                          <ItemIcon className="w-4 h-4" />
+                      <motion.div
+                        key={idx}
+                        initial={{ opacity: 0, x: 20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: false, amount: 0.3 }}
+                        transition={{ delay: idx * 0.08, duration: 0.4 }}
+                        className="flex items-center gap-4 px-5 py-4 hover:bg-amber-50 transition-colors group"
+                      >
+                        <div className={`w-10 h-10 rounded-xl flex items-center justify-center shrink-0 border ${item.accent}`}>
+                          <ItemIcon className="w-5 h-5" />
                         </div>
-                        <div>
-                          <div className="text-xs font-bold text-white">{item.title}</div>
-                          <div className="text-[11px] text-slate-300">{item.desc}</div>
+                        <div className="min-w-0">
+                          <div className="text-sm font-bold text-gray-900 group-hover:text-amber-700 transition-colors">{item.title}</div>
+                          <div className="text-xs text-gray-500 mt-0.5 truncate">{item.desc}</div>
                         </div>
-                      </div>
+                        <ArrowRight className="w-4 h-4 text-gray-300 group-hover:text-amber-500 shrink-0 transition-colors" />
+                      </motion.div>
                     );
                   })}
                 </div>
 
-                <Button 
-                  onClick={() => setInquiryOpen(true)}
-                  className="w-full h-12 bg-gradient-to-r from-amber-400 to-amber-500 text-slate-950 font-bold text-xs uppercase tracking-wider rounded-xl cursor-pointer shadow-md hover:brightness-110"
-                >
-                  Schedule Corporate Consultation
-                </Button>
+                {/* CTA Footer */}
+                <div className="px-5 py-4 bg-gray-50 border-t border-gray-100">
+                  <Button 
+                    onClick={() => setInquiryOpen(true)}
+                    className="w-full h-11 bg-gray-950 hover:bg-amber-500 hover:text-black text-white font-bold text-xs uppercase tracking-wider rounded-xl cursor-pointer transition-colors"
+                  >
+                    Schedule Free Consultation
+                  </Button>
+                </div>
               </div>
             </motion.div>
 
@@ -308,7 +310,7 @@ export default function Home() {
               {
                 pillar: "CONNECT",
                 icon: Handshake,
-                color: "from-blue-600 to-indigo-600",
+                color: "from-gray-800 to-gray-900",
                 text: "Linking buyers, suppliers, OEM plants, and retail outlets into one unified digital trade ecosystem."
               },
               {
@@ -320,19 +322,19 @@ export default function Home() {
               {
                 pillar: "GROW",
                 icon: TrendingUp,
-                color: "from-emerald-600 to-teal-600",
-                text: "Scaling store revenue with StoreSKU™ POS AI automation and direct factory cost savings."
+                color: "from-gray-700 to-gray-800",
+                text: "Scaling store revenue with StoreSKUâ„¢ POS AI automation and direct factory cost savings."
               },
               {
                 pillar: "COLLABORATE",
                 icon: Users,
-                color: "from-purple-600 to-indigo-600",
+                color: "from-gray-900 to-gray-700",
                 text: "Uniting investors, franchisors, and business brokers for turnkey acquisition deals."
               },
               {
                 pillar: "SUCCEED",
                 icon: Target,
-                color: "from-rose-600 to-red-600",
+                color: "from-amber-600 to-amber-700",
                 text: "Ensuring long-term profitability, operational compliance, and business enterprise value."
               },
             ].map((item, idx) => {
@@ -362,7 +364,7 @@ export default function Home() {
 
                   <div className="pt-4 mt-4 border-t border-slate-100 flex items-center justify-between text-[11px] font-mono text-slate-600">
                     <span>Verified</span>
-                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
+                    <CheckCircle2 className="w-3.5 h-3.5 text-gray-700" />
                   </div>
                 </motion.div>
               );
@@ -381,8 +383,8 @@ export default function Home() {
             variants={FADE_UP}
             className="text-center max-w-3xl mx-auto mb-12"
           >
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-blue-800 text-xs font-mono font-semibold uppercase tracking-wider mb-4">
-              <Network className="w-3.5 h-3.5 text-blue-600" />
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gray-100 border border-gray-300 text-gray-900 text-xs font-mono font-semibold uppercase tracking-wider mb-4">
+              <Network className="w-3.5 h-3.5 text-gray-700" />
               Interactive Cross-Border Trade Corridors
             </div>
             <h2 className="text-3xl sm:text-5xl font-serif font-extrabold text-slate-950 mb-4">
@@ -479,7 +481,7 @@ export default function Home() {
             className="text-center max-w-3xl mx-auto mb-16"
           >
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-200 text-slate-800 text-xs font-mono font-semibold uppercase tracking-wider mb-4">
-              <Building2 className="w-3.5 h-3.5 text-blue-700" />
+              <Building2 className="w-3.5 h-3.5 text-gray-900" />
               Turnkey Infrastructure Solutions
             </div>
             <h2 className="text-3xl sm:text-5xl font-serif font-extrabold text-slate-950 mb-4">
@@ -499,14 +501,14 @@ export default function Home() {
           >
             {[
               {
-                title: "Restaurant & Café Setup",
-                desc: "Complete café & restaurant setup, commercial kitchen design, espresso machines, tea programs, delivery packaging & kiosks.",
+                title: "Restaurant & CafÃ© Setup",
+                desc: "Complete cafÃ© & restaurant setup, commercial kitchen design, espresso machines, tea programs, delivery packaging & kiosks.",
                 icon: Utensils,
                 link: "/solutions"
               },
               {
                 title: "C-Store & Gas Station",
-                desc: "StoreSKU™ AI, X-ON™ Security, POS systems, gondola shelving, slatwall systems, refrigeration & store supplies.",
+                desc: "StoreSKUâ„¢ AI, X-ONâ„¢ Security, POS systems, gondola shelving, slatwall systems, refrigeration & store supplies.",
                 icon: Store,
                 link: "/solutions"
               },
@@ -583,7 +585,7 @@ export default function Home() {
             <div className="flex flex-wrap items-center justify-center gap-2 mt-8 p-1.5 rounded-2xl bg-slate-100 border border-slate-200">
               {[
                 { id: "packaging", label: "Paper & Packaging" },
-                { id: "coffee", label: "Café & Coffee Gear" },
+                { id: "coffee", label: "CafÃ© & Coffee Gear" },
                 { id: "pos", label: "StoreSKU POS & AI Hardware" },
                 { id: "hotel", label: "Hotel & Facility Supplies" },
               ].map((tab) => (
@@ -625,7 +627,7 @@ export default function Home() {
                 </div>
 
                 <div className="pt-4 border-t border-slate-100 flex items-center justify-between">
-                  <span className="text-[11px] font-mono text-emerald-700 font-bold">100% Factory Audit</span>
+                  <span className="text-[11px] font-mono text-gray-900 font-bold">100% Factory Audit</span>
                   <Button 
                     onClick={() => setInquiryOpen(true)}
                     size="sm"
@@ -688,3 +690,4 @@ export default function Home() {
     </div>
   );
 }
+
