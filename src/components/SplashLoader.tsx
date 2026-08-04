@@ -112,7 +112,7 @@ export function SplashLoader({ onComplete }: SplashLoaderProps) {
                 Global Business Ecosystem
               </div>
 
-              <h2 className="text-3xl sm:text-4xl font-serif font-extrabold text-rose-950 tracking-tight mb-2">
+              <h2 className="text-3xl sm:text-4xl font-serif font-extrabold text-slate-950 tracking-tight mb-2">
                 OneTrade<span className="text-amber-600">360™</span>
               </h2>
               

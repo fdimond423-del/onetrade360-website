@@ -27,7 +27,7 @@ export function Footer({ onReplaySplash, onOpenInquiry }: FooterProps) {
             </div>
             
             <p className="text-gray-600 text-sm font-light leading-relaxed max-w-sm">
-              <strong className="text-rose-950 font-medium">OneTrade360™</strong> — The Complete Business Ecosystem for Retail, Hospitality, Healthcare, Manufacturing & Global Trade. One Platform. Global Connections. Endless Opportunities.
+              <strong className="text-slate-950 font-medium">OneTrade360™</strong> — The Complete Business Ecosystem for Retail, Hospitality, Healthcare, Manufacturing & Global Trade. One Platform. Global Connections. Endless Opportunities.
             </p>
 
             <div className="flex flex-wrap items-center gap-2 text-xs font-mono">
@@ -46,7 +46,7 @@ export function Footer({ onReplaySplash, onOpenInquiry }: FooterProps) {
 
           {/* Column 2: Quick Links */}
           <div className="lg:col-span-3 space-y-4">
-            <h4 className="text-rose-900 font-bold text-sm tracking-wide uppercase font-mono text-amber-400">
+            <h4 className="text-slate-900 font-bold text-sm tracking-wide uppercase font-mono text-amber-400">
               Ecosystem Navigation
             </h4>
             <ul className="space-y-2.5 text-xs font-mono">
@@ -76,7 +76,7 @@ export function Footer({ onReplaySplash, onOpenInquiry }: FooterProps) {
 
           {/* Column 3: Key Platforms */}
           <div className="lg:col-span-2 space-y-4">
-            <h4 className="text-rose-900 font-bold text-sm tracking-wide uppercase font-mono text-amber-700">
+            <h4 className="text-slate-900 font-bold text-sm tracking-wide uppercase font-mono text-amber-700">
               Key Platforms
             </h4>
             <ul className="space-y-2 text-xs text-gray-600">
@@ -92,14 +92,14 @@ export function Footer({ onReplaySplash, onOpenInquiry }: FooterProps) {
 
           {/* Column 4: Direct Contact Lines */}
           <div className="lg:col-span-3 space-y-4">
-            <h4 className="text-rose-900 font-bold text-sm tracking-wide uppercase font-mono text-emerald-700">
+            <h4 className="text-slate-900 font-bold text-sm tracking-wide uppercase font-mono text-emerald-700">
               Global Support Lines
             </h4>
             
             <div className="space-y-3 text-xs font-mono">
               <div className="p-3 rounded-xl bg-gray-50 border border-gray-200 space-y-1">
                 <div className="text-gray-500 uppercase text-[10px]">India Office Line</div>
-                <div className="text-rose-900 font-bold flex items-center gap-2 text-sm">
+                <div className="text-slate-900 font-bold flex items-center gap-2 text-sm">
                   <Phone className="w-4 h-4 text-amber-400" />
                   +91-7984171515
                 </div>
@@ -107,7 +107,7 @@ export function Footer({ onReplaySplash, onOpenInquiry }: FooterProps) {
 
               <div className="p-3 rounded-xl bg-gray-50 border border-gray-200 space-y-1">
                 <div className="text-gray-500 uppercase text-[10px]">USA Headquarters Line</div>
-                <div className="text-rose-900 font-bold flex items-center gap-2 text-sm">
+                <div className="text-slate-900 font-bold flex items-center gap-2 text-sm">
                   <Phone className="w-4 h-4 text-amber-700" />
                   +1-272-267-9294
                 </div>
@@ -115,7 +115,7 @@ export function Footer({ onReplaySplash, onOpenInquiry }: FooterProps) {
 
               <div className="p-3 rounded-xl bg-gray-50 border border-gray-200 space-y-1">
                 <div className="text-gray-500 uppercase text-[10px]">Direct Email</div>
-                <div className="text-rose-900 font-bold flex items-center gap-2 text-xs truncate">
+                <div className="text-slate-900 font-bold flex items-center gap-2 text-xs truncate">
                   <Mail className="w-4 h-4 text-emerald-700 shrink-0" />
                   onetradeworld360@gmail.com
                 </div>

@@ -45,15 +45,15 @@ export function Navbar({ onOpenInquiry, onReplaySplash }: NavbarProps) {
           <div className="flex items-center gap-6">
             <div className="flex items-center gap-2">
               <Phone className="w-3.5 h-3.5 text-amber-400" />
-              <span>India: <strong className="text-rose-950 font-bold">+91-7984171515</strong></span>
+              <span>India: <strong className="text-slate-950 font-bold">+91-7984171515</strong></span>
             </div>
             <div className="flex items-center gap-2 border-l border-gray-300 pl-6">
               <Phone className="w-3.5 h-3.5 text-amber-700" />
-              <span>USA: <strong className="text-rose-950 font-bold">+1-272-267-9294</strong></span>
+              <span>USA: <strong className="text-slate-950 font-bold">+1-272-267-9294</strong></span>
             </div>
             <div className="flex items-center gap-2 border-l border-gray-300 pl-6">
               <Mail className="w-3.5 h-3.5 text-emerald-700" />
-              <span className="text-rose-950 font-bold">onetradeworld360@gmail.com</span>
+              <span className="text-slate-950 font-bold">onetradeworld360@gmail.com</span>
             </div>
           </div>
 
@@ -101,8 +101,8 @@ export function Navbar({ onOpenInquiry, onReplaySplash }: NavbarProps) {
                   href={link.href}
                   className={`relative px-2.5 py-1.5 rounded-lg text-[10px] xl:text-xs font-semibold tracking-wide transition-all group overflow-hidden ${
                     isActive
-                      ? "text-rose-950 font-bold"
-                      : "text-slate-700 hover:text-rose-950"
+                      ? "text-slate-950 font-bold"
+                      : "text-slate-700 hover:text-slate-950"
                   }`}
                 >
                   <span className="relative z-10">{link.name}</span>
@@ -124,7 +124,7 @@ export function Navbar({ onOpenInquiry, onReplaySplash }: NavbarProps) {
           <div className="hidden lg:flex items-center gap-3">
             <Button 
               onClick={onOpenInquiry} 
-              className="bg-white hover:bg-gray-800 text-rose-900 font-bold h-9 px-4 text-[11px] uppercase font-sans tracking-wider shadow-md hover:brightness-110 cursor-pointer flex items-center gap-2 rounded-xl"
+              className="bg-white hover:bg-gray-800 text-slate-900 font-bold h-9 px-4 text-[11px] uppercase font-sans tracking-wider shadow-md hover:brightness-110 cursor-pointer flex items-center gap-2 rounded-xl"
             >
               <span>Connect With Us</span>
               <ArrowRight className="w-4 h-4 text-amber-400" />
@@ -133,10 +133,10 @@ export function Navbar({ onOpenInquiry, onReplaySplash }: NavbarProps) {
 
           {/* Mobile Toggle */}
           <button 
-            className="lg:hidden p-2.5 text-rose-950 bg-slate-100 border border-slate-200 rounded-xl shadow-sm cursor-pointer" 
+            className="lg:hidden p-2.5 text-slate-950 bg-slate-100 border border-slate-200 rounded-xl shadow-sm cursor-pointer" 
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
-            {mobileMenuOpen ? <X className="w-6 h-6 text-amber-600" /> : <Menu className="w-6 h-6 text-rose-950" />}
+            {mobileMenuOpen ? <X className="w-6 h-6 text-amber-600" /> : <Menu className="w-6 h-6 text-slate-950" />}
           </button>
         </div>
       </header>
@@ -160,7 +160,7 @@ export function Navbar({ onOpenInquiry, onReplaySplash }: NavbarProps) {
                     href={link.href} 
                     onClick={() => setMobileMenuOpen(false)}
                     className={`text-base font-medium border-b border-slate-100 pb-3 flex items-center justify-between ${
-                      isActive ? "text-amber-600 font-bold" : "text-rose-900"
+                      isActive ? "text-amber-600 font-bold" : "text-slate-900"
                     }`}
                   >
                     <span>{link.name}</span>
@@ -173,7 +173,7 @@ export function Navbar({ onOpenInquiry, onReplaySplash }: NavbarProps) {
             <div className="pt-6 border-t border-slate-200 space-y-4">
               <Button 
                 onClick={() => { setMobileMenuOpen(false); onOpenInquiry(); }} 
-                className="w-full h-12 text-xs font-bold uppercase font-sans bg-rose-950 text-white hover:bg-amber-500 hover:text-black cursor-pointer rounded-xl"
+                className="w-full h-12 text-xs font-bold uppercase font-sans bg-slate-950 text-white hover:bg-amber-500 hover:text-black cursor-pointer rounded-xl"
               >
                 Schedule Consultation
               </Button>

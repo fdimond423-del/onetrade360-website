@@ -32,7 +32,7 @@ export function ParticleNetwork() {
       color: string;
     }> = [];
 
-    const colors = ["#F59E0B", "#D97706", "#4C0519", "#881337", "#FBBF24"];
+    const colors = ["#0F172A", "#334155", "#F59E0B", "#D97706", "#FBBF24"];
 
     for (let i = 0; i < particleCount; i++) {
       particles.push({
