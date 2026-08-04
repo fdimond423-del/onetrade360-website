@@ -25,7 +25,7 @@ export function LiveTicker() {
             <div key={idx} className="inline-flex items-center gap-2.5 text-gray-600">
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
               <span className="text-gray-600 font-medium">{item.label}:</span>
-              <span className="font-bold text-gray-900 font-extrabold">{item.val}</span>
+              <span className="font-bold text-rose-900 font-extrabold">{item.val}</span>
               <span className="px-1.5 py-0.5 rounded text-[10px] bg-primary/10 text-primary border border-primary/30">
                 {item.change}
               </span>
