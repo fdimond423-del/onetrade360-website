@@ -310,25 +310,25 @@ export default function Home() {
               {
                 pillar: "TRADE",
                 icon: Globe,
-                color: "from-orange-400 to-orange-600 text-white",
+                color: "from-amber-400 to-amber-600 text-white",
                 text: "Streamlining international shipping, customs, cross-border payments, and supply chain logistics."
               },
               {
                 pillar: "GROW",
                 icon: TrendingUp,
-                color: "from-emerald-400 to-emerald-600 text-white",
+                color: "from-amber-400 to-amber-600 text-white",
                 text: "Scaling store revenue with StoreSKU™ POS AI automation and direct factory cost savings."
               },
               {
                 pillar: "COLLABORATE",
                 icon: Users,
-                color: "from-gray-700 to-gray-900 text-white",
+                color: "from-amber-400 to-amber-600 text-white",
                 text: "Uniting investors, franchisors, and business brokers for turnkey acquisition deals."
               },
               {
                 pillar: "SUCCEED",
                 icon: Target,
-                color: "from-yellow-400 to-yellow-600 text-white",
+                color: "from-amber-400 to-amber-600 text-white",
                 text: "Ensuring long-term profitability, operational compliance, and business enterprise value."
               },
             ].map((item, idx) => {

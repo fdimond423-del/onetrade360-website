@@ -21,7 +21,7 @@ export function ParticleNetwork() {
 
     window.addEventListener("resize", handleResize);
 
-    // Particle nodes definition - Light Theme (Deep Navy, Gold, Cyan)
+    // Particle nodes definition - Premium Theme (Deep Navy, Amber, Gold)
     const particleCount = Math.min(Math.floor((width * height) / 14000), 75);
     const particles: Array<{
       x: number;
@@ -32,7 +32,7 @@ export function ParticleNetwork() {
       color: string;
     }> = [];
 
-    const colors = ["#0F172A", "#0284C7", "#D97706", "#1E3A8A", "#2563EB"];
+    const colors = ["#F59E0B", "#D97706", "#0F172A", "#334155", "#FBBF24"];
 
     for (let i = 0; i < particleCount; i++) {
       particles.push({
@@ -101,7 +101,7 @@ export function ParticleNetwork() {
           ctx.moveTo(p.x, p.y);
           ctx.lineTo(mouseX, mouseY);
           const alpha = (1 - mdist / 180) * 0.45;
-          ctx.strokeStyle = `rgba(2, 132, 199, ${alpha})`;
+          ctx.strokeStyle = `rgba(245, 158, 11, ${alpha})`;
           ctx.lineWidth = 1.2;
           ctx.stroke();
         }
