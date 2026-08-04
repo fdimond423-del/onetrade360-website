@@ -13,7 +13,7 @@ import { TradeCalculator } from "@/components/TradeCalculator";
 import { TestimonialsSection } from "@/components/TestimonialsSection";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
-import { ParticleNetwork } from "@/components/ParticleNetwork";
+
 import { 
   Globe, Building2, TrendingUp, Box, Shield, Activity, 
   Cpu, Layers, ArrowRight, ChevronRight, CheckCircle2, Factory, MonitorSmartphone, MapPin, Phone, Mail,
@@ -154,8 +154,6 @@ export default function Home() {
 
       {/* SECTION 1: HERO */}
       <section className="relative pt-16 pb-20 lg:pt-20 lg:pb-28 border-b border-gray-200 overflow-hidden bg-white">
-        {/* Interactive 3D Canvas Particles */}
-        <ParticleNetwork />
 
         <div className="container mx-auto px-4 sm:px-6 relative z-10">
           <div className="grid lg:grid-cols-12 gap-12 items-center">
@@ -181,11 +179,11 @@ export default function Home() {
               <h1 className="hero-title text-4xl sm:text-6xl xl:text-7xl font-serif font-extrabold text-slate-950 leading-[1.12] tracking-tight">
                 The Complete <br />
                 <span className="shimmer-text">Business Ecosystem</span> <br />
-                For Global Enterprise.
+                For Retail, Hospitality, Manufacturing & Global Trade
               </h1>
 
               <p className="hero-desc text-slate-600 text-base sm:text-lg font-light max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-                OneTrade360™ unifies entrepreneurs, retailers, investors, manufacturers, suppliers, and service providers across <strong className="text-slate-950 font-semibold">India 🇮🇳, USA 🇺🇸, and Canada 🇨🇦</strong> into one trusted, connected trade network.
+                OneTrade360™ is a global B2B platform built to help entrepreneurs, retailers, investors, manufacturers, suppliers, and service providers connect, trade, and grow. Whether you’re launching your first business, expanding across multiple locations, or sourcing products globally.
               </p>
 
               {/* Action Buttons */}
@@ -248,7 +246,7 @@ export default function Home() {
               className="lg:col-span-5"
             >
               <div className="bg-white rounded-2xl border border-gray-200 shadow-lg overflow-hidden">
-                <div className="bg-slate-950 px-6 py-4 flex items-center justify-between">
+                <div className="bg-slate-50 border-y border-slate-200 px-6 py-4 flex items-center justify-between">
                   <span className="text-sm font-bold text-slate-900 font-mono tracking-wide">OneTrade360™ Ecosystem</span>
                   <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-500/20 border border-emerald-200 text-emerald-700 text-[10px] font-mono font-bold">
                     <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping" />
@@ -287,7 +285,7 @@ export default function Home() {
                 <div className="px-5 py-4 bg-gray-50 border-t border-gray-100">
                   <Button 
                     onClick={() => setInquiryOpen(true)}
-                    className="w-full h-11 bg-slate-950-white font-bold text-xs uppercase tracking-wider rounded-xl cursor-pointer transition-colors"
+                    className="w-full h-11 bg-white border-2 border-slate-900 text-slate-900 font-bold text-xs uppercase tracking-wider rounded-xl cursor-pointer transition-colors"
                   >
                     Schedule Free Consultation
                   </Button>
@@ -332,31 +330,31 @@ export default function Home() {
               {
                 pillar: "CONNECT",
                 icon: Handshake,
-                color: "from-amber-400 to-amber-600 text-white",
+                color: "from-amber-400 to-amber-600 text-slate-900",
                 text: "Linking buyers, suppliers, OEM plants, and retail outlets into one unified digital trade ecosystem."
               },
               {
                 pillar: "TRADE",
                 icon: Globe,
-                color: "from-amber-400 to-amber-600 text-white",
+                color: "from-amber-400 to-amber-600 text-slate-900",
                 text: "Streamlining international shipping, customs, cross-border payments, and supply chain logistics."
               },
               {
                 pillar: "GROW",
                 icon: TrendingUp,
-                color: "from-amber-400 to-amber-600 text-white",
+                color: "from-amber-400 to-amber-600 text-slate-900",
                 text: "Scaling store revenue with StoreSKU™ POS AI automation and direct factory cost savings."
               },
               {
                 pillar: "COLLABORATE",
                 icon: Users,
-                color: "from-amber-400 to-amber-600 text-white",
+                color: "from-amber-400 to-amber-600 text-slate-900",
                 text: "Uniting investors, franchisors, and business brokers for turnkey acquisition deals."
               },
               {
                 pillar: "SUCCEED",
                 icon: Target,
-                color: "from-amber-400 to-amber-600 text-white",
+                color: "from-amber-400 to-amber-600 text-slate-900",
                 text: "Ensuring long-term profitability, operational compliance, and business enterprise value."
               },
             ].map((item, idx) => {

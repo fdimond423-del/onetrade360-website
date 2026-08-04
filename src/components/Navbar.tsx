@@ -173,7 +173,7 @@ export function Navbar({ onOpenInquiry, onReplaySplash }: NavbarProps) {
             <div className="pt-6 border-t border-slate-200 space-y-4">
               <Button 
                 onClick={() => { setMobileMenuOpen(false); onOpenInquiry(); }} 
-                className="w-full h-12 text-xs font-bold uppercase font-sans bg-slate-950 text-white hover:bg-amber-500 hover:text-black cursor-pointer rounded-xl"
+                className="w-full h-12 text-xs font-bold uppercase font-sans bg-amber-100 border border-amber-300 text-amber-900 hover:bg-amber-500 hover:text-black cursor-pointer rounded-xl"
               >
                 Schedule Consultation
               </Button>

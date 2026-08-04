@@ -61,7 +61,7 @@ export function SplashLoader({ onComplete }: SplashLoaderProps) {
           {/* Subtle ambient glows on white */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-amber-100 rounded-full blur-[180px] opacity-80 pointer-events-none" />
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-amber-50 rounded-full blur-[160px] opacity-60 pointer-events-none" />
-          <div className="absolute inset-0 bg-grid-cyber opacity-40 pointer-events-none" />
+
 
           {/* Main Container */}
           <div className="relative z-10 flex flex-col items-center max-w-xl px-6 text-center">

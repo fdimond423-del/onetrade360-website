@@ -53,7 +53,7 @@ export function InquiryModal({ isOpen, onClose }: InquiryModalProps) {
 
             <button
               onClick={onClose}
-              className="absolute top-4 right-4 p-2 text-gray-500 hover:text-white rounded-full bg-white/5 hover:bg-white/10 transition-colors cursor-pointer"
+              className="absolute top-4 right-4 p-2 text-gray-500 hover:text-slate-900 rounded-full bg-slate-100 hover:bg-slate-200 transition-colors cursor-pointer"
             >
               <X className="w-5 h-5" />
             </button>
@@ -63,7 +63,7 @@ export function InquiryModal({ isOpen, onClose }: InquiryModalProps) {
                 <div className="w-16 h-16 bg-amber-400/20 text-amber-400 border border-amber-400/50 rounded-full flex items-center justify-center animate-bounce">
                   <CheckCircle2 className="w-10 h-10" />
                 </div>
-                <h3 className="text-2xl font-serif font-bold text-white">Inquiry Received!</h3>
+                <h3 className="text-2xl font-serif font-bold text-slate-900">Inquiry Received!</h3>
                 <p className="text-gray-600 max-w-sm text-sm font-light">
                   Thank you for reaching out to OneTrade360™. Our global team will connect with you within 2 hours.
                 </p>
@@ -79,7 +79,7 @@ export function InquiryModal({ isOpen, onClose }: InquiryModalProps) {
                     <img src={logoImg} alt="Logo" className="h-12 w-auto object-contain filter drop-shadow-[0_0_8px_rgba(255,255,255,0.7)]" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-serif font-bold text-white">Connect with OneTrade360™</h3>
+                    <h3 className="text-lg font-serif font-bold text-slate-900">Connect with OneTrade360™</h3>
                     <p className="text-xs text-amber-700 font-mono">One Platform. Global Connections.</p>
                   </div>
                 </div>
@@ -95,7 +95,7 @@ export function InquiryModal({ isOpen, onClose }: InquiryModalProps) {
                         placeholder="John Doe"
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                        className="w-full bg-white/90 border border-gray-200 rounded-xl pl-9 pr-3 py-2.5 text-sm text-white focus:outline-none focus:border-amber-400 transition-colors"
+                        className="w-full bg-white/90 border border-gray-200 rounded-xl pl-9 pr-3 py-2.5 text-sm text-slate-900 focus:outline-none focus:border-amber-400 transition-colors"
                       />
                     </div>
                   </div>
@@ -111,7 +111,7 @@ export function InquiryModal({ isOpen, onClose }: InquiryModalProps) {
                           placeholder="john@business.com"
                           value={formData.email}
                           onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                          className="w-full bg-white/90 border border-gray-200 rounded-xl pl-9 pr-3 py-2.5 text-sm text-white focus:outline-none focus:border-amber-400 transition-colors"
+                          className="w-full bg-white/90 border border-gray-200 rounded-xl pl-9 pr-3 py-2.5 text-sm text-slate-900 focus:outline-none focus:border-amber-400 transition-colors"
                         />
                       </div>
                     </div>
@@ -125,7 +125,7 @@ export function InquiryModal({ isOpen, onClose }: InquiryModalProps) {
                           placeholder="+1 (555) 000-0000"
                           value={formData.phone}
                           onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                          className="w-full bg-white/90 border border-gray-200 rounded-xl pl-9 pr-3 py-2.5 text-sm text-white focus:outline-none focus:border-amber-400 transition-colors"
+                          className="w-full bg-white/90 border border-gray-200 rounded-xl pl-9 pr-3 py-2.5 text-sm text-slate-900 focus:outline-none focus:border-amber-400 transition-colors"
                         />
                       </div>
                     </div>
@@ -136,7 +136,7 @@ export function InquiryModal({ isOpen, onClose }: InquiryModalProps) {
                     <select
                       value={formData.interest}
                       onChange={(e) => setFormData({ ...formData, interest: e.target.value })}
-                      className="w-full bg-white/90 border border-gray-200 rounded-xl px-3 py-2.5 text-sm text-white focus:outline-none focus:border-amber-400 transition-colors font-sans cursor-pointer"
+                      className="w-full bg-white/90 border border-gray-200 rounded-xl px-3 py-2.5 text-sm text-slate-900 focus:outline-none focus:border-amber-400 transition-colors font-sans cursor-pointer"
                     >
                       <option value="Restaurant & Café Solutions">Restaurant & Café Solutions</option>
                       <option value="Convenience Store Solutions">Convenience Store & Gas Station Solutions</option>
@@ -156,7 +156,7 @@ export function InquiryModal({ isOpen, onClose }: InquiryModalProps) {
                       placeholder="Describe your business goal..."
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      className="w-full bg-white/90 border border-gray-200 rounded-xl p-3 text-sm text-white focus:outline-none focus:border-amber-400 transition-colors font-sans"
+                      className="w-full bg-white/90 border border-gray-200 rounded-xl p-3 text-sm text-slate-900 focus:outline-none focus:border-amber-400 transition-colors font-sans"
                     />
                   </div>
 
