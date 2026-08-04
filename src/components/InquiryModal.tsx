@@ -38,7 +38,7 @@ export function InquiryModal({ isOpen, onClose }: InquiryModalProps) {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={onClose}
-            className="fixed inset-0 bg-[#040711]/85 backdrop-blur-md cursor-pointer"
+            className="fixed inset-0 bg-white/60 backdrop-blur-md cursor-pointer"
           />
 
           {/* Modal Content */}
@@ -46,7 +46,7 @@ export function InquiryModal({ isOpen, onClose }: InquiryModalProps) {
             initial={{ opacity: 0, scale: 0.95, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 20 }}
-            className="relative w-full max-w-lg bg-[#0A0F1F] border border-gray-200 rounded-3xl p-6 sm:p-8 shadow-[0_0_60px_rgba(56,189,248,0.25)] z-10 overflow-hidden"
+            className="relative w-full max-w-lg bg-white border border-amber-200 rounded-3xl p-6 sm:p-8 shadow-[0_0_60px_rgba(245,183,0,0.15)] z-10 overflow-hidden"
           >
             {/* Background Ambient Glow */}
             <div className="absolute -top-24 -right-24 w-48 h-48 bg-amber-500/20 rounded-full blur-3xl pointer-events-none" />
@@ -63,7 +63,7 @@ export function InquiryModal({ isOpen, onClose }: InquiryModalProps) {
                 <div className="w-16 h-16 bg-amber-400/20 text-amber-400 border border-amber-400/50 rounded-full flex items-center justify-center animate-bounce">
                   <CheckCircle2 className="w-10 h-10" />
                 </div>
-                <h3 className="text-2xl font-serif font-bold text-slate-900">Inquiry Received!</h3>
+                <h3 className="text-2xl font-serif font-bold text-amber-700">Inquiry Received!</h3>
                 <p className="text-gray-600 max-w-sm text-sm font-light">
                   Thank you for reaching out to OneTrade360™. Our global team will connect with you within 2 hours.
                 </p>
@@ -79,7 +79,7 @@ export function InquiryModal({ isOpen, onClose }: InquiryModalProps) {
                     <img src={logoImg} alt="Logo" className="h-12 w-auto object-contain filter drop-shadow-[0_0_8px_rgba(255,255,255,0.7)]" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-serif font-bold text-slate-900">Connect with OneTrade360™</h3>
+                    <h3 className="text-lg font-serif font-bold text-amber-700">Connect with OneTrade360™</h3>
                     <p className="text-xs text-amber-700 font-mono">One Platform. Global Connections.</p>
                   </div>
                 </div>
