@@ -31,7 +31,7 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="bg-white min-h-screen text-slate-900 font-sans relative selection:bg-amber-400 selection:text-slate-950 overflow-hidden">
+    <div className="bg-white min-h-screen text-slate-800 font-sans relative selection:bg-amber-400 selection:text-slate-800 overflow-hidden">
       {showSplash && <SplashLoader onComplete={() => setShowSplash(false)} />}
       <InquiryModal isOpen={inquiryOpen} onClose={() => setInquiryOpen(false)} />
       <Navbar onOpenInquiry={() => setInquiryOpen(true)} onReplaySplash={() => setShowSplash(true)} />
@@ -197,7 +197,7 @@ export default function ContactPage() {
                       />
                     </div>
 
-                    <Button type="submit" className="w-full h-14 bg-gradient-to-r from-amber-400 via-amber-500 to-amber-500 text-slate-950 font-bold text-base clip-diagonal shadow-[0_0_25px_rgba(245,183,0,0.35)]">
+                    <Button type="submit" className="w-full h-14 bg-gradient-to-r from-amber-400 via-amber-500 to-amber-500 text-slate-800 font-bold text-base clip-diagonal shadow-[0_0_25px_rgba(245,183,0,0.35)]">
                       Submit Inquiry Now
                       <Send className="ml-2 w-5 h-5" />
                     </Button>

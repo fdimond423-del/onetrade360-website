@@ -22,7 +22,7 @@ export default function SolutionsPage() {
   const [activeTab, setActiveTab] = useState<"restaurant" | "cstore" | "hospitality" | "wholesale">("restaurant");
 
   return (
-    <div className="bg-white min-h-screen text-slate-900 font-sans relative selection:bg-amber-400 selection:text-slate-950 overflow-hidden">
+    <div className="bg-white min-h-screen text-slate-800 font-sans relative selection:bg-amber-400 selection:text-slate-800 overflow-hidden">
       {showSplash && <SplashLoader onComplete={() => setShowSplash(false)} />}
       <InquiryModal isOpen={inquiryOpen} onClose={() => setInquiryOpen(false)} />
       <Navbar onOpenInquiry={() => setInquiryOpen(true)} onReplaySplash={() => setShowSplash(true)} />
@@ -42,7 +42,7 @@ export default function SolutionsPage() {
             Turnkey Business Infrastructure
           </div>
 
-          <h1 className="text-4xl sm:text-6xl font-serif font-extrabold text-slate-950 mb-6 leading-tight">
+          <h1 className="text-4xl sm:text-6xl font-serif font-extrabold text-slate-800 mb-6 leading-tight">
             OneTrade360™ <span className="shimmer-text">Business Solutions</span>
           </h1>
 
@@ -64,7 +64,7 @@ export default function SolutionsPage() {
                 className={`flex items-center gap-2.5 px-5 py-3 rounded-xl text-xs sm:text-sm font-semibold font-mono transition-all ${
                   activeTab === tab.id
                     ? "bg-white text-gray-900 font-bold shadow-md"
-                    : "text-slate-700 hover:text-slate-950 hover:bg-slate-100"
+                    : "text-slate-700 hover:text-slate-800 hover:bg-slate-100"
                 }`}
               >
                 <tab.icon className="w-4 h-4" />
@@ -88,7 +88,7 @@ export default function SolutionsPage() {
                     <Utensils className="w-8 h-8" />
                   </div>
                   <div>
-                    <h2 className="text-3xl sm:text-4xl font-serif font-bold text-slate-950">Restaurant & Café Solutions</h2>
+                    <h2 className="text-3xl sm:text-4xl font-serif font-bold text-slate-800">Restaurant & Café Solutions</h2>
                     <p className="text-xs font-mono text-amber-700">Concept to Operation • Commercial Equipment • Menu & Launch Support</p>
                   </div>
                 </div>
@@ -124,7 +124,7 @@ export default function SolutionsPage() {
                     <Store className="w-8 h-8" />
                   </div>
                   <div>
-                    <h2 className="text-3xl sm:text-4xl font-serif font-bold text-slate-950">Convenience Store & Gas Solutions</h2>
+                    <h2 className="text-3xl sm:text-4xl font-serif font-bold text-slate-800">Convenience Store & Gas Solutions</h2>
                     <p className="text-xs font-mono text-gray-900">StoreSKU™ AI • X-ON™ AI Security • POS • Gondola & Refrigeration</p>
                   </div>
                 </div>
@@ -159,7 +159,7 @@ export default function SolutionsPage() {
                     <Hotel className="w-8 h-8" />
                   </div>
                   <div>
-                    <h2 className="text-3xl sm:text-4xl font-serif font-bold text-slate-950">Hospitality & Hotel Solutions</h2>
+                    <h2 className="text-3xl sm:text-4xl font-serif font-bold text-slate-800">Hospitality & Hotel Solutions</h2>
                     <p className="text-xs font-mono text-gray-900">Hotels • Motels • Resorts • Guest Amenities & Asset Protection</p>
                   </div>
                 </div>
@@ -193,7 +193,7 @@ export default function SolutionsPage() {
                     <Box className="w-8 h-8" />
                   </div>
                   <div>
-                    <h2 className="text-3xl sm:text-4xl font-serif font-bold text-slate-950">Wholesale & Distribution</h2>
+                    <h2 className="text-3xl sm:text-4xl font-serif font-bold text-slate-800">Wholesale & Distribution</h2>
                     <p className="text-xs font-mono text-emerald-700">Direct Factory Importer Pricing • Bulk Supply Pipelines</p>
                   </div>
                 </div>
@@ -227,7 +227,7 @@ export default function SolutionsPage() {
             </p>
             <Button 
               onClick={() => setInquiryOpen(true)}
-              className="bg-amber-400 hover:bg-amber-500 text-slate-950 font-bold clip-diagonal h-14 px-8 text-base shadow-md"
+              className="bg-amber-400 hover:bg-amber-500 text-slate-800 font-bold clip-diagonal h-14 px-8 text-base shadow-md"
             >
               Request Solution Proposal
               <ArrowRight className="ml-2 w-5 h-5" />

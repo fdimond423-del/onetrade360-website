@@ -142,7 +142,7 @@ export default function Home() {
   };
 
   return (
-    <div className="bg-white min-h-screen text-slate-950 font-sans relative selection:bg-amber-400 selection:text-slate-950 overflow-hidden">
+    <div className="bg-white min-h-screen text-slate-800 font-sans relative selection:bg-amber-400 selection:text-slate-800 overflow-hidden">
       {showSplash && <SplashLoader onComplete={() => setShowSplash(false)} />}
       <InquiryModal isOpen={inquiryOpen} onClose={() => setInquiryOpen(false)} />
       
@@ -170,13 +170,13 @@ export default function Home() {
               <motion.div 
                 animate={{ y: [0, -5, 0] }}
                 transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut" }}
-                className="hero-tag inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-100 border border-slate-300 text-slate-900 text-xs font-mono font-semibold uppercase tracking-wider shadow-sm"
+                className="hero-tag inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-100 border border-slate-300 text-slate-800 text-xs font-mono font-semibold uppercase tracking-wider shadow-sm"
               >
                 <Globe className="w-3.5 h-3.5 text-amber-600 animate-spin-slow" />
                 <span>ONE PLATFORM. GLOBAL CONNECTIONS. ENDLESS OPPORTUNITIES.</span>
               </motion.div>
 
-              <h1 className="hero-title text-4xl sm:text-6xl xl:text-7xl font-serif font-extrabold text-slate-950 leading-[1.12] tracking-tight">
+              <h1 className="hero-title text-4xl sm:text-6xl xl:text-7xl font-serif font-extrabold text-slate-800 leading-[1.12] tracking-tight">
                 The Complete <br />
                 <span className="shimmer-text">Business Ecosystem</span> <br />
                 For Retail, Hospitality, Manufacturing & Global Trade
@@ -190,7 +190,7 @@ export default function Home() {
               <div className="hero-btns flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
                 <Button 
                   onClick={() => setInquiryOpen(true)}
-                  className="w-full sm:w-auto h-13 px-8 text-xs font-bold uppercase tracking-wider bg-white hover:bg-gray-100 text-slate-900 shadow-lg hover:brightness-110 cursor-pointer flex items-center justify-center gap-2 rounded-xl border border-slate-900"
+                  className="w-full sm:w-auto h-13 px-8 text-xs font-bold uppercase tracking-wider bg-white hover:bg-gray-100 text-slate-800 shadow-lg hover:brightness-110 cursor-pointer flex items-center justify-center gap-2 rounded-xl border border-slate-900"
                 >
                   <span>Explore Ecosystem Solutions</span>
                   <ArrowRight className="w-4 h-4 text-amber-400" />
@@ -204,7 +204,7 @@ export default function Home() {
                 >
                   <Button 
                     variant="outline" 
-                    className="w-full h-13 px-8 text-xs font-bold uppercase tracking-wider border-emerald-600/60 text-slate-900 bg-emerald-50 hover:bg-emerald-100 cursor-pointer flex items-center justify-center gap-2 rounded-xl"
+                    className="w-full h-13 px-8 text-xs font-bold uppercase tracking-wider border-emerald-600/60 text-slate-800 bg-emerald-50 hover:bg-emerald-100 cursor-pointer flex items-center justify-center gap-2 rounded-xl"
                   >
                     <MessageSquare className="w-4 h-4 text-gray-700" />
                     <span>Instant WhatsApp</span>
@@ -215,7 +215,7 @@ export default function Home() {
               {/* Trust Metric Counters */}
               <div className="hero-stats pt-8 grid grid-cols-3 gap-4 border-t border-slate-200 max-w-lg mx-auto lg:mx-0">
                 <div className="space-y-0.5">
-                  <div className="text-2xl sm:text-3xl font-serif font-extrabold text-slate-950">
+                  <div className="text-2xl sm:text-3xl font-serif font-extrabold text-slate-800">
                     <Counter value={1480} suffix="+" />
                   </div>
                   <div className="text-[11px] font-mono text-slate-600 uppercase">Retail Outlets Synced</div>
@@ -229,7 +229,7 @@ export default function Home() {
                 </div>
 
                 <div className="space-y-0.5 border-l border-slate-200 pl-4">
-                  <div className="text-2xl sm:text-3xl font-serif font-extrabold text-slate-900">
+                  <div className="text-2xl sm:text-3xl font-serif font-extrabold text-slate-800">
                     <Counter value={3} suffix=" Corridors" />
                   </div>
                   <div className="text-[11px] font-mono text-slate-600 uppercase">India • USA • Canada</div>
@@ -247,7 +247,7 @@ export default function Home() {
             >
               <div className="bg-white rounded-2xl border border-gray-200 shadow-lg overflow-hidden">
                 <div className="bg-slate-50 border-y border-slate-200 px-6 py-4 flex items-center justify-between">
-                  <span className="text-sm font-bold text-slate-900 font-mono tracking-wide">OneTrade360™ Ecosystem</span>
+                  <span className="text-sm font-bold text-slate-800 font-mono tracking-wide">OneTrade360™ Ecosystem</span>
                   <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-500/20 border border-emerald-200 text-emerald-700 text-[10px] font-mono font-bold">
                     <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping" />
                     VERIFIED
@@ -274,7 +274,7 @@ export default function Home() {
                           <ItemIcon className="w-5 h-5" />
                         </div>
                         <div className="min-w-0">
-                          <div className="text-sm font-bold text-slate-900 group-hover:text-amber-700 transition-colors">{item.title}</div>
+                          <div className="text-sm font-bold text-slate-800 group-hover:text-amber-700 transition-colors">{item.title}</div>
                           <div className="text-xs text-gray-500 mt-0.5 truncate">{item.desc}</div>
                         </div>
                         <ArrowRight className="w-4 h-4 text-gray-300 group-hover:text-amber-500 shrink-0 transition-colors" />
@@ -285,7 +285,7 @@ export default function Home() {
                 <div className="px-5 py-4 bg-gray-50 border-t border-gray-100">
                   <Button 
                     onClick={() => setInquiryOpen(true)}
-                    className="w-full h-11 bg-white border-2 border-slate-900 text-slate-900 font-bold text-xs uppercase tracking-wider rounded-xl cursor-pointer transition-colors"
+                    className="w-full h-11 bg-white border-2 border-slate-900 text-slate-800 font-bold text-xs uppercase tracking-wider rounded-xl cursor-pointer transition-colors"
                   >
                     Schedule Free Consultation
                   </Button>
@@ -311,7 +311,7 @@ export default function Home() {
               <Award className="w-3.5 h-3.5 text-amber-600" />
               Core Ecosystem Pillars
             </div>
-            <h2 className="text-3xl sm:text-5xl font-serif font-extrabold text-slate-950 mb-4">
+            <h2 className="text-3xl sm:text-5xl font-serif font-extrabold text-slate-800 mb-4">
               Built On <span className="gold-text-gradient">5 Pillars Of Excellence</span>
             </h2>
             <p className="text-slate-600 text-sm sm:text-base font-light">
@@ -330,31 +330,31 @@ export default function Home() {
               {
                 pillar: "CONNECT",
                 icon: Handshake,
-                color: "from-slate-800 to-slate-950 text-amber-400 border border-slate-700",
+                color: "bg-amber-50 border border-amber-200 text-amber-600",
                 text: "Linking buyers, suppliers, OEM plants, and retail outlets into one unified digital trade ecosystem."
               },
               {
                 pillar: "TRADE",
                 icon: Globe,
-                color: "from-slate-800 to-slate-950 text-amber-400 border border-slate-700",
+                color: "bg-amber-50 border border-amber-200 text-amber-600",
                 text: "Streamlining international shipping, customs, cross-border payments, and supply chain logistics."
               },
               {
                 pillar: "GROW",
                 icon: TrendingUp,
-                color: "from-slate-800 to-slate-950 text-amber-400 border border-slate-700",
+                color: "bg-amber-50 border border-amber-200 text-amber-600",
                 text: "Scaling store revenue with StoreSKU™ POS AI automation and direct factory cost savings."
               },
               {
                 pillar: "COLLABORATE",
                 icon: Users,
-                color: "from-slate-800 to-slate-950 text-amber-400 border border-slate-700",
+                color: "bg-amber-50 border border-amber-200 text-amber-600",
                 text: "Uniting investors, franchisors, and business brokers for turnkey acquisition deals."
               },
               {
                 pillar: "SUCCEED",
                 icon: Target,
-                color: "from-slate-800 to-slate-950 text-amber-400 border border-slate-700",
+                color: "bg-amber-50 border border-amber-200 text-amber-600",
                 text: "Ensuring long-term profitability, operational compliance, and business enterprise value."
               },
             ].map((item, idx) => {
@@ -373,7 +373,7 @@ export default function Home() {
                     </div>
 
                     <div className="text-xs font-mono font-bold text-amber-700 tracking-wider">PILLAR {idx + 1}</div>
-                    <h3 className="text-xl font-serif font-extrabold text-slate-950 group-hover:text-amber-600 transition-colors">
+                    <h3 className="text-xl font-serif font-extrabold text-slate-800 group-hover:text-amber-600 transition-colors">
                       {item.pillar}
                     </h3>
 
@@ -403,11 +403,11 @@ export default function Home() {
             variants={FADE_UP}
             className="section-reveal text-center max-w-3xl mx-auto mb-12"
           >
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gray-100 border border-gray-300 text-slate-900 text-xs font-mono font-semibold uppercase tracking-wider mb-4">
-              <Network className="w-3.5 h-3.5 text-slate-900" />
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gray-100 border border-gray-300 text-slate-800 text-xs font-mono font-semibold uppercase tracking-wider mb-4">
+              <Network className="w-3.5 h-3.5 text-slate-800" />
               Interactive Cross-Border Trade Corridors
             </div>
-            <h2 className="text-3xl sm:text-5xl font-serif font-extrabold text-slate-950 mb-4">
+            <h2 className="text-3xl sm:text-5xl font-serif font-extrabold text-slate-800 mb-4">
               Connecting <span className="shimmer-text">India, USA & Canada</span>
             </h2>
             <p className="text-slate-600 text-sm sm:text-base font-light">
@@ -422,8 +422,8 @@ export default function Home() {
                   onClick={() => setActiveCorridor(key)}
                   className={`flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-mono font-bold transition-all ${
                     activeCorridor === key
-                      ? "bg-white text-slate-900 shadow-md"
-                      : "text-slate-700 hover:text-slate-950 hover:bg-white"
+                      ? "bg-white text-slate-800 shadow-md"
+                      : "text-slate-700 hover:text-slate-800 hover:bg-white"
                   }`}
                 >
                   <span className="text-base">{corridorData[key].flag}</span>
@@ -446,7 +446,7 @@ export default function Home() {
                 <div className="flex items-center gap-3">
                   <span className="text-4xl">{corridorData[activeCorridor].flag}</span>
                   <div>
-                    <h3 className="text-2xl font-serif font-bold text-slate-900">{corridorData[activeCorridor].name}</h3>
+                    <h3 className="text-2xl font-serif font-bold text-slate-800">{corridorData[activeCorridor].name}</h3>
                     <p className="text-xs font-mono text-amber-400">{corridorData[activeCorridor].subtitle}</p>
                   </div>
                 </div>
@@ -480,7 +480,7 @@ export default function Home() {
                 <p className="text-xs text-gray-500 font-light">Customs Cleared & Standardized Logistics Protocols</p>
                 <Button 
                   onClick={() => setInquiryOpen(true)}
-                  className="w-full h-11 bg-amber-400 hover:bg-amber-500 text-slate-950 font-bold text-xs uppercase cursor-pointer rounded-xl"
+                  className="w-full h-11 bg-amber-400 hover:bg-amber-500 text-slate-800 font-bold text-xs uppercase cursor-pointer rounded-xl"
                 >
                   Initiate Trade Proposal
                 </Button>
@@ -500,11 +500,11 @@ export default function Home() {
             variants={FADE_UP}
             className="text-center max-w-3xl mx-auto mb-16"
           >
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-200 text-slate-900 text-xs font-mono font-semibold uppercase tracking-wider mb-4">
-              <Building2 className="w-3.5 h-3.5 text-slate-900" />
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-200 text-slate-800 text-xs font-mono font-semibold uppercase tracking-wider mb-4">
+              <Building2 className="w-3.5 h-3.5 text-slate-800" />
               Turnkey Infrastructure Solutions
             </div>
-            <h2 className="text-3xl sm:text-5xl font-serif font-extrabold text-slate-950 mb-4">
+            <h2 className="text-3xl sm:text-5xl font-serif font-extrabold text-slate-800 mb-4">
               Comprehensive <span className="shimmer-text">Ecosystem Solutions</span>
             </h2>
             <p className="text-slate-600 text-sm sm:text-base font-light">
@@ -554,11 +554,11 @@ export default function Home() {
                   className="orion-card p-6 flex flex-col justify-between group hover:border-amber-400"
                 >
                   <div className="space-y-4">
-                    <div className="w-12 h-12 rounded-xl bg-slate-100 border border-slate-200 text-slate-950 flex items-center justify-center shadow-sm">
-                      <CardIcon className="w-6 h-6 text-slate-950" />
+                    <div className="w-12 h-12 rounded-xl bg-slate-100 border border-slate-200 text-slate-800 flex items-center justify-center shadow-sm">
+                      <CardIcon className="w-6 h-6 text-slate-800" />
                     </div>
 
-                    <h3 className="text-xl font-serif font-bold text-slate-950 group-hover:text-amber-600 transition-colors">
+                    <h3 className="text-xl font-serif font-bold text-slate-800 group-hover:text-amber-600 transition-colors">
                       {card.title}
                     </h3>
 
@@ -568,7 +568,7 @@ export default function Home() {
                   </div>
 
                   <div className="pt-6 border-t border-slate-100">
-                    <Link href={card.link} className="inline-flex items-center gap-1.5 text-xs font-mono font-bold text-amber-700 hover:text-slate-950 transition-colors">
+                    <Link href={card.link} className="inline-flex items-center gap-1.5 text-xs font-mono font-bold text-amber-700 hover:text-slate-800 transition-colors">
                       <span>Learn More</span>
                       <ArrowUpRight className="w-4 h-4 text-amber-600" />
                     </Link>
@@ -594,7 +594,7 @@ export default function Home() {
               <Factory className="w-3.5 h-3.5 text-amber-700" />
               Direct OEM Product Catalog
             </div>
-            <h2 className="text-3xl sm:text-5xl font-serif font-extrabold text-slate-950 mb-4">
+            <h2 className="text-3xl sm:text-5xl font-serif font-extrabold text-slate-800 mb-4">
               Factory Direct <span className="gold-text-gradient">Sourcing Specs</span>
             </h2>
             <p className="text-slate-600 text-sm sm:text-base font-light">
@@ -614,8 +614,8 @@ export default function Home() {
                   onClick={() => setActiveCatalogTab(tab.id as any)}
                   className={`px-4 py-2 rounded-xl text-xs font-mono font-bold transition-all ${
                     activeCatalogTab === tab.id
-                      ? "bg-amber-400 text-slate-950 shadow-md"
-                      : "text-slate-700 hover:text-slate-950 hover:bg-white"
+                      ? "bg-amber-400 text-slate-800 shadow-md"
+                      : "text-slate-700 hover:text-slate-800 hover:bg-white"
                   }`}
                 >
                   {tab.label}
@@ -642,16 +642,16 @@ export default function Home() {
                   <div className="text-[10px] font-mono text-amber-800 bg-amber-50 border border-amber-200 px-2.5 py-1 rounded w-fit">
                     {item.code}
                   </div>
-                  <h3 className="text-lg font-serif font-bold text-slate-950">{item.title}</h3>
+                  <h3 className="text-lg font-serif font-bold text-slate-800">{item.title}</h3>
                   <p className="text-xs text-slate-600 font-light">{item.desc}</p>
                 </div>
 
                 <div className="pt-4 border-t border-slate-100 flex items-center justify-between">
-                  <span className="text-[11px] font-mono text-slate-900 font-bold">100% Factory Audit</span>
+                  <span className="text-[11px] font-mono text-slate-800 font-bold">100% Factory Audit</span>
                   <Button 
                     onClick={() => setInquiryOpen(true)}
                     size="sm"
-                    className="h-8 text-[11px] bg-white hover:bg-amber-500 hover:text-slate-950 text-slate-900 font-mono font-bold rounded-lg cursor-pointer transition-colors"
+                    className="h-8 text-[11px] bg-white hover:bg-amber-500 hover:text-slate-800 text-slate-800 font-mono font-bold rounded-lg cursor-pointer transition-colors"
                   >
                     Request Quote
                   </Button>
@@ -669,7 +669,7 @@ export default function Home() {
       <TestimonialsSection />
 
       {/* SECTION 8: EXECUTIVE CALL TO ACTION */}
-      <section className="py-24 bg-slate-50 text-slate-950 relative overflow-hidden border-t border-slate-200">
+      <section className="py-24 bg-slate-50 text-slate-800 relative overflow-hidden border-t border-slate-200">
         <div className="container mx-auto px-4 sm:px-6 relative z-10 text-center max-w-4xl">
           <motion.div 
             initial="hidden"
@@ -678,7 +678,7 @@ export default function Home() {
             variants={FADE_SCALE}
             className="p-10 sm:p-16 rounded-3xl border border-slate-300 bg-white shadow-xl"
           >
-            <h2 className="text-3xl sm:text-5xl font-serif font-extrabold text-slate-950 mb-6 leading-tight">
+            <h2 className="text-3xl sm:text-5xl font-serif font-extrabold text-slate-800 mb-6 leading-tight">
               Ready to Accelerate Your <br />
               <span className="shimmer-text">Global Trade Pipeline?</span>
             </h2>
@@ -690,13 +690,13 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Button 
                 onClick={() => setInquiryOpen(true)}
-                className="w-full sm:w-auto h-13 px-10 bg-white hover:bg-gray-100 text-slate-900 font-bold text-xs uppercase tracking-wider shadow-lg cursor-pointer rounded-xl"
+                className="w-full sm:w-auto h-13 px-10 bg-white hover:bg-gray-100 text-slate-800 font-bold text-xs uppercase tracking-wider shadow-lg cursor-pointer rounded-xl"
               >
                 Schedule Executive Consultation
               </Button>
 
               <Link href="/contact">
-                <Button variant="outline" className="w-full sm:w-auto h-13 px-8 border-slate-300 text-slate-950 hover:bg-slate-100 font-serif text-xs uppercase cursor-pointer rounded-xl">
+                <Button variant="outline" className="w-full sm:w-auto h-13 px-8 border-slate-300 text-slate-800 hover:bg-slate-100 font-serif text-xs uppercase cursor-pointer rounded-xl">
                   Contact Support Lines
                 </Button>
               </Link>
