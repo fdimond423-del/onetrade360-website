@@ -67,7 +67,7 @@ export default function AboutPage() {
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: false }}
               className="glass-card-gold rounded-3xl p-8 sm:p-10 border border-amber-400/40 relative overflow-hidden"
             >
               <div className="w-14 h-14 rounded-2xl bg-amber-50 border border-amber-200 flex items-center justify-center text-amber-700 mb-6">
@@ -83,7 +83,7 @@ export default function AboutPage() {
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: false }}
               className="glass-card-cyber rounded-3xl p-8 sm:p-10 border border-gray-200 relative overflow-hidden"
             >
               <div className="w-14 h-14 rounded-2xl bg-gray-100 border border-gray-200 flex items-center justify-center text-gray-700 mb-6">
@@ -117,7 +117,7 @@ export default function AboutPage() {
                 key={idx}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: false }}
                 transition={{ delay: idx * 0.05 }}
                 className="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm hover:border-amber-400 hover:shadow-md transition-all duration-300 group"
               >

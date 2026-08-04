@@ -79,11 +79,11 @@ export default function ManufacturingPage() {
                 key={idx}
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
+                viewport={{ once: false }}
                 transition={{ delay: idx * 0.05 }}
                 className="p-4 rounded-xl bg-gray-50/90 border border-gray-200 hover:border-amber-400/60 transition-all flex items-center gap-3 group"
               >
-                <div className="w-8 h-8 rounded-lg bg-amber-50 border border-amber-400/30 flex items-center justify-center text-amber-700 group-hover:bg-gray-950 text-white group-hover:text-slate-950 transition-colors">
+                <div className="w-8 h-8 rounded-lg bg-amber-50 border border-amber-400/30 flex items-center justify-center text-amber-700 group-hover:bg-gray-950 text-slate-900 group-hover:text-slate-950 transition-colors">
                   <CheckCircle2 className="w-4 h-4" />
                 </div>
                 <span className="text-sm text-gray-700 font-semibold">{ind}</span>
@@ -111,7 +111,7 @@ export default function ManufacturingPage() {
                 key={idx}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: false }}
                 transition={{ delay: idx * 0.08 }}
                 className="glass-card-cyber p-6 rounded-2xl hover:border-amber-400/60 transition-all duration-300 group hover:-translate-y-1"
               >

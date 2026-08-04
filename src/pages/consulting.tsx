@@ -92,7 +92,7 @@ export default function ConsultingPage() {
                 key={idx}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: false }}
                 transition={{ delay: idx * 0.08 }}
                 className="glass-card p-6 rounded-2xl border border-gray-200 hover:border-amber-400/50 transition-all duration-300 group hover:-translate-y-1"
               >
@@ -125,11 +125,11 @@ export default function ConsultingPage() {
                 key={idx}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: false }}
                 transition={{ delay: idx * 0.08 }}
                 className="glass-card-cyber p-6 rounded-2xl hover:border-amber-400/70 transition-all duration-300 group hover:-translate-y-1"
               >
-                <div className="w-12 h-12 rounded-xl bg-amber-50 border border-amber-400/30 flex items-center justify-center text-amber-700 mb-4 group-hover:bg-gray-950 text-white group-hover:text-slate-950 transition-colors">
+                <div className="w-12 h-12 rounded-xl bg-amber-50 border border-amber-400/30 flex items-center justify-center text-amber-700 mb-4 group-hover:bg-gray-950 text-slate-900 group-hover:text-slate-950 transition-colors">
                   <service.icon className="w-6 h-6" />
                 </div>
                 <h3 className="text-lg font-serif font-bold text-gray-900 mb-2">{service.title}</h3>

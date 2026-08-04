@@ -87,7 +87,7 @@ export default function NetworkPage() {
                 key={idx}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: false }}
                 transition={{ delay: idx * 0.1 }}
                 className="glass-card-cyber p-8 rounded-3xl border border-gray-200 hover:border-amber-400/60 transition-all text-center group"
               >
@@ -145,7 +145,7 @@ export default function NetworkPage() {
                 key={idx}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: false }}
                 transition={{ delay: idx * 0.05 }}
                 className="glass-card p-6 rounded-2xl border border-gray-200 hover:border-amber-400/50 transition-all duration-300"
               >

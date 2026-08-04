@@ -159,7 +159,7 @@ export default function TechnologyPage() {
                     ))}
                   </div>
 
-                  <Button onClick={() => setInquiryOpen(true)} className="bg-gray-950 text-white text-slate-950 font-bold hover:bg-gray-800 h-14 px-8 clip-diagonal text-base">
+                  <Button onClick={() => setInquiryOpen(true)} className="bg-gray-950 text-slate-900 text-slate-950 font-bold hover:bg-gray-800 h-14 px-8 clip-diagonal text-base">
                     Request X-ON™ Security Specs
                   </Button>
                 </div>

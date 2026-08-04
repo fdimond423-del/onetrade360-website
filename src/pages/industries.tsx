@@ -104,7 +104,7 @@ export default function IndustriesPage() {
                 key={sec.id}
                 initial={{ opacity: 0, y: 25 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: false }}
                 transition={{ delay: idx * 0.1 }}
                 className={`glass-card rounded-3xl p-8 sm:p-10 border ${sec.border} hover:border-amber-400/60 transition-all duration-300 group hover:-translate-y-1.5 relative overflow-hidden`}
               >
