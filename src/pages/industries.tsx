@@ -67,7 +67,7 @@ export default function IndustriesPage() {
   ];
 
   return (
-    <div className="bg-white min-h-screen text-gray-900 font-sans relative selection:bg-amber-400 selection:text-slate-800 overflow-hidden">
+    <div className="bg-white min-h-screen text-amber-700 font-sans relative selection:bg-amber-400 selection:text-amber-700 overflow-hidden">
       {showSplash && <SplashLoader onComplete={() => setShowSplash(false)} />}
       <InquiryModal isOpen={inquiryOpen} onClose={() => setInquiryOpen(false)} />
       <Navbar onOpenInquiry={() => setInquiryOpen(true)} onReplaySplash={() => setShowSplash(true)} />
@@ -77,7 +77,12 @@ export default function IndustriesPage() {
       </div>
 
       {/* Header */}
-      <section className="relative py-20 border-b border-gray-200 overflow-hidden">
+      <motion.section
+  initial={{ opacity: 0, y: 40 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: false, amount: 0.1 }}
+  transition={{ duration: 0.6 }}
+  className="relative py-20 border-b border-gray-200 overflow-hidden">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[750px] h-[400px] bg-gradient-to-r from-amber-500/10 via-cyan-500/10 to-amber-500/10 blur-[150px] pointer-events-none" />
         <div className="container mx-auto px-4 sm:px-6 relative z-10 text-center max-w-4xl">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-400/10 border border-amber-400/30 text-amber-400 text-xs font-mono font-semibold uppercase tracking-wider mb-6">
@@ -85,7 +90,7 @@ export default function IndustriesPage() {
             Core Industry Portfolios
           </div>
 
-          <h1 className="text-4xl sm:text-6xl font-serif font-extrabold text-gray-900 mb-6 leading-tight">
+          <h1 className="text-4xl sm:text-6xl font-serif font-extrabold text-amber-700 mb-6 leading-tight">
             Industries We <span className="shimmer-text">Serve Globally</span>
           </h1>
 
@@ -93,10 +98,15 @@ export default function IndustriesPage() {
             Tailored supply chain, technology, and commercial setup solutions for high-demand business sectors across USA, India, and Canada.
           </p>
         </div>
-      </section>
+      </motion.section>
 
       {/* Sectors Grid */}
-      <section className="py-24 relative">
+      <motion.section
+  initial={{ opacity: 0, y: 40 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: false, amount: 0.1 }}
+  transition={{ duration: 0.6 }}
+  className="py-24 relative">
         <div className="container mx-auto px-4 sm:px-6 relative z-10">
           <div className="grid md:grid-cols-2 gap-8">
             {sectors.map((sec, idx) => (
@@ -109,11 +119,11 @@ export default function IndustriesPage() {
                 className={`glass-card rounded-3xl p-8 sm:p-10 border ${sec.border} hover:border-amber-400/60 transition-all duration-300 group hover:-translate-y-1.5 relative overflow-hidden`}
               >
                 <div className="flex items-center gap-4 mb-6">
-                  <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${sec.accent} flex items-center justify-center text-slate-800 shadow-lg`}>
+                  <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${sec.accent} flex items-center justify-center text-amber-700 shadow-lg`}>
                     <sec.icon className="w-7 h-7" />
                   </div>
                   <div>
-                    <h3 className="text-2xl sm:text-3xl font-serif font-bold text-gray-900">{sec.title}</h3>
+                    <h3 className="text-2xl sm:text-3xl font-serif font-bold text-amber-700">{sec.title}</h3>
                     <span className="text-xs font-mono text-amber-700">Industry Vertical #{idx + 1}</span>
                   </div>
                 </div>
@@ -137,20 +147,20 @@ export default function IndustriesPage() {
 
           {/* CTA */}
           <div className="mt-16 text-center glass-card-cyber rounded-3xl p-10 relative overflow-hidden">
-            <h3 className="text-3xl font-serif font-bold text-gray-900 mb-4">Don't See Your Specific Business Type?</h3>
+            <h3 className="text-3xl font-serif font-bold text-amber-700 mb-4">Don't See Your Specific Business Type?</h3>
             <p className="text-gray-600 max-w-2xl mx-auto mb-8 font-light">
               OneTrade360 serves over 18+ business categories. Contact our team for customized global sourcing and operational match-making.
             </p>
             <Button 
               onClick={() => setInquiryOpen(true)}
-              className="bg-gradient-to-r from-amber-400 via-amber-500 to-amber-500 text-slate-800 font-bold hover:brightness-110 clip-diagonal h-14 px-8 text-base shadow-[0_0_30px_rgba(245,183,0,0.4)]"
+              className="bg-gradient-to-r from-amber-400 via-amber-500 to-amber-500 text-amber-700 font-bold hover:brightness-110 clip-diagonal h-14 px-8 text-base shadow-[0_0_30px_rgba(245,183,0,0.4)]"
             >
               Consult Industry Specialists
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       <Footer onOpenInquiry={() => setInquiryOpen(true)} onReplaySplash={() => setShowSplash(true)} />
     </div>

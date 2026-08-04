@@ -38,7 +38,7 @@ export default function TechnologyPage() {
   const [activeTech, setActiveTech] = useState<"storesku" | "xon">("storesku");
 
   return (
-    <div className="bg-white min-h-screen text-gray-900 font-sans relative selection:bg-amber-400 selection:text-slate-800 overflow-hidden">
+    <div className="bg-white min-h-screen text-amber-700 font-sans relative selection:bg-amber-400 selection:text-amber-700 overflow-hidden">
       {showSplash && <SplashLoader onComplete={() => setShowSplash(false)} />}
       <InquiryModal isOpen={inquiryOpen} onClose={() => setInquiryOpen(false)} />
       <Navbar onOpenInquiry={() => setInquiryOpen(true)} onReplaySplash={() => setShowSplash(true)} />
@@ -48,7 +48,12 @@ export default function TechnologyPage() {
       </div>
 
       {/* Hero Header */}
-      <section className="relative py-20 border-b border-gray-200 overflow-hidden">
+      <motion.section
+  initial={{ opacity: 0, y: 40 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: false, amount: 0.1 }}
+  transition={{ duration: 0.6 }}
+  className="relative py-20 border-b border-gray-200 overflow-hidden">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[850px] h-[450px] bg-gradient-to-r from-amber-100 via-amber-50 to-amber-100 blur-[160px] pointer-events-none" />
         <div className="container mx-auto px-4 sm:px-6 relative z-10 text-center max-w-4xl">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-50 border border-amber-400/30 text-amber-700 text-xs font-mono font-semibold uppercase tracking-wider mb-6">
@@ -56,7 +61,7 @@ export default function TechnologyPage() {
             Proprietary Tech Suite
           </div>
 
-          <h1 className="text-4xl sm:text-6xl font-serif font-extrabold text-gray-900 mb-6 leading-tight">
+          <h1 className="text-4xl sm:text-6xl font-serif font-extrabold text-amber-700 mb-6 leading-tight">
             AI-Powered <span className="shimmer-text">Business Solutions</span>
           </h1>
 
@@ -70,8 +75,8 @@ export default function TechnologyPage() {
               onClick={() => setActiveTech("storesku")}
               className={`px-6 py-3 rounded-xl text-xs sm:text-sm font-semibold font-mono transition-all ${
                 activeTech === "storesku"
-                  ? "bg-gradient-to-r from-amber-400 to-amber-500 text-slate-800 font-bold shadow-[0_0_20px_rgba(245,183,0,0.35)]"
-                  : "text-gray-500 hover:text-gray-900"
+                  ? "bg-gradient-to-r from-amber-400 to-amber-500 text-amber-700 font-bold shadow-[0_0_20px_rgba(245,183,0,0.35)]"
+                  : "text-gray-500 hover:text-amber-700"
               }`}
             >
               StoreSKU™ AI Retail
@@ -80,18 +85,23 @@ export default function TechnologyPage() {
               onClick={() => setActiveTech("xon")}
               className={`px-6 py-3 rounded-xl text-xs sm:text-sm font-semibold font-mono transition-all ${
                 activeTech === "xon"
-                  ? "bg-gradient-to-r from-amber-400 to-amber-500 text-slate-800 font-bold shadow-[0_0_20px_rgba(245,183,0,0.35)]"
-                  : "text-gray-500 hover:text-gray-900"
+                  ? "bg-gradient-to-r from-amber-400 to-amber-500 text-amber-700 font-bold shadow-[0_0_20px_rgba(245,183,0,0.35)]"
+                  : "text-gray-500 hover:text-amber-700"
               }`}
             >
               X-ON™ AI Security
             </button>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Main Tech Showcase */}
-      <section className="py-24 relative">
+      <motion.section
+  initial={{ opacity: 0, y: 40 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: false, amount: 0.1 }}
+  transition={{ duration: 0.6 }}
+  className="py-24 relative">
         <div className="container mx-auto px-4 sm:px-6 relative z-10">
           <div className="grid lg:grid-cols-12 gap-12 items-center">
             
@@ -103,7 +113,7 @@ export default function TechnologyPage() {
                     <MonitorSmartphone className="w-8 h-8" />
                   </div>
                   
-                  <h2 className="text-3xl sm:text-4xl font-serif font-bold text-gray-900">StoreSKU™ AI Platform</h2>
+                  <h2 className="text-3xl sm:text-4xl font-serif font-bold text-amber-700">StoreSKU™ AI Platform</h2>
                   
                   <p className="text-gray-600 leading-relaxed font-light">
                     Retail operations management platform for convenience stores, gas stations, liquor stores, and multi-location retail chains.
@@ -126,7 +136,7 @@ export default function TechnologyPage() {
                     ))}
                   </div>
 
-                  <Button onClick={() => setInquiryOpen(true)} className="bg-amber-400 text-slate-800 font-bold hover:bg-amber-500 h-14 px-8 clip-diagonal text-base">
+                  <Button onClick={() => setInquiryOpen(true)} className="bg-amber-400 text-amber-700 font-bold hover:bg-amber-500 h-14 px-8 clip-diagonal text-base">
                     Schedule StoreSKU™ Live Demo
                   </Button>
                 </div>
@@ -136,7 +146,7 @@ export default function TechnologyPage() {
                     <Shield className="w-8 h-8" />
                   </div>
                   
-                  <h2 className="text-3xl sm:text-4xl font-serif font-bold text-gray-900">X-ON™ AI Security System</h2>
+                  <h2 className="text-3xl sm:text-4xl font-serif font-bold text-amber-700">X-ON™ AI Security System</h2>
                   
                   <p className="text-gray-600 leading-relaxed font-light">
                     Smart surveillance and AI-powered security engineered for commercial retail stores, warehouses, hotels, and industrial plants.
@@ -159,7 +169,7 @@ export default function TechnologyPage() {
                     ))}
                   </div>
 
-                  <Button onClick={() => setInquiryOpen(true)} className="bg-gray-950 text-slate-800 text-slate-800 font-bold hover:bg-gray-800 h-14 px-8 clip-diagonal text-base">
+                  <Button onClick={() => setInquiryOpen(true)} className="bg-gray-950 text-amber-700 text-amber-700 font-bold hover:bg-gray-800 h-14 px-8 clip-diagonal text-base">
                     Request X-ON™ Security Specs
                   </Button>
                 </div>
@@ -218,7 +228,7 @@ export default function TechnologyPage() {
 
           </div>
         </div>
-      </section>
+      </motion.section>
 
       <Footer onOpenInquiry={() => setInquiryOpen(true)} onReplaySplash={() => setShowSplash(true)} />
     </div>

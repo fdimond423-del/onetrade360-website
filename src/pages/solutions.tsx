@@ -22,7 +22,7 @@ export default function SolutionsPage() {
   const [activeTab, setActiveTab] = useState<"restaurant" | "cstore" | "hospitality" | "wholesale">("restaurant");
 
   return (
-    <div className="bg-white min-h-screen text-slate-800 font-sans relative selection:bg-amber-400 selection:text-slate-800 overflow-hidden">
+    <div className="bg-white min-h-screen text-amber-700 font-sans relative selection:bg-amber-400 selection:text-amber-700 overflow-hidden">
       {showSplash && <SplashLoader onComplete={() => setShowSplash(false)} />}
       <InquiryModal isOpen={inquiryOpen} onClose={() => setInquiryOpen(false)} />
       <Navbar onOpenInquiry={() => setInquiryOpen(true)} onReplaySplash={() => setShowSplash(true)} />
@@ -32,7 +32,12 @@ export default function SolutionsPage() {
       </div>
 
       {/* Hero Header */}
-      <section className="relative py-20 overflow-hidden border-b border-slate-200 bg-slate-50">
+      <motion.section
+  initial={{ opacity: 0, y: 40 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: false, amount: 0.1 }}
+  transition={{ duration: 0.6 }}
+  className="relative py-20 overflow-hidden border-b border-slate-200 bg-slate-50">
         <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-gradient-to-r from-amber-100 via-amber-50 to-amber-50 blur-[160px] pointer-events-none" />
         <div className="absolute inset-0 bg-grid-cyber opacity-30 pointer-events-none" />
 
@@ -42,7 +47,7 @@ export default function SolutionsPage() {
             Turnkey Business Infrastructure
           </div>
 
-          <h1 className="text-4xl sm:text-6xl font-serif font-extrabold text-slate-800 mb-6 leading-tight">
+          <h1 className="text-4xl sm:text-6xl font-serif font-extrabold text-amber-700 mb-6 leading-tight">
             OneTrade360™ <span className="shimmer-text">Business Solutions</span>
           </h1>
 
@@ -63,8 +68,8 @@ export default function SolutionsPage() {
                 onClick={() => setActiveTab(tab.id as any)}
                 className={`flex items-center gap-2.5 px-5 py-3 rounded-xl text-xs sm:text-sm font-semibold font-mono transition-all ${
                   activeTab === tab.id
-                    ? "bg-white text-gray-900 font-bold shadow-md"
-                    : "text-slate-700 hover:text-slate-800 hover:bg-slate-100"
+                    ? "bg-white text-amber-700 font-bold shadow-md"
+                    : "text-slate-700 hover:text-amber-700 hover:bg-slate-100"
                 }`}
               >
                 <tab.icon className="w-4 h-4" />
@@ -73,10 +78,15 @@ export default function SolutionsPage() {
             ))}
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Main Solution Content Sections */}
-      <section className="py-24 relative bg-white">
+      <motion.section
+  initial={{ opacity: 0, y: 40 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: false, amount: 0.1 }}
+  transition={{ duration: 0.6 }}
+  className="py-24 relative bg-white">
         <div className="container mx-auto px-4 sm:px-6 relative z-10">
 
           {/* 1. Restaurant & Café Solutions */}
@@ -84,11 +94,11 @@ export default function SolutionsPage() {
             <motion.div initial="hidden" animate="visible" variants={FADE_UP} className="space-y-12">
               <div className="bg-white border border-slate-200 rounded-3xl p-8 sm:p-12 shadow-sm">
                 <div className="flex items-center gap-4 mb-6">
-                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center text-gray-900 shadow-md">
+                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center text-amber-700 shadow-md">
                     <Utensils className="w-8 h-8" />
                   </div>
                   <div>
-                    <h2 className="text-3xl sm:text-4xl font-serif font-bold text-slate-800">Restaurant & Café Solutions</h2>
+                    <h2 className="text-3xl sm:text-4xl font-serif font-bold text-amber-700">Restaurant & Café Solutions</h2>
                     <p className="text-xs font-mono text-amber-700">Concept to Operation • Commercial Equipment • Menu & Launch Support</p>
                   </div>
                 </div>
@@ -107,7 +117,7 @@ export default function SolutionsPage() {
                   ].map((service, i) => (
                     <div key={i} className="p-4 rounded-xl bg-slate-50 border border-slate-200 hover:border-amber-400 transition-all flex items-start gap-3 group">
                       <CheckCircle2 className="w-5 h-5 text-amber-500 shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />
-                      <span className="text-sm text-slate-800 font-medium">{service}</span>
+                      <span className="text-sm text-amber-700 font-medium">{service}</span>
                     </div>
                   ))}
                 </div>
@@ -120,12 +130,12 @@ export default function SolutionsPage() {
             <motion.div initial="hidden" animate="visible" variants={FADE_UP} className="space-y-12">
               <div className="bg-white border border-slate-200 rounded-3xl p-8 sm:p-12 shadow-sm">
                 <div className="flex items-center gap-4 mb-6">
-                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center text-gray-900 shadow-md">
+                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center text-amber-700 shadow-md">
                     <Store className="w-8 h-8" />
                   </div>
                   <div>
-                    <h2 className="text-3xl sm:text-4xl font-serif font-bold text-slate-800">Convenience Store & Gas Solutions</h2>
-                    <p className="text-xs font-mono text-gray-900">StoreSKU™ AI • X-ON™ AI Security • POS • Gondola & Refrigeration</p>
+                    <h2 className="text-3xl sm:text-4xl font-serif font-bold text-amber-700">Convenience Store & Gas Solutions</h2>
+                    <p className="text-xs font-mono text-amber-700">StoreSKU™ AI • X-ON™ AI Security • POS • Gondola & Refrigeration</p>
                   </div>
                 </div>
 
@@ -141,8 +151,8 @@ export default function SolutionsPage() {
                     "Food Service & Deli Setup", "Thermal Receipt Paper Rolls", "Retail Operating Supplies"
                   ].map((service, i) => (
                     <div key={i} className="p-4 rounded-xl bg-slate-50 border border-slate-200 hover:border-gray-400 transition-all flex items-start gap-3 group">
-                      <CheckCircle2 className="w-5 h-5 text-gray-900 shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />
-                      <span className="text-sm text-slate-800 font-medium">{service}</span>
+                      <CheckCircle2 className="w-5 h-5 text-amber-700 shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />
+                      <span className="text-sm text-amber-700 font-medium">{service}</span>
                     </div>
                   ))}
                 </div>
@@ -155,12 +165,12 @@ export default function SolutionsPage() {
             <motion.div initial="hidden" animate="visible" variants={FADE_UP} className="space-y-12">
               <div className="bg-white border border-slate-200 rounded-3xl p-8 sm:p-12 shadow-sm">
                 <div className="flex items-center gap-4 mb-6">
-                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center text-gray-900 shadow-md">
+                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center text-amber-700 shadow-md">
                     <Hotel className="w-8 h-8" />
                   </div>
                   <div>
-                    <h2 className="text-3xl sm:text-4xl font-serif font-bold text-slate-800">Hospitality & Hotel Solutions</h2>
-                    <p className="text-xs font-mono text-gray-900">Hotels • Motels • Resorts • Guest Amenities & Asset Protection</p>
+                    <h2 className="text-3xl sm:text-4xl font-serif font-bold text-amber-700">Hospitality & Hotel Solutions</h2>
+                    <p className="text-xs font-mono text-amber-700">Hotels • Motels • Resorts • Guest Amenities & Asset Protection</p>
                   </div>
                 </div>
 
@@ -175,8 +185,8 @@ export default function SolutionsPage() {
                     "Property Operations Support", "Commercial Facility Equipment"
                   ].map((service, i) => (
                     <div key={i} className="p-4 rounded-xl bg-slate-50 border border-slate-200 hover:border-gray-400 transition-all flex items-start gap-3 group">
-                      <CheckCircle2 className="w-5 h-5 text-gray-900 shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />
-                      <span className="text-sm text-slate-800 font-medium">{service}</span>
+                      <CheckCircle2 className="w-5 h-5 text-amber-700 shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />
+                      <span className="text-sm text-amber-700 font-medium">{service}</span>
                     </div>
                   ))}
                 </div>
@@ -189,11 +199,11 @@ export default function SolutionsPage() {
             <motion.div initial="hidden" animate="visible" variants={FADE_UP} className="space-y-12">
               <div className="bg-white border border-slate-200 rounded-3xl p-8 sm:p-12 shadow-sm">
                 <div className="flex items-center gap-4 mb-6">
-                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center text-gray-900 shadow-md">
+                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center text-amber-700 shadow-md">
                     <Box className="w-8 h-8" />
                   </div>
                   <div>
-                    <h2 className="text-3xl sm:text-4xl font-serif font-bold text-slate-800">Wholesale & Distribution</h2>
+                    <h2 className="text-3xl sm:text-4xl font-serif font-bold text-amber-700">Wholesale & Distribution</h2>
                     <p className="text-xs font-mono text-emerald-700">Direct Factory Importer Pricing • Bulk Supply Pipelines</p>
                   </div>
                 </div>
@@ -211,7 +221,7 @@ export default function SolutionsPage() {
                   ].map((service, i) => (
                     <div key={i} className="p-4 rounded-xl bg-slate-50 border border-slate-200 hover:border-emerald-400 transition-all flex items-start gap-3 group">
                       <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />
-                      <span className="text-sm text-slate-800 font-medium">{service}</span>
+                      <span className="text-sm text-amber-700 font-medium">{service}</span>
                     </div>
                   ))}
                 </div>
@@ -221,13 +231,13 @@ export default function SolutionsPage() {
 
           {/* CTA Banner */}
           <div className="mt-16 text-center bg-gray-50 rounded-3xl p-10 relative overflow-hidden border border-gray-200">
-            <h3 className="text-3xl font-serif font-bold text-gray-900 mb-4">Need a Custom Turnkey Solution Package?</h3>
+            <h3 className="text-3xl font-serif font-bold text-amber-700 mb-4">Need a Custom Turnkey Solution Package?</h3>
             <p className="text-gray-600 max-w-2xl mx-auto mb-8 font-light">
               Our specialists configure complete equipment, technology, and sourcing plans tailored to your specific budget and timeline.
             </p>
             <Button 
               onClick={() => setInquiryOpen(true)}
-              className="bg-amber-400 hover:bg-amber-500 text-slate-800 font-bold clip-diagonal h-14 px-8 text-base shadow-md"
+              className="bg-amber-400 hover:bg-amber-500 text-amber-700 font-bold clip-diagonal h-14 px-8 text-base shadow-md"
             >
               Request Solution Proposal
               <ArrowRight className="ml-2 w-5 h-5" />
@@ -235,7 +245,7 @@ export default function SolutionsPage() {
           </div>
 
         </div>
-      </section>
+      </motion.section>
 
       <Footer onOpenInquiry={() => setInquiryOpen(true)} onReplaySplash={() => setShowSplash(true)} />
     </div>

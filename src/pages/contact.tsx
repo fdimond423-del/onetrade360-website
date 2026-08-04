@@ -31,7 +31,7 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="bg-white min-h-screen text-slate-800 font-sans relative selection:bg-amber-400 selection:text-slate-800 overflow-hidden">
+    <div className="bg-white min-h-screen text-amber-700 font-sans relative selection:bg-amber-400 selection:text-amber-700 overflow-hidden">
       {showSplash && <SplashLoader onComplete={() => setShowSplash(false)} />}
       <InquiryModal isOpen={inquiryOpen} onClose={() => setInquiryOpen(false)} />
       <Navbar onOpenInquiry={() => setInquiryOpen(true)} onReplaySplash={() => setShowSplash(true)} />
@@ -41,7 +41,12 @@ export default function ContactPage() {
       </div>
 
       {/* Hero Header */}
-      <section className="relative py-16 border-b border-gray-200 overflow-hidden">
+      <motion.section
+  initial={{ opacity: 0, y: 40 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: false, amount: 0.1 }}
+  transition={{ duration: 0.6 }}
+  className="relative py-16 border-b border-gray-200 overflow-hidden">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-gradient-to-r from-cyan-500/10 via-amber-500/10 to-amber-500/10 blur-[160px] pointer-events-none" />
         <div className="container mx-auto px-4 sm:px-6 relative z-10 text-center max-w-3xl">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-50 border border-amber-400/30 text-amber-700 text-xs font-mono font-semibold uppercase tracking-wider mb-6">
@@ -49,7 +54,7 @@ export default function ContactPage() {
             Direct Global Support
           </div>
 
-          <h1 className="text-4xl sm:text-6xl font-serif font-extrabold text-gray-900 mb-6 leading-tight">
+          <h1 className="text-4xl sm:text-6xl font-serif font-extrabold text-amber-700 mb-6 leading-tight">
             Connect With <span className="shimmer-text">OneTrade360™</span>
           </h1>
 
@@ -57,17 +62,22 @@ export default function ContactPage() {
             Our global teams in India, USA, and Canada are standing by to assist with your business setup, OEM sourcing, and technology requirements.
           </p>
         </div>
-      </section>
+      </motion.section>
 
       {/* Contact Info & Form Grid */}
-      <section className="py-20 relative">
+      <motion.section
+  initial={{ opacity: 0, y: 40 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: false, amount: 0.1 }}
+  transition={{ duration: 0.6 }}
+  className="py-20 relative">
         <div className="container mx-auto px-4 sm:px-6 relative z-10 max-w-6xl">
           <div className="grid lg:grid-cols-12 gap-10 items-start">
             
             {/* Left Contact Cards */}
             <div className="lg:col-span-5 space-y-6">
               <div className="glass-card-cyber rounded-3xl p-8 space-y-6">
-                <h3 className="text-2xl font-serif font-bold text-gray-900 flex items-center gap-2">
+                <h3 className="text-2xl font-serif font-bold text-amber-700 flex items-center gap-2">
                   <Globe className="w-6 h-6 text-amber-400" />
                   Direct Direct Lines
                 </h3>
@@ -76,7 +86,7 @@ export default function ContactPage() {
                   {/* India Line */}
                   <div className="p-4 rounded-2xl bg-gray-50/90 border border-gray-200 hover:border-emerald-400/50 transition-colors">
                     <div className="text-xs font-mono text-emerald-700 uppercase tracking-wider mb-1">India Contact Line</div>
-                    <div className="text-xl font-bold text-gray-900 font-serif flex items-center gap-3">
+                    <div className="text-xl font-bold text-amber-700 font-serif flex items-center gap-3">
                       <Phone className="w-5 h-5 text-emerald-700 shrink-0" />
                       +91-7984171515
                     </div>
@@ -85,7 +95,7 @@ export default function ContactPage() {
                   {/* USA Line */}
                   <div className="p-4 rounded-2xl bg-gray-50/90 border border-gray-200 hover:border-amber-400/50 transition-colors">
                     <div className="text-xs font-mono text-amber-700 uppercase tracking-wider mb-1">USA Headquarters Line</div>
-                    <div className="text-xl font-bold text-gray-900 font-serif flex items-center gap-3">
+                    <div className="text-xl font-bold text-amber-700 font-serif flex items-center gap-3">
                       <Phone className="w-5 h-5 text-amber-700 shrink-0" />
                       +1-272-267-9294
                     </div>
@@ -94,7 +104,7 @@ export default function ContactPage() {
                   {/* Email */}
                   <div className="p-4 rounded-2xl bg-gray-50/90 border border-gray-200 hover:border-amber-400/50 transition-colors">
                     <div className="text-xs font-mono text-amber-400 uppercase tracking-wider mb-1">Direct Support Email</div>
-                    <div className="text-base font-bold text-gray-900 font-mono flex items-center gap-3 truncate">
+                    <div className="text-base font-bold text-amber-700 font-mono flex items-center gap-3 truncate">
                       <Mail className="w-5 h-5 text-amber-400 shrink-0" />
                       onetradeworld360@gmail.com
                     </div>
@@ -116,7 +126,7 @@ export default function ContactPage() {
             {/* Right Interactive Inquiry Form */}
             <div className="lg:col-span-7">
               <div className="glass-card-gold rounded-3xl p-8 sm:p-10 relative overflow-hidden">
-                <h3 className="text-2xl font-serif font-bold text-gray-900 mb-2">Send an Inquiry</h3>
+                <h3 className="text-2xl font-serif font-bold text-amber-700 mb-2">Send an Inquiry</h3>
                 <p className="text-xs text-gray-600 mb-6 font-light">Fill in your requirements below and our global specialists will respond within 2 hours.</p>
 
                 {submitted ? (
@@ -124,7 +134,7 @@ export default function ContactPage() {
                     <div className="w-16 h-16 bg-emerald-400/20 text-emerald-700 border border-emerald-400/50 rounded-full flex items-center justify-center mx-auto animate-bounce">
                       <CheckCircle2 className="w-10 h-10" />
                     </div>
-                    <h4 className="text-2xl font-serif font-bold text-gray-900">Inquiry Received Successfully!</h4>
+                    <h4 className="text-2xl font-serif font-bold text-amber-700">Inquiry Received Successfully!</h4>
                     <p className="text-gray-600 text-sm max-w-md mx-auto">
                       Thank you for connecting with OneTrade360™. Your dedicated account manager will call or email you shortly.
                     </p>
@@ -139,7 +149,7 @@ export default function ContactPage() {
                         placeholder="John Doe"
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                        className="w-full bg-gray-50/90 border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-900 focus:outline-none focus:border-amber-400 transition-colors"
+                        className="w-full bg-gray-50/90 border border-gray-200 rounded-xl px-4 py-3 text-sm text-amber-700 focus:outline-none focus:border-amber-400 transition-colors"
                       />
                     </div>
 
@@ -152,7 +162,7 @@ export default function ContactPage() {
                           placeholder="john@business.com"
                           value={formData.email}
                           onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                          className="w-full bg-gray-50/90 border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-900 focus:outline-none focus:border-amber-400 transition-colors"
+                          className="w-full bg-gray-50/90 border border-gray-200 rounded-xl px-4 py-3 text-sm text-amber-700 focus:outline-none focus:border-amber-400 transition-colors"
                         />
                       </div>
                       <div>
@@ -163,7 +173,7 @@ export default function ContactPage() {
                           placeholder="+1 (555) 000-0000"
                           value={formData.phone}
                           onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                          className="w-full bg-gray-50/90 border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-900 focus:outline-none focus:border-amber-400 transition-colors"
+                          className="w-full bg-gray-50/90 border border-gray-200 rounded-xl px-4 py-3 text-sm text-amber-700 focus:outline-none focus:border-amber-400 transition-colors"
                         />
                       </div>
                     </div>
@@ -173,7 +183,7 @@ export default function ContactPage() {
                       <select
                         value={formData.interest}
                         onChange={(e) => setFormData({ ...formData, interest: e.target.value })}
-                        className="w-full bg-gray-50/90 border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-900 focus:outline-none focus:border-amber-400 transition-colors"
+                        className="w-full bg-gray-50/90 border border-gray-200 rounded-xl px-4 py-3 text-sm text-amber-700 focus:outline-none focus:border-amber-400 transition-colors"
                       >
                         <option value="Restaurant & Café Solutions">Restaurant & Café Turnkey Setup</option>
                         <option value="Convenience Store Solutions">Convenience Store & Gas Station Solutions</option>
@@ -193,11 +203,11 @@ export default function ContactPage() {
                         placeholder="Describe your business goals, preferred location, or sourcing requirements..."
                         value={formData.message}
                         onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                        className="w-full bg-gray-50/90 border border-gray-200 rounded-xl p-4 text-sm text-gray-900 focus:outline-none focus:border-amber-400 transition-colors"
+                        className="w-full bg-gray-50/90 border border-gray-200 rounded-xl p-4 text-sm text-amber-700 focus:outline-none focus:border-amber-400 transition-colors"
                       />
                     </div>
 
-                    <Button type="submit" className="w-full h-14 bg-gradient-to-r from-amber-400 via-amber-500 to-amber-500 text-slate-800 font-bold text-base clip-diagonal shadow-[0_0_25px_rgba(245,183,0,0.35)]">
+                    <Button type="submit" className="w-full h-14 bg-gradient-to-r from-amber-400 via-amber-500 to-amber-500 text-amber-700 font-bold text-base clip-diagonal shadow-[0_0_25px_rgba(245,183,0,0.35)]">
                       Submit Inquiry Now
                       <Send className="ml-2 w-5 h-5" />
                     </Button>
@@ -208,7 +218,7 @@ export default function ContactPage() {
 
           </div>
         </div>
-      </section>
+      </motion.section>
 
       <Footer onOpenInquiry={() => setInquiryOpen(true)} onReplaySplash={() => setShowSplash(true)} />
     </div>
