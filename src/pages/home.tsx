@@ -185,10 +185,10 @@ export default function Home() {
                 <span>ONE PLATFORM. GLOBAL CONNECTIONS. ENDLESS OPPORTUNITIES.</span>
               </motion.div>
 
-              <h1 className="hero-title text-3xl sm:text-5xl md:text-6xl xl:text-7xl font-serif font-extrabold text-amber-600 leading-[1.2] tracking-tight break-words hyphens-auto">
+              <h1 className="hero-title text-3xl sm:text-5xl md:text-6xl xl:text-7xl font-serif font-extrabold text-slate-900 leading-[1.18] tracking-tight break-words">
                 The Complete <br />
                 <span className="shimmer-text">Business Ecosystem</span> <br />
-                For Retail, Hospitality, Manufacturing & Global Trade
+                <span className="text-slate-700 font-sans font-bold text-xl sm:text-3xl md:text-4xl block mt-2">For Retail, Hospitality, Manufacturing & Global Trade</span>
               </h1>
 
               <p className="hero-desc text-slate-600 text-base sm:text-lg font-light max-w-2xl mx-auto lg:mx-0 leading-relaxed">
