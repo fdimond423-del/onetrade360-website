@@ -131,8 +131,8 @@ export function VideoGallery() {
 
                 {/* Center Play Button */}
                 <div className="absolute inset-0 flex items-center justify-center z-10">
-                  <div className="w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-r from-amber-400 to-yellow-500 text-slate-950 rounded-full flex items-center justify-center group-hover:scale-115 transition-transform duration-300 shadow-[0_0_35px_rgba(245,158,11,0.6)]">
-                    <Play className="w-7 h-7 sm:w-8 sm:h-8 ml-1 fill-current" />
+                  <div className="w-14 h-14 sm:w-16 sm:h-16 bg-slate-950/70 hover:bg-slate-900 border border-white/20 backdrop-blur-md rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-2xl">
+                    <Play className="w-7 h-7 sm:w-8 sm:h-8 ml-1 text-white fill-white" />
                   </div>
                 </div>
 

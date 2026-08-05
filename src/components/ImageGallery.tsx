@@ -41,16 +41,14 @@ export function ImageGallery() {
     return () => clearInterval(timer);
   }, [isPlaying]);
 
-  // Scroll thumbnail into view when current index changes
+  // Scroll thumbnail into view when current index changes (WITHOUT scrolling the main page window)
   useEffect(() => {
     if (thumbnailRef.current) {
       const activeThumb = thumbnailRef.current.children[currentIndex] as HTMLElement;
       if (activeThumb) {
-        activeThumb.scrollIntoView({
-          behavior: "smooth",
-          block: "nearest",
-          inline: "center",
-        });
+        const container = thumbnailRef.current;
+        const targetLeft = activeThumb.offsetLeft - container.offsetWidth / 2 + activeThumb.offsetWidth / 2;
+        container.scrollTo({ left: targetLeft, behavior: "smooth" });
       }
     }
   }, [currentIndex]);
@@ -274,8 +272,8 @@ export function ImageGallery() {
               playsInline 
             />
             <div className="absolute inset-0 bg-black/40 flex items-center justify-center group-hover:bg-black/20 transition-colors">
-              <div className="w-20 h-20 bg-gradient-to-r from-amber-400 to-yellow-500 text-slate-950 backdrop-blur-sm rounded-full flex items-center justify-center group-hover:scale-110 transition-transform shadow-[0_0_50px_rgba(245,158,11,0.5)]">
-                <PlayCircle className="w-12 h-12 ml-1 fill-current" />
+              <div className="w-16 h-16 sm:w-20 sm:h-20 bg-slate-950/70 hover:bg-slate-900 border border-white/20 backdrop-blur-md rounded-full flex items-center justify-center group-hover:scale-110 transition-transform shadow-2xl">
+                <PlayCircle className="w-10 h-10 sm:w-12 sm:h-12 text-white fill-white ml-0.5" />
               </div>
             </div>
             
