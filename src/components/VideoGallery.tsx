@@ -146,7 +146,6 @@ export function VideoGallery() {
               <div className="p-5 bg-slate-900/90 border-t border-slate-800/80 flex items-start justify-between gap-3">
                 <div>
                   <div className="text-[11px] font-mono font-bold text-amber-400 uppercase tracking-widest mb-1 flex items-center gap-1.5">
-                    <span className="w-1.5 h-1.5 rounded-full bg-amber-400" />
                     {item.category}
                   </div>
                   <h3 className="text-sm sm:text-base font-bold text-white group-hover:text-amber-300 transition-colors line-clamp-2 leading-snug">

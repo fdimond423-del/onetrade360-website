@@ -25,7 +25,6 @@ const FADE_UP = {
 export function ImageGallery() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(true);
-  const [isHovered, setIsHovered] = useState(false);
   const [selectedFile, setSelectedFile] = useState<string | null>(null);
   const thumbnailRef = useRef<HTMLDivElement>(null);
 
@@ -33,14 +32,14 @@ export function ImageGallery() {
 
   // Auto slide effect
   useEffect(() => {
-    if (!isPlaying || isHovered) return;
+    if (!isPlaying) return;
 
     const timer = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % IMAGES.length);
     }, SLIDE_DURATION);
 
     return () => clearInterval(timer);
-  }, [isPlaying, isHovered]);
+  }, [isPlaying]);
 
   // Scroll thumbnail into view when current index changes
   useEffect(() => {
@@ -104,13 +103,11 @@ export function ImageGallery() {
         <div className="max-w-6xl mx-auto mb-8">
           <div 
             className="relative p-2 sm:p-3 rounded-[2.2rem] bg-slate-900 shadow-[0_25px_60px_-15px_rgba(217,119,6,0.25)] border border-amber-500/30 transition-all duration-500 group"
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
           >
             <div className="relative rounded-3xl overflow-hidden bg-slate-950">
               {/* Top Animated Progress Bar */}
               <div className="absolute top-0 left-0 right-0 z-30 h-1.5 bg-black/50 backdrop-blur-sm">
-                {isPlaying && !isHovered && (
+                {isPlaying && (
                   <motion.div
                     key={currentIndex}
                     initial={{ width: "0%" }}
@@ -123,7 +120,7 @@ export function ImageGallery() {
 
               {/* Slide Display */}
               <div 
-                className="relative aspect-[16/9] sm:aspect-[21/9] md:aspect-[2.2/1] w-full flex items-center justify-center cursor-pointer bg-slate-950"
+                className="relative h-[50vh] sm:h-[65vh] md:h-[72vh] min-h-[360px] w-full flex items-center justify-center cursor-pointer bg-slate-950 p-2 sm:p-6 overflow-hidden"
                 onClick={() => setSelectedFile(currentFile)}
               >
                 <AnimatePresence mode="wait">
@@ -131,11 +128,11 @@ export function ImageGallery() {
                     key={currentFile}
                     src={`${import.meta.env.BASE_URL}images/gallery/${currentFile}`}
                     alt={`Slide ${currentIndex + 1}`}
-                    initial={{ opacity: 0, scale: 1.04 }}
+                    initial={{ opacity: 0, scale: 1.02 }}
                     animate={{ opacity: 1, scale: 1 }}
-                    exit={{ opacity: 0, scale: 0.96 }}
+                    exit={{ opacity: 0, scale: 0.98 }}
                     transition={{ duration: 0.5, ease: "easeOut" }}
-                    className="w-full h-full object-contain sm:object-cover"
+                    className="max-w-full max-h-full object-contain drop-shadow-2xl rounded-xl"
                   />
                 </AnimatePresence>
 
@@ -150,17 +147,6 @@ export function ImageGallery() {
                     <span className="text-slate-500">/</span>
                     <span>{IMAGES.length}</span>
                   </span>
-
-                  {isHovered && (
-                    <motion.span 
-                      initial={{ opacity: 0, scale: 0.9 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      className="px-3 py-1.5 rounded-full bg-amber-500 text-slate-950 text-[10px] font-mono font-black uppercase tracking-widest shadow-lg flex items-center gap-1.5"
-                    >
-                      <span className="w-2 h-2 rounded-full bg-slate-950 animate-ping" />
-                      Paused On Hover
-                    </motion.span>
-                  )}
                 </div>
 
                 {/* Fullscreen Expand Icon */}
