@@ -467,48 +467,48 @@ export default function Home() {
             initial={{ opacity: 0, scale: 0.95, y: 15 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             transition={{ duration: 0.4 }}
-            className="max-w-4xl mx-auto orion-card-navy p-8 sm:p-12 border-gray-200 relative"
+            className="max-w-4xl mx-auto bg-slate-900 border border-slate-800 p-8 sm:p-12 rounded-3xl shadow-2xl text-white relative"
           >
             <div className="grid md:grid-cols-12 gap-8 items-center">
               <div className="md:col-span-7 space-y-4">
                 <div className="flex items-center gap-3">
                   <span className="text-4xl">{corridorData[activeCorridor].flag}</span>
                   <div>
-                    <h3 className="text-2xl font-serif font-bold text-amber-600">{corridorData[activeCorridor].name}</h3>
+                    <h3 className="text-2xl font-serif font-bold text-amber-300">{corridorData[activeCorridor].name}</h3>
                     <p className="text-xs font-mono text-amber-400">{corridorData[activeCorridor].subtitle}</p>
                   </div>
                 </div>
 
-                <p className="text-gray-600 text-sm font-light leading-relaxed">
+                <p className="text-slate-300 text-sm font-light leading-relaxed">
                   {corridorData[activeCorridor].desc}
                 </p>
 
                 <div className="space-y-2 pt-2">
-                  <div className="flex items-center gap-2 text-xs font-mono text-amber-300">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-700" />
+                  <div className="flex items-center gap-2 text-xs font-mono text-slate-200">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-400" />
                     <span>{corridorData[activeCorridor].stat1}</span>
                   </div>
-                  <div className="flex items-center gap-2 text-xs font-mono text-amber-300">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-700" />
+                  <div className="flex items-center gap-2 text-xs font-mono text-slate-200">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-400" />
                     <span>{corridorData[activeCorridor].stat2}</span>
                   </div>
-                  <div className="flex items-center gap-2 text-xs font-mono text-amber-300">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-700" />
+                  <div className="flex items-center gap-2 text-xs font-mono text-slate-200">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-400" />
                     <span>{corridorData[activeCorridor].stat3}</span>
                   </div>
                 </div>
               </div>
 
-              <div className="md:col-span-5 flex flex-col justify-center space-y-4 bg-gray-50 p-6 rounded-2xl border border-gray-200 text-center">
-                <div className="text-xs font-mono text-gray-500 uppercase">Live Corridor Status</div>
-                <div className="text-3xl font-serif font-bold text-emerald-700 flex items-center justify-center gap-2">
+              <div className="md:col-span-5 flex flex-col justify-center space-y-4 bg-slate-950 p-6 rounded-2xl border border-slate-800 text-center">
+                <div className="text-xs font-mono text-slate-400 uppercase">Live Corridor Status</div>
+                <div className="text-3xl font-serif font-bold text-emerald-400 flex items-center justify-center gap-2">
                   <span className="w-3 h-3 rounded-full bg-emerald-400 animate-ping" />
                   100% ACTIVE
                 </div>
-                <p className="text-xs text-gray-500 font-light">Customs Cleared & Standardized Logistics Protocols</p>
+                <p className="text-xs text-slate-400 font-light">Customs Cleared & Standardized Logistics Protocols</p>
                 <Button 
                   onClick={() => setInquiryOpen(true)}
-                  className="w-full h-11 bg-amber-400 hover:bg-amber-500 text-amber-700 font-bold text-xs uppercase cursor-pointer rounded-xl"
+                  className="w-full h-11 bg-gradient-to-r from-amber-400 to-yellow-500 hover:brightness-110 text-slate-950 font-bold text-xs uppercase cursor-pointer rounded-xl"
                 >
                   Initiate Trade Proposal
                 </Button>
