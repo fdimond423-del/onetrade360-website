@@ -248,39 +248,6 @@ export function ImageGallery() {
             })}
           </div>
         </div>
-
-        {/* FEATURED VIDEO SHOWCASE */}
-        <motion.div 
-          variants={FADE_UP}
-          className="max-w-5xl mx-auto"
-        >
-          <div className="flex items-center gap-2.5 mb-4 justify-center">
-            <Film className="w-5 h-5 text-amber-600 animate-bounce" />
-            <h3 className="text-xl font-serif font-extrabold text-amber-700">Featured Video Overview</h3>
-          </div>
-
-          <div 
-            className="relative rounded-3xl overflow-hidden shadow-2xl bg-black aspect-video group cursor-pointer border-2 border-amber-500/30 hover:border-amber-400 transition-all duration-500" 
-            onClick={() => setSelectedFile(VIDEO_FILE)}
-          >
-            <video 
-              src={`${import.meta.env.BASE_URL}images/gallery/${VIDEO_FILE}`} 
-              className="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-700" 
-              muted 
-              loop 
-              autoPlay 
-              playsInline 
-            />
-            <div className="absolute inset-0 bg-black/40 flex items-center justify-center group-hover:bg-black/20 transition-colors">
-              <div className="w-16 h-16 sm:w-20 sm:h-20 bg-slate-950/70 hover:bg-slate-900 border border-white/20 backdrop-blur-md rounded-full flex items-center justify-center group-hover:scale-110 transition-transform shadow-2xl">
-                <PlayCircle className="w-10 h-10 sm:w-12 sm:h-12 text-white fill-white ml-0.5" />
-              </div>
-            </div>
-            
-            {/* Top Accent Line */}
-            <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-600 z-20" />
-          </div>
-        </motion.div>
       </div>
 
       {/* LIGHTBOX MODAL */}
