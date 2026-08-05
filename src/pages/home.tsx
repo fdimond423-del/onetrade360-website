@@ -8,9 +8,13 @@ gsap.registerPlugin(ScrollTrigger);
 import { Counter } from "@/components/Counter";
 import { SplashLoader } from "@/components/SplashLoader";
 import { InquiryModal } from "@/components/InquiryModal";
+import { ParticleNetwork } from "@/components/ParticleNetwork";
 import { LiveTicker } from "@/components/LiveTicker";
 import { TradeCalculator } from "@/components/TradeCalculator";
 import { TestimonialsSection } from "@/components/TestimonialsSection";
+import { GlobalPortfolios } from "@/components/GlobalPortfolios";
+import { ImageGallery } from "@/components/ImageGallery";
+import { VideoGallery } from "@/components/VideoGallery";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 
@@ -25,17 +29,17 @@ import { Button } from "@/components/ui/button";
 
 const FADE_UP = {
   hidden: { opacity: 0, y: 35 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] } }
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] as const } }
 };
 
 const FADE_SCALE = {
   hidden: { opacity: 0, scale: 0.94 },
-  visible: { opacity: 1, scale: 1, transition: { duration: 0.5, ease: "easeOut" } }
+  visible: { opacity: 1, scale: 1, transition: { duration: 0.5, ease: "easeOut" as const } }
 };
 
 const SLIDE_RIGHT = {
   hidden: { opacity: 0, x: 40 },
-  visible: { opacity: 1, x: 0, transition: { duration: 0.6, ease: "easeOut" } }
+  visible: { opacity: 1, x: 0, transition: { duration: 0.6, ease: "easeOut" as const } }
 };
 
 const CONTAINER_STAGGER = {
@@ -159,7 +163,7 @@ export default function Home() {
   viewport={{ once: false, amount: 0.1 }}
   transition={{ duration: 0.6 }}
   className="relative pt-16 pb-20 lg:pt-20 lg:pb-28 border-b border-gray-200 overflow-hidden bg-white">
-
+        <ParticleNetwork />
         <div className="container mx-auto px-4 sm:px-6 relative z-10">
           <div className="grid lg:grid-cols-12 gap-12 items-center">
             
@@ -181,7 +185,7 @@ export default function Home() {
                 <span>ONE PLATFORM. GLOBAL CONNECTIONS. ENDLESS OPPORTUNITIES.</span>
               </motion.div>
 
-              <h1 className="hero-title text-4xl sm:text-6xl xl:text-7xl font-serif font-extrabold text-amber-700 leading-[1.12] tracking-tight">
+              <h1 className="hero-title text-3xl sm:text-5xl md:text-6xl xl:text-7xl font-serif font-extrabold text-amber-600 leading-[1.2] tracking-tight break-words hyphens-auto">
                 The Complete <br />
                 <span className="shimmer-text">Business Ecosystem</span> <br />
                 For Retail, Hospitality, Manufacturing & Global Trade
@@ -321,7 +325,7 @@ export default function Home() {
               <Award className="w-3.5 h-3.5 text-amber-600" />
               Core Ecosystem Pillars
             </div>
-            <h2 className="text-3xl sm:text-5xl font-serif font-extrabold text-amber-700 mb-4">
+            <h2 className="text-3xl sm:text-5xl font-serif font-extrabold text-amber-600 mb-4">
               Built On <span className="gold-text-gradient">5 Pillars Of Excellence</span>
             </h2>
             <p className="text-slate-600 text-sm sm:text-base font-light">
@@ -383,7 +387,7 @@ export default function Home() {
                     </div>
 
                     <div className="text-xs font-mono font-bold text-amber-700 tracking-wider">PILLAR {idx + 1}</div>
-                    <h3 className="text-xl font-serif font-extrabold text-amber-700 group-hover:text-amber-600 transition-colors">
+                    <h3 className="text-xl font-serif font-extrabold text-amber-600 group-hover:text-amber-600 transition-colors">
                       {item.pillar}
                     </h3>
 
@@ -402,6 +406,15 @@ export default function Home() {
           </motion.div>
         </div>
       </motion.section>
+
+      {/* GLOBAL PORTFOLIOS */}
+      <GlobalPortfolios />
+
+      {/* GALLERY */}
+      <ImageGallery />
+
+      {/* VIDEO GALLERY */}
+      <VideoGallery />
 
       {/* SECTION 3: INTERACTIVE GLOBAL CORRIDORS (INDIA, USA, CANADA) */}
       <motion.section
@@ -422,7 +435,7 @@ export default function Home() {
               <Network className="w-3.5 h-3.5 text-amber-700" />
               Interactive Cross-Border Trade Corridors
             </div>
-            <h2 className="text-3xl sm:text-5xl font-serif font-extrabold text-amber-700 mb-4">
+            <h2 className="text-3xl sm:text-5xl font-serif font-extrabold text-amber-600 mb-4">
               Connecting <span className="shimmer-text">India, USA & Canada</span>
             </h2>
             <p className="text-slate-600 text-sm sm:text-base font-light">
@@ -461,7 +474,7 @@ export default function Home() {
                 <div className="flex items-center gap-3">
                   <span className="text-4xl">{corridorData[activeCorridor].flag}</span>
                   <div>
-                    <h3 className="text-2xl font-serif font-bold text-amber-700">{corridorData[activeCorridor].name}</h3>
+                    <h3 className="text-2xl font-serif font-bold text-amber-600">{corridorData[activeCorridor].name}</h3>
                     <p className="text-xs font-mono text-amber-400">{corridorData[activeCorridor].subtitle}</p>
                   </div>
                 </div>
@@ -524,7 +537,7 @@ export default function Home() {
               <Building2 className="w-3.5 h-3.5 text-amber-700" />
               Turnkey Infrastructure Solutions
             </div>
-            <h2 className="text-3xl sm:text-5xl font-serif font-extrabold text-amber-700 mb-4">
+            <h2 className="text-3xl sm:text-5xl font-serif font-extrabold text-amber-600 mb-4">
               Comprehensive <span className="shimmer-text">Ecosystem Solutions</span>
             </h2>
             <p className="text-slate-600 text-sm sm:text-base font-light">
@@ -578,7 +591,7 @@ export default function Home() {
                       <CardIcon className="w-6 h-6 text-amber-700" />
                     </div>
 
-                    <h3 className="text-xl font-serif font-bold text-amber-700 group-hover:text-amber-600 transition-colors">
+                    <h3 className="text-xl font-serif font-bold text-amber-600 group-hover:text-amber-600 transition-colors">
                       {card.title}
                     </h3>
 
@@ -619,7 +632,7 @@ export default function Home() {
               <Factory className="w-3.5 h-3.5 text-amber-700" />
               Direct OEM Product Catalog
             </div>
-            <h2 className="text-3xl sm:text-5xl font-serif font-extrabold text-amber-700 mb-4">
+            <h2 className="text-3xl sm:text-5xl font-serif font-extrabold text-amber-600 mb-4">
               Factory Direct <span className="gold-text-gradient">Sourcing Specs</span>
             </h2>
             <p className="text-slate-600 text-sm sm:text-base font-light">
@@ -667,7 +680,7 @@ export default function Home() {
                   <div className="text-[10px] font-mono text-amber-800 bg-amber-50 border border-amber-200 px-2.5 py-1 rounded w-fit">
                     {item.code}
                   </div>
-                  <h3 className="text-lg font-serif font-bold text-amber-700">{item.title}</h3>
+                  <h3 className="text-lg font-serif font-bold text-amber-600">{item.title}</h3>
                   <p className="text-xs text-slate-600 font-light">{item.desc}</p>
                 </div>
 
@@ -708,7 +721,7 @@ export default function Home() {
             variants={FADE_SCALE}
             className="p-10 sm:p-16 rounded-3xl border border-slate-300 bg-white shadow-xl"
           >
-            <h2 className="text-3xl sm:text-5xl font-serif font-extrabold text-amber-700 mb-6 leading-tight">
+            <h2 className="text-3xl sm:text-5xl font-serif font-extrabold text-amber-600 mb-6 leading-tight">
               Ready to Accelerate Your <br />
               <span className="shimmer-text">Global Trade Pipeline?</span>
             </h2>

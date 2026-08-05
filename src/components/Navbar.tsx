@@ -148,7 +148,7 @@ export function Navbar({ onOpenInquiry, onReplaySplash }: NavbarProps) {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="fixed inset-0 z-30 bg-white pt-32 px-6 pb-10 flex flex-col justify-between lg:hidden border-b border-slate-200 overflow-y-auto"
+            className="fixed inset-0 z-[60] bg-white pt-32 px-6 pb-10 flex flex-col justify-between lg:hidden border-b border-slate-200 overflow-y-auto"
           >
             <div className="space-y-2">
               <div className="text-xs font-mono text-amber-700 uppercase tracking-widest mb-4">Corporate Navigation</div>
