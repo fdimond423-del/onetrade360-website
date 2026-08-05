@@ -1,49 +1,84 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { PlayCircle, Maximize2, X, Film, Sparkles, Video, Play } from "lucide-react";
+import { PlayCircle, Maximize2, X, Film, Sparkles, Video, Play, Building2 } from "lucide-react";
 
 const VIDEOS = [
   {
     id: "video-1.mp4",
     title: "OEM Manufacturing & Production Line",
+    company: "OneTrade360 OEM Manufacturing",
     category: "Factory Operations",
     badge: "Audited Facility"
   },
   {
     id: "video-2.mp4",
     title: "Global Supply Chain & Logistics Hub",
+    company: "OneTrade360 Global Logistics",
     category: "Logistics",
     badge: "Cross-Border Cargo"
   },
   {
     id: "video-3.mp4",
     title: "Eco Packaging & Paper Products Processing",
+    company: "OneTrade360 Eco Packaging",
     category: "Eco Sourcing",
     badge: "ISO Certified"
   },
   {
     id: "video-4.mp4",
     title: "StoreSKU™ Retail Outlet Infrastructure",
+    company: "StoreSKU™ Retail Tech",
     category: "Retail Tech",
     badge: "POS Deployment"
   },
   {
     id: "video-5.mp4",
     title: "Turnkey Commercial Café & Hospitality Showcase",
+    company: "Chai Kofe Espresso",
     category: "Commercial Setup",
     badge: "Franchise Ready"
   },
   {
     id: "video-6.mp4",
     title: "Quality Control & Warehousing Walkthrough",
+    company: "OneTrade360 Quality Assurance",
     category: "Quality Audit",
     badge: "100% Inspected"
   },
   {
     id: "video-7.mp4",
     title: "Enterprise Wholesale & Bulk Distribution Network",
+    company: "OneTrade360 Enterprise Wholesale",
     category: "Global Trade",
     badge: "Direct Factory"
+  },
+  {
+    id: "video-8.mp4",
+    title: "International Freight & Port Clearance Facility",
+    company: "OneTrade360 Port Logistics",
+    category: "Port Logistics",
+    badge: "Customs Cleared"
+  },
+  {
+    id: "video-9.mp4",
+    title: "High-Volume Automation & Packaging Assembly",
+    company: "WellOzyn Nutraceuticals & OEM",
+    category: "Smart Manufacturing",
+    badge: "Automated Line"
+  },
+  {
+    id: "video-10.mp4",
+    title: "C-Store & Gas Station POS Installation",
+    company: "StoreSKU™ POS & Security Systems",
+    category: "Store Infrastructure",
+    badge: "Turnkey Setup"
+  },
+  {
+    id: "video-11.mp4",
+    title: "Global B2B Wholesale Warehouse Inspection",
+    company: "OneTrade360 Global Trade Network",
+    category: "Warehouse Ops",
+    badge: "Verified Inventory"
   }
 ];
 
@@ -144,13 +179,19 @@ export function VideoGallery() {
 
               {/* Video Info Footer */}
               <div className="p-5 bg-slate-900/90 border-t border-slate-800/80 flex items-start justify-between gap-3">
-                <div>
-                  <div className="text-[11px] font-mono font-bold text-amber-400 uppercase tracking-widest mb-1 flex items-center gap-1.5">
+                <div className="space-y-1.5">
+                  <div className="text-[11px] font-mono font-bold text-amber-400 uppercase tracking-widest flex items-center gap-1.5">
                     {item.category}
                   </div>
+
                   <h3 className="text-sm sm:text-base font-bold text-white group-hover:text-amber-300 transition-colors line-clamp-2 leading-snug">
                     {item.title}
                   </h3>
+
+                  <div className="text-[11px] font-mono text-amber-300/90 flex items-center gap-1.5 bg-amber-500/10 border border-amber-500/20 px-2.5 py-1 rounded-lg w-fit mt-2">
+                    <Building2 className="w-3.5 h-3.5 text-amber-400 shrink-0" />
+                    <span>Company: {item.company}</span>
+                  </div>
                 </div>
 
                 <button
