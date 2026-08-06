@@ -12,31 +12,31 @@ const VIDEOS = [
   },
   {
     id: "video-2.mp4",
-    title: "Global Supply Chain & Logistics Hub",
-    company: "OneTrade360 Global Logistics",
-    category: "Logistics",
-    badge: "Cross-Border Cargo"
+    title: "Orion Infrastructure Showcase",
+    company: "Orion Infrastructure",
+    category: "Infrastructure",
+    badge: "Enterprise Infrastructure"
   },
   {
     id: "video-3.mp4",
-    title: "Eco Packaging & Paper Products Processing",
-    company: "OneTrade360 Eco Packaging",
-    category: "Eco Sourcing",
-    badge: "ISO Certified"
+    title: "Chai-Kofe Express Brand Showcase",
+    company: "Chai-Kofe Express",
+    category: "Commercial Setup",
+    badge: "Franchise Ready"
   },
   {
     id: "video-4.mp4",
-    title: "StoreSKU™ Retail Outlet Infrastructure",
-    company: "StoreSKU™ Retail Tech",
-    category: "Retail Tech",
-    badge: "POS Deployment"
+    title: "Health & Beauty Wellness Showcase",
+    company: "Health & Beauty Wellness",
+    category: "Wellness & Sourcing",
+    badge: "Verified Sourcing"
   },
   {
     id: "video-5.mp4",
-    title: "Turnkey Commercial Café & Hospitality Showcase",
+    title: "Turnkey Commercial Hospitality Showcase",
     company: "Chai Kofe Espresso",
-    category: "Commercial Setup",
-    badge: "Franchise Ready"
+    category: "Hospitality Setup",
+    badge: "Turnkey Setup"
   },
   {
     id: "video-6.mp4",
@@ -62,16 +62,16 @@ const VIDEOS = [
   {
     id: "video-9.mp4",
     title: "High-Volume Automation & Packaging Assembly",
-    company: "WellOzyn Nutraceuticals & OEM",
+    company: "WellOzyn Nutraceuticals",
     category: "Smart Manufacturing",
     badge: "Automated Line"
   },
   {
     id: "video-10.mp4",
     title: "C-Store & Gas Station POS Installation",
-    company: "StoreSKU™ POS & Security Systems",
+    company: "StoreSKU™ Retail Automation",
     category: "Store Infrastructure",
-    badge: "Turnkey Setup"
+    badge: "POS Deployment"
   },
   {
     id: "video-11.mp4",
@@ -179,7 +179,7 @@ export function VideoGallery() {
 
               {/* Video Info Footer - Only Company Name */}
               <div className="p-4 bg-slate-900/90 border-t border-slate-800/80 flex items-center justify-between gap-3">
-                <h3 className="text-base font-bold text-white group-hover:text-amber-300 transition-colors line-clamp-1 leading-snug">
+                <h3 className="text-base sm:text-lg font-bold text-white group-hover:text-amber-300 transition-colors line-clamp-1 leading-snug">
                   {item.company}
                 </h3>
 
