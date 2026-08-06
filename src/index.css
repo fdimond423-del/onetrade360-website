@@ -60,6 +60,11 @@
 
 @layer base {
   * { @apply border-gray-200; }
+  html, body {
+    max-width: 100vw;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+  }
   body {
     @apply bg-white text-gray-950 font-sans antialiased selection:bg-amber-400 selection:text-black;
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";

@@ -54,31 +54,31 @@ const VIDEOS = [
   },
   {
     id: "video-8.mp4",
-    title: "International Freight & Port Clearance Facility",
-    company: "OneTrade360 Port Logistics",
-    category: "Port Logistics",
-    badge: "Customs Cleared"
+    title: "Manufacturing and Distribution Showcase",
+    company: "Manufacturing and distribution",
+    category: "Manufacturing",
+    badge: "Verified Sourcing"
   },
   {
     id: "video-9.mp4",
-    title: "High-Volume Automation & Packaging Assembly",
-    company: "WellOzyn Nutraceuticals",
-    category: "Smart Manufacturing",
-    badge: "Automated Line"
+    title: "Global Business Eco System Showcase",
+    company: "Global business eco system",
+    category: "Business Ecosystem",
+    badge: "Global Network"
   },
   {
     id: "video-10.mp4",
-    title: "C-Store & Gas Station POS Installation",
-    company: "StoreSKU™ Retail Automation",
-    category: "Store Infrastructure",
-    badge: "POS Deployment"
+    title: "One Trade 360 Platform Showcase",
+    company: "One trade 360",
+    category: "Digital Platform",
+    badge: "Official Platform"
   },
   {
     id: "video-11.mp4",
-    title: "Global B2B Wholesale Warehouse Inspection",
-    company: "OneTrade360 Global Trade Network",
-    category: "Warehouse Ops",
-    badge: "Verified Inventory"
+    title: "One Trade 360 & Global Business Service",
+    company: "One trade 360 & global business service",
+    category: "Global Services",
+    badge: "Verified Partner"
   }
 ];
 

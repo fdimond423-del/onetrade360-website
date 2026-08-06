@@ -179,27 +179,27 @@ export default function Home() {
               <motion.div 
                 animate={{ y: [0, -5, 0] }}
                 transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut" }}
-                className="hero-tag inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-100 border border-slate-300 text-amber-700 text-xs font-mono font-semibold uppercase tracking-wider shadow-sm"
+                className="hero-tag inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 rounded-full bg-slate-100 border border-slate-300 text-amber-700 text-[10px] sm:text-xs font-mono font-semibold uppercase tracking-wider shadow-sm max-w-full flex-wrap justify-center"
               >
-                <Globe className="w-3.5 h-3.5 text-amber-600 animate-spin-slow" />
-                <span>ONE PLATFORM. GLOBAL CONNECTIONS. ENDLESS OPPORTUNITIES.</span>
+                <Globe className="w-3.5 h-3.5 text-amber-600 animate-spin-slow shrink-0" />
+                <span className="break-words">ONE PLATFORM. GLOBAL CONNECTIONS. ENDLESS OPPORTUNITIES.</span>
               </motion.div>
 
-              <h1 className="hero-title text-3xl sm:text-5xl md:text-6xl xl:text-7xl font-serif font-extrabold text-slate-900 leading-[1.18] tracking-tight break-words">
-                The Complete <br />
-                <span className="shimmer-text">Business Ecosystem</span> <br />
-                <span className="text-slate-700 font-sans font-bold text-xl sm:text-3xl md:text-4xl block mt-2">For Retail, Hospitality, Manufacturing & Global Trade</span>
+              <h1 className="hero-title text-2xl sm:text-5xl md:text-6xl xl:text-7xl font-serif font-extrabold text-slate-900 leading-[1.18] tracking-tight break-words">
+                The Complete <br className="hidden sm:inline" />
+                <span className="shimmer-text">Business Ecosystem</span> <br className="hidden sm:inline" />
+                <span className="text-slate-700 font-sans font-bold text-lg sm:text-3xl md:text-4xl block mt-2">For Retail, Hospitality, Manufacturing & Global Trade</span>
               </h1>
 
-              <p className="hero-desc text-slate-600 text-base sm:text-lg font-light max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+              <p className="hero-desc text-slate-600 text-sm sm:text-lg font-light max-w-2xl mx-auto lg:mx-0 leading-relaxed">
                 OneTrade360™ is a global B2B platform built to help entrepreneurs, retailers, investors, manufacturers, suppliers, and service providers connect, trade, and grow. Whether you’re launching your first business, expanding across multiple locations, or sourcing products globally.
               </p>
 
               {/* Action Buttons */}
-              <div className="hero-btns flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+              <div className="hero-btns flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 sm:gap-4 pt-2">
                 <Button 
                   onClick={() => setInquiryOpen(true)}
-                  className="w-full sm:w-auto h-13 px-8 text-xs font-bold uppercase tracking-wider bg-white hover:bg-gray-100 text-amber-700 shadow-lg hover:brightness-110 cursor-pointer flex items-center justify-center gap-2 rounded-xl border border-slate-900"
+                  className="w-full sm:w-auto h-12 sm:h-13 px-6 sm:px-8 text-xs font-bold uppercase tracking-wider bg-white hover:bg-gray-100 text-amber-700 shadow-lg hover:brightness-110 cursor-pointer flex items-center justify-center gap-2 rounded-xl border border-slate-900"
                 >
                   <span>Explore Ecosystem Solutions</span>
                   <ArrowRight className="w-4 h-4 text-amber-400" />
@@ -213,7 +213,7 @@ export default function Home() {
                 >
                   <Button 
                     variant="outline" 
-                    className="w-full h-13 px-8 text-xs font-bold uppercase tracking-wider border-emerald-600/60 text-amber-700 bg-emerald-50 hover:bg-emerald-100 cursor-pointer flex items-center justify-center gap-2 rounded-xl"
+                    className="w-full h-12 sm:h-13 px-6 sm:px-8 text-xs font-bold uppercase tracking-wider border-emerald-600/60 text-amber-700 bg-emerald-50 hover:bg-emerald-100 cursor-pointer flex items-center justify-center gap-2 rounded-xl"
                   >
                     <MessageSquare className="w-4 h-4 text-gray-700" />
                     <span>Instant WhatsApp</span>
@@ -222,7 +222,7 @@ export default function Home() {
               </div>
 
               {/* Trust Metric Counters */}
-              <div className="hero-stats pt-8 grid grid-cols-3 gap-4 border-t border-slate-200 max-w-lg mx-auto lg:mx-0">
+              <div className="hero-stats pt-8 grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-4 border-t border-slate-200 max-w-lg mx-auto lg:mx-0">
                 <div className="space-y-0.5">
                   <div className="text-2xl sm:text-3xl font-serif font-extrabold text-amber-700">
                     <Counter value={1480} suffix="+" />
@@ -230,14 +230,14 @@ export default function Home() {
                   <div className="text-[11px] font-mono text-slate-600 uppercase">Retail Outlets Synced</div>
                 </div>
 
-                <div className="space-y-0.5 border-l border-slate-200 pl-4">
+                <div className="space-y-0.5 sm:border-l sm:border-slate-200 sm:pl-4">
                   <div className="text-2xl sm:text-3xl font-serif font-extrabold text-amber-600">
                     <Counter value={120} suffix="+" />
                   </div>
                   <div className="text-[11px] font-mono text-slate-600 uppercase">Audited OEM Plants</div>
                 </div>
 
-                <div className="space-y-0.5 border-l border-slate-200 pl-4">
+                <div className="space-y-0.5 sm:border-l sm:border-slate-200 sm:pl-4">
                   <div className="text-2xl sm:text-3xl font-serif font-extrabold text-amber-700">
                     <Counter value={3} suffix=" Corridors" />
                   </div>
