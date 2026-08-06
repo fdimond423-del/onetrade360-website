@@ -14,8 +14,8 @@ export function LiveTicker() {
   ];
 
   return (
-    <div className="w-full bg-gray-50 border-y border-gray-200 py-2.5 overflow-hidden font-mono text-xs z-30 relative backdrop-blur-md">
-      <div className="flex w-full whitespace-nowrap">
+    <div className="w-full max-w-full bg-gray-50 border-y border-gray-200 py-2.5 overflow-hidden font-mono text-xs z-30 relative backdrop-blur-md">
+      <div className="flex w-full max-w-full overflow-hidden whitespace-nowrap">
         <motion.div
           animate={{ x: ["0%", "-50%"] }}
           transition={{ repeat: Infinity, ease: "linear", duration: 30 }}
