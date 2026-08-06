@@ -53,7 +53,7 @@ export function Navbar({ onOpenInquiry, onReplaySplash }: NavbarProps) {
             </div>
             <div className="flex items-center gap-2 border-l border-gray-300 pl-6">
               <Mail className="w-3.5 h-3.5 text-emerald-700" />
-              <span className="text-slate-950 font-bold">onetradeworld360@gmail.com</span>
+              <span className="text-slate-950 font-bold">oneworldtrade360@gmail.com</span>
             </div>
           </div>
 
@@ -148,10 +148,19 @@ export function Navbar({ onOpenInquiry, onReplaySplash }: NavbarProps) {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="fixed inset-0 z-[60] bg-white pt-32 px-6 pb-10 flex flex-col justify-between lg:hidden border-b border-slate-200 overflow-y-auto"
+            className="fixed inset-0 z-[60] bg-white pt-20 px-5 pb-8 flex flex-col justify-between lg:hidden border-b border-slate-200 overflow-y-auto max-w-full"
           >
             <div className="space-y-2">
-              <div className="text-xs font-mono text-amber-700 uppercase tracking-widest mb-4">Corporate Navigation</div>
+              <div className="flex items-center justify-between border-b border-slate-100 pb-3 mb-2">
+                <div className="text-xs font-mono text-amber-700 uppercase tracking-widest font-bold">Corporate Navigation</div>
+                <button
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="p-1.5 rounded-lg bg-slate-100 text-slate-900 hover:bg-amber-100"
+                >
+                  <X className="w-5 h-5 text-slate-900" />
+                </button>
+              </div>
+
               {navLinks.map((link) => {
                 const isActive = location === link.href;
                 return (
@@ -159,7 +168,7 @@ export function Navbar({ onOpenInquiry, onReplaySplash }: NavbarProps) {
                     key={link.name} 
                     href={link.href} 
                     onClick={() => setMobileMenuOpen(false)}
-                    className={`text-base font-medium border-b border-slate-100 pb-3 flex items-center justify-between ${
+                    className={`text-sm sm:text-base font-medium border-b border-slate-100 py-2.5 flex items-center justify-between ${
                       isActive ? "text-amber-600 font-bold" : "text-slate-900"
                     }`}
                   >
@@ -170,15 +179,15 @@ export function Navbar({ onOpenInquiry, onReplaySplash }: NavbarProps) {
               })}
             </div>
 
-            <div className="pt-6 border-t border-slate-200 space-y-4">
+            <div className="pt-4 border-t border-slate-200 space-y-3 mt-4">
               <Button 
                 onClick={() => { setMobileMenuOpen(false); onOpenInquiry(); }} 
-                className="w-full h-12 text-xs font-bold uppercase font-sans bg-amber-100 border border-amber-300 text-amber-900 hover:bg-amber-500 hover:text-black cursor-pointer rounded-xl"
+                className="w-full h-11 text-xs font-bold uppercase font-sans bg-amber-500 text-slate-950 hover:bg-amber-600 cursor-pointer rounded-xl"
               >
                 Schedule Consultation
               </Button>
-              <div className="text-center text-xs text-slate-600 font-mono">
-                India: +91-7984171515 • USA: +1-272-267-9294
+              <div className="text-center text-[11px] text-slate-600 font-mono break-all">
+                oneworldtrade360@gmail.com
               </div>
             </div>
           </motion.div>

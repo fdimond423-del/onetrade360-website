@@ -115,10 +115,10 @@ export function Footer({ onReplaySplash, onOpenInquiry }: FooterProps) {
 
               <div className="p-3 rounded-xl bg-gray-50 border border-gray-200 space-y-1">
                 <div className="text-gray-500 uppercase text-[10px]">Direct Email</div>
-                <div className="text-slate-900 font-bold flex items-center gap-2 text-xs truncate">
+                <a href="mailto:oneworldtrade360@gmail.com" className="text-slate-950 font-bold hover:text-amber-600 flex items-center gap-2 text-xs truncate transition-colors">
                   <Mail className="w-4 h-4 text-emerald-700 shrink-0" />
-                  onetradeworld360@gmail.com
-                </div>
+                  <span>oneworldtrade360@gmail.com</span>
+                </a>
               </div>
             </div>
           </div>

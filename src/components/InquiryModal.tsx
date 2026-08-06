@@ -22,10 +22,26 @@ export function InquiryModal({ isOpen, onClose }: InquiryModalProps) {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitted(true);
+    fetch("https://formsubmit.co/ajax/oneworldtrade360@gmail.com", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      },
+      body: JSON.stringify({
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        interest: formData.interest,
+        message: formData.message,
+        _subject: `New OneTrade360 Modal Inquiry from ${formData.name}`
+      })
+    }).catch(() => {});
+
     setTimeout(() => {
       setSubmitted(false);
       onClose();
-    }, 3000);
+    }, 4000);
   };
 
   return (

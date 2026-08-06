@@ -146,7 +146,7 @@ export function GlobalPortfolios() {
               <motion.div
                 key={idx}
                 variants={FADE_UP}
-                className="group relative bg-white border border-slate-100 rounded-2xl p-8 shadow-sm hover:shadow-[0_0_40px_rgba(245,183,0,0.15)] hover:border-amber-200 transition-all duration-500"
+                className="group relative bg-white border border-slate-100 rounded-2xl p-5 sm:p-8 shadow-sm hover:shadow-[0_0_40px_rgba(245,183,0,0.15)] hover:border-amber-200 transition-all duration-500"
               >
                 {/* Top Accent Line */}
                 <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-amber-400 to-amber-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-t-2xl" />

@@ -25,13 +25,29 @@ export default function ContactPage() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitted(true);
+    fetch("https://formsubmit.co/ajax/oneworldtrade360@gmail.com", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      },
+      body: JSON.stringify({
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        interest: formData.interest,
+        message: formData.message,
+        _subject: `New OneTrade360 Contact Inquiry from ${formData.name}`
+      })
+    }).catch(() => {});
+
     setTimeout(() => {
       setSubmitted(false);
-    }, 4000);
+    }, 5000);
   };
 
   return (
-    <div className="bg-white min-h-screen text-amber-700 font-sans relative selection:bg-amber-400 selection:text-amber-700 overflow-hidden">
+    <div className="bg-white min-h-screen text-amber-700 font-sans relative selection:bg-amber-400 selection:text-amber-700 overflow-x-hidden">
       {showSplash && <SplashLoader onComplete={() => setShowSplash(false)} />}
       <InquiryModal isOpen={inquiryOpen} onClose={() => setInquiryOpen(false)} />
       <Navbar onOpenInquiry={() => setInquiryOpen(true)} onReplaySplash={() => setShowSplash(true)} />
@@ -42,11 +58,12 @@ export default function ContactPage() {
 
       {/* Hero Header */}
       <motion.section
-  initial={{ opacity: 0, y: 40 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  viewport={{ once: false, amount: 0.1 }}
-  transition={{ duration: 0.6 }}
-  className="relative py-16 border-b border-gray-200 overflow-hidden">
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: false, amount: 0.1 }}
+        transition={{ duration: 0.6 }}
+        className="relative py-16 border-b border-gray-200 overflow-hidden"
+      >
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-gradient-to-r from-cyan-500/10 via-amber-500/10 to-amber-500/10 blur-[160px] pointer-events-none" />
         <div className="container mx-auto px-4 sm:px-6 relative z-10 text-center max-w-3xl">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-50 border border-amber-400/30 text-amber-700 text-xs font-mono font-semibold uppercase tracking-wider mb-6">
@@ -54,11 +71,11 @@ export default function ContactPage() {
             Direct Global Support
           </div>
 
-          <h1 className="text-4xl sm:text-6xl font-serif font-extrabold text-amber-700 mb-6 leading-tight">
+          <h1 className="text-3xl sm:text-6xl font-serif font-extrabold text-amber-700 mb-6 leading-tight break-words">
             Connect With <span className="shimmer-text">OneTrade360™</span>
           </h1>
 
-          <p className="text-lg text-gray-600 font-light leading-relaxed">
+          <p className="text-base sm:text-lg text-gray-600 font-light leading-relaxed">
             Our global teams in India, USA, and Canada are standing by to assist with your business setup, OEM sourcing, and technology requirements.
           </p>
         </div>
@@ -66,48 +83,49 @@ export default function ContactPage() {
 
       {/* Contact Info & Form Grid */}
       <motion.section
-  initial={{ opacity: 0, y: 40 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  viewport={{ once: false, amount: 0.1 }}
-  transition={{ duration: 0.6 }}
-  className="py-20 relative">
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: false, amount: 0.1 }}
+        transition={{ duration: 0.6 }}
+        className="py-16 sm:py-20 relative"
+      >
         <div className="container mx-auto px-4 sm:px-6 relative z-10 max-w-6xl">
-          <div className="grid lg:grid-cols-12 gap-10 items-start">
+          <div className="grid lg:grid-cols-12 gap-8 sm:gap-10 items-start">
             
             {/* Left Contact Cards */}
             <div className="lg:col-span-5 space-y-6">
-              <div className="glass-card-cyber rounded-3xl p-8 space-y-6">
-                <h3 className="text-2xl font-serif font-bold text-amber-700 flex items-center gap-2">
-                  <Globe className="w-6 h-6 text-amber-400" />
-                  Direct Direct Lines
+              <div className="glass-card-cyber rounded-3xl p-6 sm:p-8 space-y-6">
+                <h3 className="text-xl sm:text-2xl font-serif font-bold text-amber-700 flex items-center gap-2">
+                  <Globe className="w-6 h-6 text-amber-400 shrink-0" />
+                  <span>Direct Communication Lines</span>
                 </h3>
 
                 <div className="space-y-4">
                   {/* India Line */}
                   <div className="p-4 rounded-2xl bg-gray-50/90 border border-gray-200 hover:border-emerald-400/50 transition-colors">
                     <div className="text-xs font-mono text-emerald-700 uppercase tracking-wider mb-1">India Contact Line</div>
-                    <div className="text-xl font-bold text-amber-700 font-serif flex items-center gap-3">
+                    <a href="tel:+917984171515" className="text-lg sm:text-xl font-bold text-amber-700 font-serif flex items-center gap-3 hover:text-amber-600">
                       <Phone className="w-5 h-5 text-emerald-700 shrink-0" />
-                      +91-7984171515
-                    </div>
+                      <span>+91-7984171515</span>
+                    </a>
                   </div>
 
                   {/* USA Line */}
                   <div className="p-4 rounded-2xl bg-gray-50/90 border border-gray-200 hover:border-amber-400/50 transition-colors">
                     <div className="text-xs font-mono text-amber-700 uppercase tracking-wider mb-1">USA Headquarters Line</div>
-                    <div className="text-xl font-bold text-amber-700 font-serif flex items-center gap-3">
+                    <a href="tel:+12722679294" className="text-lg sm:text-xl font-bold text-amber-700 font-serif flex items-center gap-3 hover:text-amber-600">
                       <Phone className="w-5 h-5 text-amber-700 shrink-0" />
-                      +1-272-267-9294
-                    </div>
+                      <span>+1-272-267-9294</span>
+                    </a>
                   </div>
 
                   {/* Email */}
                   <div className="p-4 rounded-2xl bg-gray-50/90 border border-gray-200 hover:border-amber-400/50 transition-colors">
                     <div className="text-xs font-mono text-amber-400 uppercase tracking-wider mb-1">Direct Support Email</div>
-                    <div className="text-base font-bold text-amber-700 font-mono flex items-center gap-3 truncate">
+                    <a href="mailto:oneworldtrade360@gmail.com" className="text-sm sm:text-base font-bold text-amber-700 font-mono flex items-center gap-3 break-all hover:text-amber-600">
                       <Mail className="w-5 h-5 text-amber-400 shrink-0" />
-                      onetradeworld360@gmail.com
-                    </div>
+                      <span>oneworldtrade360@gmail.com</span>
+                    </a>
                   </div>
 
                   {/* Corridors */}
@@ -125,7 +143,7 @@ export default function ContactPage() {
 
             {/* Right Interactive Inquiry Form */}
             <div className="lg:col-span-7">
-              <div className="glass-card-gold rounded-3xl p-8 sm:p-10 relative overflow-hidden">
+              <div className="glass-card-gold rounded-3xl p-6 sm:p-10 relative overflow-hidden">
                 <h3 className="text-2xl font-serif font-bold text-amber-700 mb-2">Send an Inquiry</h3>
                 <p className="text-xs text-gray-600 mb-6 font-light">Fill in your requirements below and our global specialists will respond within 2 hours.</p>
 
@@ -136,80 +154,94 @@ export default function ContactPage() {
                     </div>
                     <h4 className="text-2xl font-serif font-bold text-amber-700">Inquiry Received Successfully!</h4>
                     <p className="text-gray-600 text-sm max-w-md mx-auto">
-                      Thank you for connecting with OneTrade360™. Your dedicated account manager will call or email you shortly.
+                      Thank you for connecting with OneTrade360™. Your inquiry has been sent to oneworldtrade360@gmail.com and our team will connect shortly.
                     </p>
                   </div>
                 ) : (
-                  <form onSubmit={handleSubmit} className="space-y-4">
-                    <div>
-                      <label className="block text-xs font-mono text-gray-600 uppercase mb-1">Full Name</label>
-                      <input
-                        type="text"
-                        required
-                        placeholder="John Doe"
-                        value={formData.name}
-                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                        className="w-full bg-gray-50/90 border border-gray-200 rounded-xl px-4 py-3 text-sm text-amber-700 focus:outline-none focus:border-amber-400 transition-colors"
-                      />
-                    </div>
-
+                  <form onSubmit={handleSubmit} className="space-y-5">
                     <div className="grid sm:grid-cols-2 gap-4">
                       <div>
-                        <label className="block text-xs font-mono text-gray-600 uppercase mb-1">Email Address</label>
+                        <label className="block text-xs font-mono text-gray-600 uppercase mb-1">Full Name *</label>
+                        <div className="relative">
+                          <User className="w-4 h-4 text-gray-500 absolute left-3 top-3.5" />
+                          <input
+                            type="text"
+                            required
+                            placeholder="John Doe"
+                            value={formData.name}
+                            onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                            className="w-full bg-white border border-gray-200 rounded-xl pl-9 pr-3 py-2.5 text-sm text-slate-900 focus:outline-none focus:border-amber-400 transition-colors"
+                          />
+                        </div>
+                      </div>
+
+                      <div>
+                        <label className="block text-xs font-mono text-gray-600 uppercase mb-1">Phone Number *</label>
+                        <div className="relative">
+                          <Phone className="w-4 h-4 text-gray-500 absolute left-3 top-3.5" />
+                          <input
+                            type="tel"
+                            required
+                            placeholder="+1 (555) 000-0000"
+                            value={formData.phone}
+                            onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                            className="w-full bg-white border border-gray-200 rounded-xl pl-9 pr-3 py-2.5 text-sm text-slate-900 focus:outline-none focus:border-amber-400 transition-colors"
+                          />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div>
+                      <label className="block text-xs font-mono text-gray-600 uppercase mb-1">Email Address *</label>
+                      <div className="relative">
+                        <Mail className="w-4 h-4 text-gray-500 absolute left-3 top-3.5" />
                         <input
                           type="email"
                           required
-                          placeholder="john@business.com"
+                          placeholder="john@example.com"
                           value={formData.email}
                           onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                          className="w-full bg-gray-50/90 border border-gray-200 rounded-xl px-4 py-3 text-sm text-amber-700 focus:outline-none focus:border-amber-400 transition-colors"
-                        />
-                      </div>
-                      <div>
-                        <label className="block text-xs font-mono text-gray-600 uppercase mb-1">Phone Number</label>
-                        <input
-                          type="tel"
-                          required
-                          placeholder="+1 (555) 000-0000"
-                          value={formData.phone}
-                          onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                          className="w-full bg-gray-50/90 border border-gray-200 rounded-xl px-4 py-3 text-sm text-amber-700 focus:outline-none focus:border-amber-400 transition-colors"
+                          className="w-full bg-white border border-gray-200 rounded-xl pl-9 pr-3 py-2.5 text-sm text-slate-900 focus:outline-none focus:border-amber-400 transition-colors"
                         />
                       </div>
                     </div>
 
                     <div>
-                      <label className="block text-xs font-mono text-gray-600 uppercase mb-1">Primary Interest Area</label>
+                      <label className="block text-xs font-mono text-gray-600 uppercase mb-1">Service / Division Required</label>
                       <select
                         value={formData.interest}
                         onChange={(e) => setFormData({ ...formData, interest: e.target.value })}
-                        className="w-full bg-gray-50/90 border border-gray-200 rounded-xl px-4 py-3 text-sm text-amber-700 focus:outline-none focus:border-amber-400 transition-colors"
+                        className="w-full bg-white border border-gray-200 rounded-xl px-3 py-2.5 text-sm text-slate-900 focus:outline-none focus:border-amber-400 transition-colors font-sans cursor-pointer"
                       >
-                        <option value="Restaurant & Café Solutions">Restaurant & Café Turnkey Setup</option>
+                        <option value="Restaurant & Café Solutions">Restaurant & Café Solutions (Chai Kofe)</option>
                         <option value="Convenience Store Solutions">Convenience Store & Gas Station Solutions</option>
                         <option value="StoreSKU AI Platform">StoreSKU™ AI Retail Management</option>
-                        <option value="X-ON AI Security">X-ON™ AI Security Surveillance</option>
+                        <option value="Healthcare & Rehab">Oasis Rehab & Healthcare Services</option>
+                        <option value="Real Estate Infrastructure">Orion Infrastructure & Real Estate</option>
+                        <option value="Nutraceuticals & Wellness">WellOzyn & Pharmaplus Wellness</option>
                         <option value="OEM Factory Sourcing">Global OEM & Factory Direct Sourcing</option>
-                        <option value="Business Acquisition">Business Acquisition & Consulting</option>
-                        <option value="Hospitality Solutions">Hospitality & Hotel Solutions</option>
+                        <option value="Business Acquisition">Business Acquisition & M&A</option>
                         <option value="Wholesale Distribution">Wholesale & Bulk Supply</option>
                       </select>
                     </div>
 
                     <div>
-                      <label className="block text-xs font-mono text-gray-600 uppercase mb-1">Project Details / Requirements</label>
+                      <label className="block text-xs font-mono text-gray-600 uppercase mb-1">Inquiry Details</label>
                       <textarea
                         rows={4}
-                        placeholder="Describe your business goals, preferred location, or sourcing requirements..."
+                        placeholder="Tell us about your business goals or sourcing needs..."
                         value={formData.message}
                         onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                        className="w-full bg-gray-50/90 border border-gray-200 rounded-xl p-4 text-sm text-amber-700 focus:outline-none focus:border-amber-400 transition-colors"
+                        className="w-full bg-white border border-gray-200 rounded-xl p-3 text-sm text-slate-900 focus:outline-none focus:border-amber-400 transition-colors font-sans"
                       />
                     </div>
 
-                    <Button type="submit" className="w-full h-14 bg-gradient-to-r from-amber-400 via-amber-500 to-amber-500 text-amber-700 font-bold text-base clip-diagonal shadow-[0_0_25px_rgba(245,183,0,0.35)]">
-                      Submit Inquiry Now
-                      <Send className="ml-2 w-5 h-5" />
+                    <Button 
+                      type="submit" 
+                      className="w-full h-12 bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold uppercase tracking-wider flex items-center justify-center gap-2 rounded-xl cursor-pointer shadow-md"
+                    >
+                      <span>Submit Inquiry to oneworldtrade360@gmail.com</span>
+                      <Send className="w-4 h-4" />
                     </Button>
                   </form>
                 )}
@@ -220,7 +252,7 @@ export default function ContactPage() {
         </div>
       </motion.section>
 
-      <Footer onOpenInquiry={() => setInquiryOpen(true)} onReplaySplash={() => setShowSplash(true)} />
+      <Footer onReplaySplash={() => setShowSplash(true)} onOpenInquiry={() => setInquiryOpen(true)} />
     </div>
   );
 }
