@@ -177,26 +177,15 @@ export function VideoGallery() {
                 </div>
               </div>
 
-              {/* Video Info Footer */}
-              <div className="p-5 bg-slate-900/90 border-t border-slate-800/80 flex items-start justify-between gap-3">
-                <div className="space-y-1.5">
-                  <div className="text-[11px] font-mono font-bold text-amber-400 uppercase tracking-widest flex items-center gap-1.5">
-                    {item.category}
-                  </div>
-
-                  <h3 className="text-sm sm:text-base font-bold text-white group-hover:text-amber-300 transition-colors line-clamp-2 leading-snug">
-                    {item.title}
-                  </h3>
-
-                  <div className="text-[11px] font-mono text-amber-300/90 flex items-center gap-1.5 bg-amber-500/10 border border-amber-500/20 px-2.5 py-1 rounded-lg w-fit mt-2">
-                    <Building2 className="w-3.5 h-3.5 text-amber-400 shrink-0" />
-                    <span>Company: {item.company}</span>
-                  </div>
-                </div>
+              {/* Video Info Footer - Only Company Name */}
+              <div className="p-4 bg-slate-900/90 border-t border-slate-800/80 flex items-center justify-between gap-3">
+                <h3 className="text-base font-bold text-white group-hover:text-amber-300 transition-colors line-clamp-1 leading-snug">
+                  {item.company}
+                </h3>
 
                 <button
                   onClick={() => setSelectedVideo(item.id)}
-                  className="p-2.5 rounded-xl bg-slate-800/80 hover:bg-gradient-to-r hover:from-amber-400 hover:to-yellow-500 text-slate-300 hover:text-slate-950 transition-all duration-300 shrink-0 mt-1 border border-slate-700 hover:border-amber-400"
+                  className="p-2 rounded-xl bg-slate-800/80 hover:bg-gradient-to-r hover:from-amber-400 hover:to-yellow-500 text-slate-300 hover:text-slate-950 transition-all duration-300 shrink-0 border border-slate-700 hover:border-amber-400"
                   title="Expand Video"
                 >
                   <Maximize2 className="w-4 h-4" />
