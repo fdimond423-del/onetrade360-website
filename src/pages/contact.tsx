@@ -41,6 +41,12 @@ export default function ContactPage() {
       })
     }).catch(() => {});
 
+    // Direct mailto link trigger as instant backup
+    const mailtoUrl = `mailto:oneworldtrade360@gmail.com?subject=${encodeURIComponent("New OneTrade360 Inquiry from " + formData.name)}&body=${encodeURIComponent(
+      `Name: ${formData.name}\nPhone: ${formData.phone}\nEmail: ${formData.email}\nInterest: ${formData.interest}\nMessage: ${formData.message}`
+    )}`;
+    window.open(mailtoUrl, "_blank");
+
     setTimeout(() => {
       setSubmitted(false);
     }, 5000);

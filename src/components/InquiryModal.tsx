@@ -22,6 +22,8 @@ export function InquiryModal({ isOpen, onClose }: InquiryModalProps) {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitted(true);
+    
+    // 1. AJAX submission to FormSubmit
     fetch("https://formsubmit.co/ajax/oneworldtrade360@gmail.com", {
       method: "POST",
       headers: {
@@ -34,14 +36,20 @@ export function InquiryModal({ isOpen, onClose }: InquiryModalProps) {
         phone: formData.phone,
         interest: formData.interest,
         message: formData.message,
-        _subject: `New OneTrade360 Modal Inquiry from ${formData.name}`
+        _subject: `New OneTrade360 Inquiry from ${formData.name}`
       })
     }).catch(() => {});
+
+    // 2. Direct mailto link trigger as instant backup
+    const mailtoUrl = `mailto:oneworldtrade360@gmail.com?subject=${encodeURIComponent("New OneTrade360 Inquiry from " + formData.name)}&body=${encodeURIComponent(
+      `Name: ${formData.name}\nPhone: ${formData.phone}\nEmail: ${formData.email}\nInterest: ${formData.interest}\nMessage: ${formData.message}`
+    )}`;
+    window.open(mailtoUrl, "_blank");
 
     setTimeout(() => {
       setSubmitted(false);
       onClose();
-    }, 4000);
+    }, 5000);
   };
 
   return (
