@@ -32,13 +32,6 @@ const VIDEOS = [
     badge: "Verified Sourcing"
   },
   {
-    id: "video-5.mp4",
-    title: "Turnkey Commercial Hospitality Showcase",
-    company: "Chai Kofe Espresso",
-    category: "Hospitality Setup",
-    badge: "Turnkey Setup"
-  },
-  {
     id: "video-6.mp4",
     title: "Orion Infrastructure & Real Estate Showcase",
     company: "Orion Infrastructure",
