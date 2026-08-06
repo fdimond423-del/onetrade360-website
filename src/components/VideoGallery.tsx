@@ -5,17 +5,17 @@ import { PlayCircle, Maximize2, X, Film, Sparkles, Video, Play, Building2 } from
 const VIDEOS = [
   {
     id: "video-1.mp4",
-    title: "OEM Manufacturing & Production Line",
-    company: "OneTrade360 OEM Manufacturing",
-    category: "Factory Operations",
+    title: "Oasis Rehab & Physical Therapy Showcase",
+    company: "Oasis rehab",
+    category: "Healthcare & Rehab",
     badge: "Audited Facility"
   },
   {
     id: "video-2.mp4",
-    title: "Orion Infrastructure Showcase",
-    company: "Orion Infrastructure",
-    category: "Infrastructure",
-    badge: "Enterprise Infrastructure"
+    title: "Global Supply Chain & Freight Showcase",
+    company: "OneTrade360 Global Logistics",
+    category: "Logistics",
+    badge: "Cross-Border Cargo"
   },
   {
     id: "video-3.mp4",
@@ -40,16 +40,16 @@ const VIDEOS = [
   },
   {
     id: "video-6.mp4",
-    title: "Quality Control & Warehousing Walkthrough",
-    company: "OneTrade360 Quality Assurance",
-    category: "Quality Audit",
+    title: "Orion Infrastructure & Real Estate Showcase",
+    company: "Orion Infrastructure",
+    category: "Real Estate & Infrastructure",
     badge: "100% Inspected"
   },
   {
     id: "video-7.mp4",
-    title: "Enterprise Wholesale & Bulk Distribution Network",
-    company: "OneTrade360 Enterprise Wholesale",
-    category: "Global Trade",
+    title: "Pharmaplus Wellness Product Showcase",
+    company: "Pharmaplus wellness",
+    category: "Wellness & Direct Factory",
     badge: "Direct Factory"
   },
   {
