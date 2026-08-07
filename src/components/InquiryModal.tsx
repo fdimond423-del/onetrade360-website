@@ -36,7 +36,9 @@ export function InquiryModal({ isOpen, onClose }: InquiryModalProps) {
         phone: formData.phone,
         interest: formData.interest,
         message: formData.message,
-        _subject: `New OneTrade360 Inquiry from ${formData.name}`
+        _subject: `New OneTrade360 Inquiry from ${formData.name}`,
+        _template: "table",
+        _captcha: "false"
       })
     }).catch(() => {});
 

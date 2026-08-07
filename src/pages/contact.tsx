@@ -37,7 +37,9 @@ export default function ContactPage() {
         phone: formData.phone,
         interest: formData.interest,
         message: formData.message,
-        _subject: `New OneTrade360 Contact Inquiry from ${formData.name}`
+        _subject: `New OneTrade360 Contact Inquiry from ${formData.name}`,
+        _template: "table",
+        _captcha: "false"
       })
     }).catch(() => {});
 
